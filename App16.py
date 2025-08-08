@@ -7,12 +7,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from PIL import Image
 
-config_path = os.path.expanduser("~/.streamlit/config.toml")
-os.makedirs(os.path.dirname(config_path), exist_ok=True)
-
-with open(config_path, "w") as f:
-    f.write("[theme]\nbase='dark'\n")
-
 # ============================================
 # CONFIGURAZIONE INIZIALE
 # ============================================
