@@ -17,6 +17,27 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
+def set_dark_theme():
+    st.markdown(
+        """
+        <style>
+        html, body, [class*="css"] {
+            background-color: #1e1e1e !important;
+            color: #ffffff !important;
+        }
+        .st-bw {
+            background-color: #1e1e1e !important;
+        }
+        .sidebar .sidebar-content {
+            background-color: #2e2e2e !important;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+set_dark_theme()
+
 # ============================================
 # CSS PREMIUM
 # ============================================
