@@ -1,4 +1,27 @@
 import streamlit as st
+from streamlit import config as _config
+
+if not _config.get_option("theme.base"):
+    _config.set_option("theme.base", "dark")
+
+st.markdown("""
+<style>
+:root {
+    --primary-color: #FF4B4B;
+    --background-color: #0E1117;
+    --secondary-background-color: #262730;
+    --text-color: #FAFAFA;
+}
+html, body, [class*="css"] {
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+}
+.stApp, .stSidebar {
+    background-color: var(--background-color) !important;
+}
+</style>
+""", unsafe_allow_html=True)
+
 import random
 from collections import defaultdict
 import os
