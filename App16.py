@@ -1,27 +1,5 @@
 import streamlit as st
 from streamlit import config as _config
-
-if not _config.get_option("theme.base"):
-    _config.set_option("theme.base", "dark")
-
-st.markdown("""
-<style>
-:root {
-    --primary-color: #FF4B4B;
-    --background-color: #0E1117;
-    --secondary-background-color: #262730;
-    --text-color: #FAFAFA;
-}
-html, body, [class*="css"] {
-    background-color: var(--background-color) !important;
-    color: var(--text-color) !important;
-}
-.stApp, .stSidebar {
-    background-color: var(--background-color) !important;
-}
-</style>
-""", unsafe_allow_html=True)
-
 import random
 from collections import defaultdict
 import os
@@ -39,27 +17,6 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
-
-def set_dark_theme():
-    st.markdown(
-        """
-        <style>
-        html, body, [class*="css"] {
-            background-color: #1e1e1e !important;
-            color: #ffffff !important;
-        }
-        .st-bw {
-            background-color: #1e1e1e !important;
-        }
-        .sidebar .sidebar-content {
-            background-color: #2e2e2e !important;
-        }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
-
-set_dark_theme()
 
 # ============================================
 # CSS PREMIUM
