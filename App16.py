@@ -20,7 +20,7 @@ st.set_page_config(
     page_title="AP88",
     page_icon="🚀",
     layout="wide",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="expanded",
     theme.base="dark"  
 )
 
