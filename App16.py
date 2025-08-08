@@ -529,7 +529,7 @@ def home_page():
                         <div style="background: rgba(106, 90, 205, 0.1); padding: 1.5rem; border-radius: 12px;">
                             <h4 style="color: var(--accent); margin-bottom: 1rem;">📊 Statistiche</h4>
                             <p><strong>Voto Medio:</strong> 8.6</p>
-                            <p><strong>Top Voto:</strong> 19+ (Bax)</p>
+                            <p><strong>Top Voto:</strong> 9+ (Bax)</p>
                             <p><strong>Partecipanti:</strong> 7</p>
                             <p><strong>Durata:</strong> 9 giorni</p>
                             <p><strong>Luogo:</strong> Croazia (Dubrovnik, Split, Hvar, Bosnia)</p>
