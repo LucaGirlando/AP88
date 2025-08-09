@@ -466,8 +466,8 @@ def home_page():
                         st.markdown("""
                         <div style="background: rgba(106, 90, 205, 0.1); padding: 1.5rem; border-radius: 12px;">
                             <h4 style="color: var(--accent); margin-bottom: 1rem;">📊 Statistiche</h4>
-                            <p><strong>Voto Medio:</strong> 8.4</p>
-                            <p><strong>Top Voto:</strong> 9 (Girla, Ari)</p>
+                            <p><strong>Voto Medio:</strong> 8.25</p>
+                            <p><strong>Top Voto:</strong> 9 (Girla)</p>
                             <p><strong>Partecipanti:</strong> 9</p>
                             <p><strong>Durata:</strong> 1 settimana</p>
                             <p><strong>Luogo:</strong> Puglia (Polignano, Gallipoli, Alezio, Alberobello, Ostuni)</p>
@@ -485,37 +485,58 @@ def home_page():
 
                         st.markdown("""
                         <h3>Ceci (LA CAFONA): 8.5</h3>
-                        <p>Partendo dal presupposto che il duomo fa cagare perché ci sono i piccioni fuori, è importante evidenziare la tranquillità e i nervi saldi con cui gestisce la scelta della spiaggia la mattina dell'arrivo ad Alezio city, insistendo molto per andare in questo luogo sconosciuto detto Porto Cesareo. Purtroppo come navigatore non da il meglio di sè ma almeno permette alle girls di risparmiare una notte di affitto a Monopoli, facendole arrivare il giorno dopo con le sue indicazioni. Per il resto settimana tranquilla da tifosa della Juve, stressata quando qualcuno gli tocca la macchinetta del caffè e durante la festa per il compleanno di paletta.</p>
+                        <p>Partendo dal presupposto che il duomo fa cagare perché ci sono i piccioni fuori, è importante evidenziare la tranquillità e i nervi saldi con cui gestisce la scelta della spiaggia la mattina dell’arrivo ad Alezio city, insistendo molto per andare in questo luogo sconosciuto detto Porto Cesareo.Purtroppo come navigatore non da il meglio di sè ma almeno permette alle girls di risparmiare una notte di affitto a Monopoli, facendole arrivare il giorno dopo con le sue indicazioni.</p>
                         """, unsafe_allow_html=True)
 
                         st.markdown("""
-                        <h3>Ari (LA RAGAZZA DI CICE): 9</h3>
-                        <p>Un anno e mezzo dopo il successo greco riesce a bissare l'ottima prestazione con qualche pacca più forte e soprattutto qualche «vaffa» più generoso, oltre a qualche nuova canzone presa in prestito da francomarshall. Nonostante un fisico poco adatto riesce a vincere la sfida "chi arriva prima ai 1000m" e tiene un record stagionale di corse sulle gambe, che sicuramente porterà con sé fino all'anno prossimo. Nel frattempo si allena a fare i superpoteri con le mani.</p>
+                        <h3>Ari (LA BENZINAIA): 9-</h3>
+                        <p>Arriva con il collo marchiato dal Conte Mattia e uccide subito il mood della vacanza utilizzando un terzo del budget della spesa per comprare gli assorbenti; e mentre a lei non è mai arrivato il ciclo i boys si sono visti costretti ad alternare giorni senza dentifricio a giorni senza sapone per le mani.Si sta ancora chiedendo perché il pieno di benzina iniziale non sia stato messo su Splitwise, abbassando ad ogni richiesta il QI medio italiano, ma anche strappando ogni volta una risata a tutto il gruppo e facendo alzare continuamente il suo voto.</p>
                         """, unsafe_allow_html=True)
 
                         st.markdown("""
-                        <h3>Bax (IL PENGWIN): 8.5</h3>
-                        <p>Nonostante la sua forma non sia al 100% riesce a mantenere un buon livello di gioco, anche grazie alle ottime condizioni meteo. Si dimostra un ottimo compagno di squadra e riesce a mantenere la calma anche nei momenti di difficoltà. Durante la settimana regala momenti di ilarità grazie ai suoi commenti pungenti e alle sue battute ironiche.</p>
+                        <h3>Bax (LA ZECCA DI STATO): 8.5</h3>
+                        <p>Rinnova per il terzo anno con la scuderia per la felicità dei tifosi.
+Rimane fregato essendo l’unico ad avere soldi in contanti, sperando che tornino prima della benza di Corfù 2022.
+I genitori di tutti sono tranquilli perché conoscono ogni nostro spostamento grazie a lui che fa le veci di Pierluigi Pardo con Marta e la Carla.
+Ogni giorno al Mare porta un ombrellone solo per se stesso causa allergia al sole.
+Se non giochi al “grande gioco dei nomi” ti sgozza, stacce.
+.</p>
                         """, unsafe_allow_html=True)
 
                         st.markdown("""
-                        <h3>Gaia (LA POETESSA): 8.5</h3>
-                        <p>Nonostante qualche piccolo problema di salute, riesce a partecipare attivamente alle attività del gruppo, offrendo il suo supporto e la sua presenza costante. La sua poesia e sensibilità emergono soprattutto nelle serate più tranquille, creando momenti di riflessione e relax per tutti.</p>
+                        <h3>Gaia (DORAEMON): 8</h3>
+                        <p>A differenza delle altre ragazze porta tutto il necessario e si permette il lusso di portarsi la sua colazione personale che nasconde accuratamente dai predatori durante il corso di tutta la vacanza.
+Piccolo scivolone nel suo ambito, le lavastoviglie: far partire il programma ECO da 4 ore e poi togliere la chiave che tiene accesa la corrente non è stata un’ottima idea.
+Importante citare anche la sua crisi di mezza età alla Praja.</p>
                         """, unsafe_allow_html=True)
 
                         st.markdown("""
-                        <h3>Chiara (BIG ROM): 8</h3>
-                        <p>Con il suo carattere deciso e la sua grinta, riesce a guidare il gruppo nelle situazioni più complesse. Nonostante qualche discussione, dimostra di essere una persona affidabile e pronta a dare il massimo. La sua energia è contagiosa e motiva tutti a dare il meglio.</p>
+                        <h3>Chiara (LA PART-TIME): 7.5</h3>
+                        <p>Come l’anno scorso viene richiamata dal prestito a metà stagione.
+Solo una serata no per lei, causa risposta deludente da parte della relatrice della tesi, ma viene distratta dai numerosi rutti dei boys dopo l’ottima pasta al pesto Rana.
+Voto basso a causa della vittoria sia del premio come miglior outfit delle girls, con il vestito d’oro ad alberobello, sia quello della girl meno scassa cazzo.</p>
                         """, unsafe_allow_html=True)
 
                         st.markdown("""
-                        <h3>Paga (IL BARISTA): 9</h3>
-                        <p>Con la sua simpatia e il suo sorriso, riesce a creare un'atmosfera positiva e accogliente per tutti. Sempre pronto ad aiutare e a risolvere piccoli problemi, è una figura fondamentale all'interno del gruppo. La sua passione per il caffè non passa inosservata e diventa un momento di condivisione quotidiana.</p>
+                        <h3>Paga (IL MEGAFONO): 8</h3>
+                        <p>Un po’ sottotono rispetto agli altri anni forse anche grazie al fatto che arriva a pancia piena con un goal poco prima della partenza.
+La sua giornata tipo è: mi sveglio, mangio, rutto, cago e bestemmio, per poi ripetere questa sequenza fino a cena (ma ha anche dei difetti).
+Non ha più il fisico di una volta, però si merita mezzo voto in più per l’insalata di riso che è bastata a sfamare tutti gli abitanti di Alezio city.</p>
                         """, unsafe_allow_html=True)
 
                         st.markdown("""
-                        <h3>Paci (IL PADRINO): 8.5</h3>
-                        <p>Nonostante qualche momento di riflessione solitaria, riesce a mantenere un ruolo di leadership nel gruppo. La sua presenza è rassicurante e offre sempre consigli preziosi. La sua esperienza e saggezza sono apprezzate da tutti.</p>
+                        <h3>Paci (IL BENEFATTORE): 8</h3>
+                        <p>Dopo il periodo di carcere (non per aver rubato le barrette) a Monopoli, torna insieme ai boys ad Alezio city.
+La sua specialità è palleggiare e giocare a calcio appena scesi dalla macchina, incurante del terreno di gioco perde qualche pallone di troppo. 
+Dopo una sostanziosa donazione alla fondazione Panigalli, viene ricompensato con un goal al 95’
+Mezzo voto in meno per lo stile talmente zanza che Cellery può accompagnare solo; menzione d’onore per gli occhiali di cui si voleva liberare 30 secondi dopo averli comprati.</p>
+                        """, unsafe_allow_html=True)
+                    
+                        st.markdown("""
+                        <h3>gIO (MIKE TYSON): 8</h3>
+                        <p>Abbastanza boy da stare nella macchina dei boys, ma non abbastanza da dormire nella dependance dei boys.
+Durante la serata alla Praja tenta il KO su un maranza che la stava palpando, ma purtroppo va a vuoto.
+Quando ne ha più bisogno e non ci sperava più, ecco pronto un contratto multimilionario dall’ Al Nassr per duettare in attacco con Cristiano Ronaldo e poter pagare l’ultima cena senza chiedere aiuti al benefattore.</p>
                         """, unsafe_allow_html=True)
 
                         st.markdown("""
