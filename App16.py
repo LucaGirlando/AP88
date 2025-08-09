@@ -620,11 +620,6 @@ Quando ne ha più bisogno e non ci sperava più, ecco pronto un contratto multim
                         """, unsafe_allow_html=True)
 
                         st.markdown("""
-                        <h3>Ari (IN SMARTWORKING): 10</h3>
-                        <p>Pagella d'onore nonostante la sua assenza, che però le ha fatto guadagnare punti infiniti come figlia. Fortunatamente per lei si trattava del primo capodanno low-cost non causando rimorsi dal punto di vista economico. Viene comunque aggiornata tramite videochiamata anche se averla dal vivo sarebbe stata tutt'altra cosa ❤.</p>
-                        """, unsafe_allow_html=True)
-
-                        st.markdown("""
                         <h3>Marti (L'INFLUENCER): 10</h3>
                         <p>Fresca di firma sul contratto è costretta a stamparsi un sorriso in faccia per non fare brutta figura con gli amici del fidanzato. Un po' provata ancora dal recente cambio di telefono che l'ha costretta a ritrovarsi con l'iphone 16, non nasconde comunque la sue doti da boomer ben visibili ai suoi follower. Prepara la squadra alla serata principale infilando scorte di alcol in tutti gli orifizi dei compagni risultate utilissime ad allungare il ghiaccio nei bicchieri vuoti. L'ultima sera ospita un hamburgerata importante mantendendo la calma sotto la pressione degli chef paga e girla.</p>
                         """, unsafe_allow_html=True)
@@ -658,7 +653,12 @@ Quando ne ha più bisogno e non ci sperava più, ecco pronto un contratto multim
                         <h3>Ferdi (CAZZO DICI): 9</h3>
                         <p>Dopo aver passato il natale in solitaria viene invaso dall'uragano italiano, ma non si scompone e sembra apprezzare l'arrivo dei monzesi grazie anche al supporto prontamente arrivato dalla bolivia. In casa fa finta di fare qualcosa per nn fare brutta figura con gli ospiti mostrando subito l'italiano imparato in questi mesi: "Mi mangio la mela mentecatto succhiami il cazzo". Al Negro rojo non incide, dimenticandosi le chiavi della discordia rischiando di causare una rissa tra coinquilini. L'ultima sera sente la pressione di girla perdendo la lucidità davanti ad un bicchiere per la felicità della proprietaria di casa.</p>
                         """, unsafe_allow_html=True)
-
+                    
+                        st.markdown("""
+                        <h3>Ari (IN SMARTWORKING): 10</h3>
+                        <p>Pagella d'onore nonostante la sua assenza, che però le ha fatto guadagnare punti infiniti come figlia. Fortunatamente per lei si trattava del primo capodanno low-cost non causando rimorsi dal punto di vista economico. Viene comunque aggiornata tramite videochiamata anche se averla dal vivo sarebbe stata tutt'altra cosa ❤.</p>
+                        """, unsafe_allow_html=True)
+                    
                         st.markdown("""
                         </div>
                         """, unsafe_allow_html=True)
