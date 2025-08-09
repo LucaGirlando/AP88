@@ -533,7 +533,7 @@ Mezzo voto in meno per lo stile talmente zanza che Cellery può accompagnare sol
                         """, unsafe_allow_html=True)
                     
                         st.markdown("""
-                        <h3>gIO (MIKE TYSON): 8</h3>
+                        <h3>Gio (MIKE TYSON): 8</h3>
                         <p>Abbastanza boy da stare nella macchina dei boys, ma non abbastanza da dormire nella dependance dei boys.
 Durante la serata alla Praja tenta il KO su un maranza che la stava palpando, ma purtroppo va a vuoto.
 Quando ne ha più bisogno e non ci sperava più, ecco pronto un contratto multimilionario dall’ Al Nassr per duettare in attacco con Cristiano Ronaldo e poter pagare l’ultima cena senza chiedere aiuti al benefattore.</p>
@@ -781,7 +781,7 @@ Quando ne ha più bisogno e non ci sperava più, ecco pronto un contratto multim
                 elif member == "Ari":
                     stats = {
                         "Vacanze": 4,
-                        "Voto più alto": "9 (Puglia)",
+                        "Voto più alto": "9- (Puglia)",
                         "Media voti": 8.06,
                         "Miglior performance": "Puglia 2023",
                         "Soprannomi": ["BULBASAUR", "LA CAMIONISTA", "LA BENZINAIA", "STANGA?MAGARI", "IN SMARTWORKING"]
