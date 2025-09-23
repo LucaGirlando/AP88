@@ -1720,8 +1720,8 @@ def game_2():
                     (3, 3): {
                         "category": categories[3],
                         "value": 400,
-                        "question": "Quali di queste città non ho mai visitato (Madrid, Parigi, Monaco, Vienna)? ",
-                        "answer": "Madrid, Parigi e Monaco"
+                        "question": "Quali di queste città non ho mai visitato (Madrid, Parigi, Monaco, Vienna, Varsavia)? ",
+                        "answer": "Madrid e Parigi "
                     },
                     (3, 4): {
                         "category": categories[3],
@@ -1819,7 +1819,7 @@ def game_3():
         "Chi è il più predisposto a cadere in diretta TV?",
         "Chi è il più predisposto a farsi bannare dai social per un commento stupido?",
         "Chi è il più predisposto a vomitare dopo un giro sulle montagne russe?",
-        "Chi è il più predisposto a farsi scoprire con un feticcio bizzarro?",
+        "Chi è il più predisposto a farsi scoprire con un fetish bizzarro?",
         "Chi è il più predisposto a dire 'ti amo' durante il primo appuntamento?",
         "Chi è il più predisposto a farsi beccare a cantare davanti allo specchio?",
         
@@ -1836,7 +1836,7 @@ def game_3():
         "Chi è il più predisposto a corrompere un poliziotto?",
         
         # Relazioni tossiche
-        "Chi è il più predisposto a tornare con l'ex (anche se è tossico)?",
+        "Chi è il più predisposto a tornare con l'ex tossico?",
         "Chi è il più predisposto a fare stalking?",
         "Chi è il più predisposto a farsi bloccare su WhatsApp?",
         "Chi è il più predisposto a scrivere un messaggio ubriaco all'ex?",
@@ -1844,7 +1844,7 @@ def game_3():
         "Chi è il più predisposto a sposarsi dopo una settimana?",
         "Chi è il più predisposto a divorziare dopo un mese?",
         "Chi è il più predisposto a farsi catfisherare?",
-        "Chi è il più predisposto a farsi stalkerare da un fan?",
+        "Chi è il più predisposto a ghostare un/a tipo/a?",
         "Chi è il più predisposto a farsi ghostare?",
         
         # Futuro distopico
@@ -1878,7 +1878,7 @@ def game_3():
         "Chi è il più predisposto a essere quello scomodo a cena?",
         "Chi è il più predisposto a farsi odiare dai suoceri?",
         "Chi è il più predisposto a litigare per un like mancato?",
-        "Chi è il più predisposto a farsi licenziare per un post su Facebook?",
+        "Chi è il più predisposto a farsi licenziare per un post su Instagram?",
         "Chi è il più predisposto a essere quello che non viene invitato?",
         "Chi è il più predisposto a finire su un video imbarazzante virale?",
         "Chi è il più predisposto a fare coming out dopo i 50 anni?",
@@ -1893,19 +1893,19 @@ def game_3():
         "Chi è il più predisposto a fare un figlio segreto?",
         "Chi è il più predisposto a farsi un amante?",
         "Chi è il più predisposto a farsi stalkerare dall'ex?",
-        "Chi è il più predisposto a finire al Jerry Springer Show?",
+        "Chi è il più predisposto a finire a C'è Posta per Te",
         
         # Abitudini disgustose
         "Chi è il più predisposto a non lavarsi per una settimana?",
         "Chi è il più predisposto a mangiare cibo scaduto?",
-        "Chi è il più predisposto a fare pipì nella doccia?",
+        "Chi è il più predisposto a fare pipì nella piscina?",
         "Chi è il più predisposto a usare la stessa biancheria per giorni?",
         "Chi è il più predisposto a non pulire il bagno?",
         "Chi è il più predisposto a mangiarsi le unghie dei piedi?",
         "Chi è il più predisposto a russare come un trattore?",
         "Chi è il più predisposto a scoreggiare sotto le coperte?",
         "Chi è il più predisposto a bere dal cartone del latte?",
-        "Chi è il più predisposto a mangiare il proprio moccio?",
+        "Chi è il più predisposto a mangiare il proprio muco?",
         
         # Scelte di vita discutibili
         "Chi è il più predisposto a investire in crypto e perdere tutto?",
