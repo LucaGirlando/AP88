@@ -59,11 +59,6 @@ html[data-theme="light"] {
     --accent-dark: hsl(263, 55%, 38%);
     --accent-glow: rgba(106, 90, 205, 0.08);
     
-    --success: hsl(142, 60%, 40%);
-    --success-bg: rgba(76, 175, 80, 0.08);
-    --error: hsl(350, 70%, 48%);
-    --error-bg: rgba(244, 67, 54, 0.08);
-    
     --glass-bg: rgba(255, 255, 255, 0.75);
     --glass-border: rgba(0, 0, 0, 0.08);
     
@@ -139,12 +134,6 @@ p {
     0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(106, 90, 205, 0.4); }
     70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(106, 90, 205, 0); }
     100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(106, 90, 205, 0); }
-}
-
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
 }
 
 .animate-fade-in { animation: fadeIn var(--transition-slow) forwards; }
@@ -441,6 +430,25 @@ h2 {
 .btn-error:hover {
     background: hsl(350, 90%, 60%);
     transform: translateY(-2px);
+}
+
+.btn-trash {
+    background: transparent;
+    color: var(--error);
+    border: 1px solid rgba(244, 67, 54, 0.2);
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: background var(--transition-fast);
+}
+
+.btn-trash:hover {
+    background: var(--error-bg);
+    border-color: var(--error);
 }
 
 .btn-logout {
@@ -972,75 +980,41 @@ html[data-theme="light"] .custom-list strong {
 }
 
 /* ==========================================================================
-   ALBUM & MEMBERS GALLERY VIEW
+   RECOMMENDED GAMES LINK CARDS
    ========================================================================== */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 25px;
-}
-
-.gallery-card {
-    background: var(--bg-surface);
-    border: 1px solid var(--border-color);
+.game-card-link {
+    background: var(--bg-surface-elevated);
+    border: 1.5px solid var(--border-color);
     border-radius: var(--radius-md);
-    overflow: hidden;
-    transition: transform var(--transition-normal), border-color var(--transition-normal), box-shadow var(--transition-normal);
-    cursor: pointer;
-    box-shadow: var(--shadow-sm);
+    padding: 20px;
+    transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+    min-height: 160px;
 }
 
-.gallery-card:hover {
-    transform: translateY(-6px);
+.game-card-link:hover {
+    transform: translateY(-4px);
     border-color: var(--accent);
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-accent);
 }
 
-.gallery-img-wrapper {
-    position: relative;
-    padding-top: 110%; /* Aspect ratio of card image */
-    overflow: hidden;
-}
-
-.gallery-card img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform var(--transition-slow);
-}
-
-.gallery-card:hover img {
-    transform: scale(1.06);
-}
-
-.gallery-card-info {
-    padding: 16px;
-    text-align: center;
-    background: var(--bg-surface);
-    border-top: 1px solid var(--border-color);
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.gallery-card-name {
+.game-card-title {
+    font-size: 1.15rem;
     font-weight: 700;
-    font-size: 1.1rem;
-    margin-bottom: 4px;
+    color: var(--accent-light);
 }
 
-.gallery-card-tag {
-    font-size: 0.75rem;
-    text-transform: uppercase;
+html[data-theme="light"] .game-card-title {
+    color: var(--accent-dark);
+}
+
+.game-card-desc {
+    font-size: 0.85rem;
     color: var(--text-secondary);
-    letter-spacing: 1px;
-    font-weight: 600;
+    line-height: 1.5;
 }
 
 /* ==========================================================================
@@ -1075,6 +1049,7 @@ html[data-theme="light"] .custom-list strong {
 
 .form-group input[type="text"],
 .form-group input[type="number"],
+.form-group input[type="password"],
 .form-group select {
     background: var(--bg-surface-elevated);
     border: 1.5px solid var(--border-color);
@@ -1085,6 +1060,7 @@ html[data-theme="light"] .custom-list strong {
     font-weight: 500;
     outline: none;
     transition: border-color var(--transition-fast);
+    width: 100%;
 }
 
 .form-group input:focus,
@@ -1440,14 +1416,6 @@ html[data-theme="light"] .jeopardy-answer-text {
     color: var(--text-secondary);
 }
 
-.danger-flame-icon {
-    width: 50px;
-    height: 50px;
-    color: var(--error);
-    margin: 0 auto 15px;
-    display: block;
-}
-
 .voting-question-card {
     text-align: center;
     margin-bottom: 25px;
@@ -1570,142 +1538,31 @@ html[data-theme="light"] .premium-table tbody tr:hover {
 }
 
 /* ==========================================================================
-   FINANCE SIMULATOR & LESSON VIEW
+   TRIP VOTING (VOTAZIONI FINE VACANZA) COMMENTS CARDS
    ========================================================================== */
-.finance-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-}
-
-.finance-learning-card {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.learning-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.learning-icon {
-    width: 28px;
-    height: 28px;
-    color: var(--accent);
-}
-
-.alert-box {
-    display: flex;
-    gap: 12px;
-    padding: 16px;
+.tv-comment-card {
+    background: var(--bg-surface-elevated);
+    border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
-    font-size: 0.9rem;
-    line-height: 1.5;
+    padding: 15px;
 }
 
-.alert-info {
-    background: var(--accent-glow);
-    border: 1.5px solid var(--accent);
-}
-
-.alert-info i {
+.tv-comment-author {
+    font-size: 0.85rem;
+    font-weight: 700;
     color: var(--accent-light);
-    flex-shrink: 0;
+    margin-bottom: 6px;
+    text-transform: uppercase;
 }
 
-html[data-theme="light"] .alert-info i {
+html[data-theme="light"] .tv-comment-author {
     color: var(--accent-dark);
 }
 
-.download-actions {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
+.tv-comment-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
 }
-
-.download-actions .btn {
-    text-align: left;
-    padding: 15px 24px;
-}
-
-/* Simulator inputs card */
-.finance-simulator-card h2 {
-    font-size: 1.3rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 5px;
-}
-
-.simulator-inputs-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-/* Projections Box */
-.projection-box h3 {
-    margin-bottom: 20px;
-}
-
-.projections-summary-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-}
-
-.proj-card {
-    padding: 20px;
-    border-radius: var(--radius-md);
-    border: 1.5px solid var(--border-color);
-}
-
-.proj-label {
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: var(--text-secondary);
-    margin-bottom: 6px;
-}
-
-.proj-value {
-    font-size: 1.6rem;
-    font-weight: 800;
-    margin-bottom: 4px;
-}
-
-.proj-note {
-    font-size: 0.75rem;
-    color: var(--text-secondary);
-}
-
-.card-orange {
-    background: rgba(255, 165, 0, 0.05);
-    border-color: rgba(255, 165, 0, 0.3);
-}
-.card-orange .proj-value { color: #FFA500; }
-
-.card-green {
-    background: var(--success-bg);
-    border-color: rgba(76, 175, 80, 0.3);
-}
-.card-green .proj-value { color: var(--success); }
-
-.card-blue {
-    background: rgba(33, 150, 243, 0.05);
-    border-color: rgba(33, 150, 243, 0.3);
-}
-.card-blue .proj-value { color: #2196F3; }
-
-.card-red {
-    background: var(--error-bg);
-    border-color: rgba(244, 67, 54, 0.3);
-}
-.card-red .proj-value { color: var(--error); }
 
 /* ==========================================================================
    PERSONAL PROFILE VIEW
@@ -1875,6 +1732,13 @@ html[data-theme="light"] .timeline-grade {
     align-items: center;
     justify-content: center;
     margin: 0 auto 20px;
+}
+
+/* Admin Builder Layouts */
+.finance-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 25px;
 }
 
 /* ==========================================================================
