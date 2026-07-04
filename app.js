@@ -559,6 +559,7 @@ const TRANSLATIONS = {
         pass_error: "Password errata. Riprova.",
         pass_hint_title: "Suggerimento:",
         pass_hint_desc: "Soprannome di chi ha preso il voto più alto nella pagella della Sardegna (Nome e Cognome).",
+        pass_input_placeholder: "Password...",
         profile_select_title: "Chi sei?",
         profile_select_subtitle: "Seleziona il tuo profilo ufficiale per accedere alle tue schede personali.",
         profile_select_guest: "Entra come Ospite",
@@ -633,6 +634,7 @@ const TRANSLATIONS = {
         girla_pass_subtitle: "Inserisci la password aggiuntiva di Girla per abilitare i superpoteri.",
         girla_pass_error: "Password errata. Riprova.",
         girla_pass_btn: "Sblocca Amministrazione",
+        girla_pass_input_placeholder: "Password di Girla...",
         admin_intro: "Benvenuto nell'area di amministrazione. Qui puoi aggiungere nuove vacanze con le relative pagelle. Le vacanze aggiunte si integreranno nello storico del sito.",
         admin_add_title: "Aggiungi Nuova Vacanza",
         admin_custom_list_title: "Vacanze Gestibili",
@@ -649,6 +651,17 @@ const TRANSLATIONS = {
         tv_turn_voter: "Turno di voto per:",
         tv_turn_warning: "(Tutti gli altri partecipanti devono girarsi e NON guardare lo schermo!)",
         tv_form_title: "Votazione Segreta di:",
+        tv_go_vote_btn: "Inizia a Votare 🔒",
+        tv_form_subtitle: "Dai un voto da 1 a 10 ed esprimi la tua opinione su ciascuno degli altri presenti.",
+        tv_submit_votes_btn: "Conferma e Salva Voti Segreti",
+        tv_results_completed_title: "🎉 Votazioni Completate!",
+        tv_download_report_btn: "Scarica Report Voti (.txt)",
+        tv_results_summary_title: "Riepilogo Voti Medi Ricevuti",
+        tv_table_member: "Membro Presente",
+        tv_table_average: "Voto Medio Ricevuto",
+        tv_table_count: "Numero di Voti Ricevuti",
+        tv_results_comments_title: "Tutti i Commenti e Opinioni Raccolte",
+        tv_restart_btn: "Nuova Sessione Voti 🔄",
         tv_results_disclaimer: "Questi voti servono a fare le pagelle, per dare spunti, ma che della vostra opinione non ci interessa e saranno come sempre gestite dai poteri forti.",
         tv_results_disclaimer_setup: "Questi voti servono a fare le pagelle, per dare spunti, ma che della vostra opinione non ci interessa e saranno come sempre gestite dai poteri forti.",
         gameslist_intro: "Seleziona uno dei giochi online per iniziare a giocare con il gruppo.",
@@ -679,6 +692,7 @@ const TRANSLATIONS = {
         pass_error: "Wrong password. Try again.",
         pass_hint_title: "Hint:",
         pass_hint_desc: "Nickname of whoever got the highest grade in the Sardinia trip reports (First & Last Name).",
+        pass_input_placeholder: "Password...",
         profile_select_title: "Who are you?",
         profile_select_subtitle: "Select your official profile to access your personal stats.",
         profile_select_guest: "Enter as Guest",
@@ -753,6 +767,7 @@ const TRANSLATIONS = {
         girla_pass_subtitle: "Enter Girla's secondary password to enable super administrative powers.",
         girla_pass_error: "Wrong password. Try again.",
         girla_pass_btn: "Unlock Admin Panel",
+        girla_pass_input_placeholder: "Girla's Password...",
         admin_intro: "Welcome to the administration panel. Here you can add new vacations with their respective report cards. They will automatically merge with the database.",
         admin_add_title: "Add New Vacation",
         admin_custom_list_title: "Manageable Vacations",
@@ -769,6 +784,17 @@ const TRANSLATIONS = {
         tv_turn_voter: "Turn to vote for:",
         tv_turn_warning: "(Everyone else must turn away and NOT look at the screen!)",
         tv_form_title: "Secret Vote of:",
+        tv_go_vote_btn: "Start Voting 🔒",
+        tv_form_subtitle: "Give a grade from 1 to 10 and express your opinion on each of the other participants.",
+        tv_submit_votes_btn: "Confirm and Save Secret Votes",
+        tv_results_completed_title: "🎉 Voting Completed!",
+        tv_download_report_btn: "Download Votes Report (.txt)",
+        tv_results_summary_title: "Summary of Average Grades Received",
+        tv_table_member: "Present Member",
+        tv_table_average: "Average Grade Received",
+        tv_table_count: "Number of Grades Received",
+        tv_results_comments_title: "All Comments and Opinions Collected",
+        tv_restart_btn: "New Voting Session 🔄",
         tv_results_disclaimer: "These votes serve only as suggestions and inspiration. We don't care about your opinion; final grades will still be managed by the authorities.",
         tv_results_disclaimer_setup: "These votes serve only as suggestions and inspiration. We don't care about your opinion; final grades will still be managed by the authorities.",
         gameslist_intro: "Select one of the online games to start playing with the group.",
@@ -845,35 +871,35 @@ const QUIZ_QUESTIONS = [
 // --- JEOPARDY DATA (GIRLA) ---
 const JEOPARDY_CATEGORIES = ["Generale", "Amore", "Scuola", "Viaggi", "Cibo"];
 const JEOPARDY_QUESTIONS = {
-    "0_0": { category: "Generale", value: 100, question: "Quando è nato Girla?", answer: "23 Marzo 2001" },
-    "0_1": { category: "Generale", value: 200, question: "Come si chiamava il suo coniglio?", answer: "Willy" },
-    "0_2": { category: "Generale", value: 300, question: "In che squadra giocava il bisnonno materno di Girla?", answer: "Milan (+ Cagliari, GC Vigevanesi, Sempre Avanti)" },
-    "0_3": { category: "Generale", value: 400, question: "Quando (mese e anno) Girla si è fatto la pelata (margine di errore 3 mesi)?", answer: "Maggio 2022" },
-    "0_4": { category: "Generale", value: 500, question: "Chi, quando e perché ha iniziato a chiamarlo 'Girla'?", answer: "Allenatore di calcio, elementari, per non confonderlo con Luca Cesari" },
+    "0_0": { category: { it: "Generale", en: "General" }, value: 100, question: { it: "Quando è nato Girla?", en: "When was Girla born?" }, answer: { it: "23 Marzo 2001", en: "March 23, 2001" } },
+    "0_1": { category: { it: "Generale", en: "General" }, value: 200, question: { it: "Come si chiamava il suo coniglio?", en: "What was his rabbit's name?" }, answer: { it: "Willy", en: "Willy" } },
+    "0_2": { category: { it: "Generale", en: "General" }, value: 300, question: { it: "In che squadra giocava il bisnonno materno di Girla?", en: "Which team did Girla's maternal great-grandfather play for?" }, answer: { it: "Milan (+ Cagliari, GC Vigevanesi, Sempre Avanti)", en: "Milan (+ Cagliari, GC Vigevanesi, Sempre Avanti)" } },
+    "0_3": { category: { it: "Generale", en: "General" }, value: 400, question: { it: "Quando (mese e anno) Girla si è fatto la pelata (margine di errore 3 mesi)?", en: "When (month and year) did Girla shave his head (margin of error 3 months)?" }, answer: { it: "Maggio 2022", en: "May 2022" } },
+    "0_4": { category: { it: "Generale", en: "General" }, value: 500, question: { it: "Chi, quando e perché ha iniziato a chiamarlo 'Girla'?", en: "Who, when, and why did they start calling him 'Girla'?" }, answer: { it: "Allenatore di calcio, elementari, per non confonderlo con Luca Cesari", en: "Soccer coach, elementary school, to avoid confusing him with Luca Cesari" } },
     
-    "1_0": { category: "Amore", value: 100, question: "Girla preferisce more o bionde? Occhi chiari o occhi scuri?", answer: "More - occhi chiari (anche prima di incontrare Ewa!)" },
-    "1_1": { category: "Amore", value: 200, question: "Quante tipe si è fatto Girla in discoteca?", answer: "0" },
-    "1_2": { category: "Amore", value: 300, question: "Quante relazioni ufficiali (no elementari) ha avuto e come si chiamavano le ragazze?", answer: "3: Chiara (non Verpelli), Letizia ed Ewa" },
-    "1_3": { category: "Amore", value: 400, question: "Dimmi il nome/soprannome delle TRE 'situationship' (no relazioni) avute da Girla", answer: "Maria Luisa Montale (Lully), Alessia (la russa) e Lucia" },
-    "1_4": { category: "Amore", value: 500, question: "Dopo varie relazioni/situationship, quale caratteristica sembra presentarsi maggiormente nelle ragazze trovate?", answer: "Daddy Issues (problemi con il padre) :)" },
+    "1_0": { category: { it: "Amore", en: "Love" }, value: 100, question: { it: "Girla preferisce more o bionde? Occhi chiari o occhi scuri?", en: "Does Girla prefer brunettes or blondes? Light eyes or dark eyes?" }, answer: { it: "More - occhi chiari (anche prima di incontrare Ewa!)", en: "Brunettes - light eyes (even before meeting Ewa!)" } },
+    "1_1": { category: { it: "Amore", en: "Love" }, value: 200, question: { it: "Quante tipe si è fatto Girla in discoteca?", en: "How many girls has Girla hooked up with in a club?" }, answer: { it: "0", en: "0" } },
+    "1_2": { category: { it: "Amore", en: "Love" }, value: 300, question: { it: "Quante relazioni ufficiali (no elementari) ha avuto e come si chiamavano le ragazze?", en: "How many official relationships (excluding elementary school) has he had and what were their names?" }, answer: { it: "3: Chiara (non Verpelli), Letizia ed Ewa", en: "3: Chiara (not Verpelli), Letizia and Ewa" } },
+    "1_3": { category: { it: "Amore", en: "Love" }, value: 400, question: { it: "Dimmi il nome/soprannome delle TRE 'situationship' (no relazioni) avute da Girla", en: "Name the THREE situationships (non-relationships) Girla has had" }, answer: { it: "Maria Luisa Montale (Lully), Alessia (la russa) e Lucia", en: "Maria Luisa Montale (Lully), Alessia (the Russian) and Lucia" } },
+    "1_4": { category: { it: "Amore", en: "Love" }, value: 500, question: { it: "Dopo varie relazioni/situationship, quale caratteristica sembra presentarsi maggiormente nelle ragazze trovate?", en: "After various relationships/situationships, what characteristic seems to occur most in the girls he meets?" }, answer: { it: "Daddy Issues (problemi con il padre) :)", en: "Daddy Issues (father issues) :)" } },
     
-    "2_0": { category: "Scuola", value: 100, question: "Cosa è andato a studiare Girla a Londra?", answer: "Quantitative Finance (with Data Science)" },
-    "2_1": { category: "Scuola", value: 200, question: "Voto di laurea triennale di Girla (margine di errore: 2 punti)?", answer: "96" },
-    "2_2": { category: "Scuola", value: 300, question: "Quanti debiti scolastici ha preso al liceo Girla?", answer: "8 debiti" },
-    "2_3": { category: "Scuola", value: 400, question: "Voto di maturità di Girla (margine di errore: 1 point)?", answer: "64" },
-    "2_4": { category: "Scuola", value: 500, question: "Quante internship ha fatto in triennale e in quante associazioni universitarie è stato in magistrale?", answer: "2 internship (Fineco, Invesco) e 2 associazioni (Starting Finance, Miura)" },
+    "2_0": { category: { it: "Scuola", en: "School" }, value: 100, question: { it: "Cosa è andato a studiare Girla a Londra?", en: "What did Girla go to study in London?" }, answer: { it: "Quantitative Finance (with Data Science)", en: "Quantitative Finance (with Data Science)" } },
+    "2_1": { category: { it: "Scuola", en: "School" }, value: 200, question: { it: "Voto di laurea triennale di Girla (margine di errore: 2 punti)?", en: "Girla's bachelor's degree grade (margin of error: 2 points)?" }, answer: { it: "96", en: "96" } },
+    "2_2": { category: { it: "Scuola", en: "School" }, value: 300, question: { it: "Quanti debiti scolastici ha preso al liceo Girla?", en: "How many failed subjects (debiti) did Girla get in high school?" }, answer: { it: "8 debiti", en: "8 subjects" } },
+    "2_3": { category: { it: "Scuola", en: "School" }, value: 400, question: { it: "Voto di maturità di Girla (margine di errore: 1 point)?", en: "Girla's high school graduation score (margin of error: 1 point)?" }, answer: { it: "64", en: "64" } },
+    "2_4": { category: { it: "Scuola", en: "School" }, value: 500, question: { it: "Quante internship ha fatto in triennale e in quante associazioni universitarie è stato in magistrale?", en: "How many internships did he do during his bachelor's, and how many university associations was he in during his master's?" }, answer: { it: "2 internship (Fineco, Invesco) e 2 associazioni (Starting Finance, Miura)", en: "2 internships (Fineco, Invesco) and 2 associations (Starting Finance, Miura)" } },
     
-    "3_0": { category: "Viaggi", value: 100, question: "Qual è il viaggio dei sogni di Girla?", answer: "Giappone" },
-    "3_1": { category: "Viaggi", value: 200, question: "In quali due località di mare italiane Girla è sempre andato in vacanza fin da piccolo?", answer: "Alassio e Grottammare/San Benedetto del Tronto" },
-    "3_2": { category: "Viaggi", value: 300, question: "Prima vacanza di Girla con il gruppo AP88 (luogo, anno, occasione)?", answer: "Capodanno Roma 2019" },
-    "3_3": { category: "Viaggi", value: 400, question: "Quali di queste città Girla NON ha mai visitato: Madrid, Parigi, Monaco, Vienna, Varsavia?", answer: "Madrid e Parigi" },
-    "3_4": { category: "Viaggi", value: 500, question: "Da quale regione italiana ha origine il cognome Girlando?", answer: "Sicilia" },
+    "3_0": { category: { it: "Viaggi", en: "Travel" }, value: 100, question: { it: "Qual è il viaggio dei sogni di Girla?", en: "What is Girla's dream trip?" }, answer: { it: "Giappone", en: "Japan" } },
+    "3_1": { category: { it: "Viaggi", en: "Travel" }, value: 200, question: { it: "In quali due località di mare italiane Girla è sempre andato in vacanza fin da piccolo?", en: "Which two Italian seaside resorts has Girla always gone to on vacation since childhood?" }, answer: { it: "Alassio e Grottammare/San Benedetto del Tronto", en: "Alassio and Grottammare/San Benedetto del Tronto" } },
+    "3_2": { category: { it: "Viaggi", en: "Travel" }, value: 300, question: { it: "Prima vacanza di Girla con il gruppo AP88 (luogo, anno, occasione)?", en: "Girla's first vacation with the AP88 group (location, year, occasion)?" }, answer: { it: "Capodanno Roma 2019", en: "New Year Rome 2019" } },
+    "3_3": { category: { it: "Viaggi", en: "Travel" }, value: 400, question: { it: "Quali di queste città Girla NON ha mai visitato: Madrid, Parigi, Monaco, Vienna, Varsavia?", en: "Which of these cities has Girla NEVER visited: Madrid, Paris, Munich, Vienna, Warsaw?" }, answer: { it: "Madrid e Parigi", en: "Madrid and Paris" } },
+    "3_4": { category: { it: "Viaggi", en: "Travel" }, value: 500, question: { it: "Da quale regione italiana ha origine il cognome Girlando?", en: "Which Italian region does the surname Girlando originate from?" }, answer: { it: "Sicilia", en: "Sicily" } },
     
-    "4_0": { category: "Cibo", value: 100, question: "Qual è la pizza preferita di Girla?", answer: "Diavola" },
-    "4_1": { category: "Cibo", value: 200, question: "Qual è il drink preferito di Girla? Preferisce vino rosso o vino bianco?", answer: "Moscow Mule - Vino Rosso" },
-    "4_2": { category: "Cibo", value: 300, question: "Cioccolato: bianco, al latte o fondente? Formaggio sulla pasta al sugo di pesce: sì o no?", answer: "Fondente - Assolutamente no formaggio sul pesce!" },
-    "4_3": { category: "Cibo", value: 400, question: "Gin o Vodka? Lemon o Tonic? Tè alla Pesca o al Limone? Gorgonzola o Pecorino?", answer: "Gin, Tonic, Tè alla Pesca, Gorgonzola" },
-    "4_4": { category: "Cibo", value: 500, question: "Carne o pesce? Dolce o salato? Carbonara o cacio e pepe? Tette o culo? Prima il latte o prima i cereali?", answer: "Pesce, salato, cacio e pepe, culo, prima i cereali" }
+    "4_0": { category: { it: "Cibo", en: "Food" }, value: 100, question: { it: "Qual è la pizza preferita di Girla?", en: "What is Girla's favorite pizza?" }, answer: { it: "Diavola", en: "Diavola" } },
+    "4_1": { category: { it: "Cibo", en: "Food" }, value: 200, question: { it: "Qual è il drink preferito di Girla? Preferisce vino rosso o vino bianco?", en: "What is Girla's favorite drink? Does he prefer red or white wine?" }, answer: { it: "Moscow Mule - Vino Rosso", en: "Moscow Mule - Red Wine" } },
+    "4_2": { category: { it: "Cibo", en: "Food" }, value: 300, question: { it: "Cioccolato: bianco, al latte o fondente? Formaggio sulla pasta al sugo di pesce: sì o no?", en: "Chocolate: white, milk or dark? Cheese on pasta with fish sauce: yes or no?" }, answer: { it: "Fondente - Assolutamente no formaggio sul pesce!", en: "Dark - Absolutely no cheese on fish!" } },
+    "4_3": { category: { it: "Cibo", en: "Food" }, value: 400, question: { it: "Gin o Vodka? Lemon o Tonic? Tè alla Pesca o al Limone? Gorgonzola o Pecorino?", en: "Gin or Vodka? Lemon or Tonic? Peach or Lemon Tea? Gorgonzola or Pecorino?" }, answer: { it: "Gin, Tonic, Tè alla Pesca, Gorgonzola", en: "Gin, Tonic, Peach Tea, Gorgonzola" } },
+    "4_4": { category: { it: "Cibo", en: "Food" }, value: 500, question: { it: "Carne o pesce? Dolce o salato? Carbonara o cacio e pepe? Tette o culo? Prima il latte o prima i cereali?", en: "Meat or fish? Sweet or savory? Carbonara or cacio e pepe? Boobs or butt? Milk first or cereal first?" }, answer: { it: "Pesce, salato, cacio e pepe, culo, prima i cereali", en: "Fish, savory, cacio e pepe, butt, cereal first" } }
 };
 
 // --- VOTING QUESTIONS ("LITIGHIAMO") ---
@@ -1749,11 +1775,11 @@ function renderQuizGame() {
         const winnerMsg = document.getElementById("quiz-winner-msg");
         
         if (s1 > s2) {
-            winnerMsg.innerHTML = `🏆 Vince la <strong>${APP_STATE.quiz.team1Name}</strong> con ${s1} punti!`;
+            winnerMsg.innerHTML = APP_STATE.language === 'it' ? `🏆 Vince la <strong>${APP_STATE.quiz.team1Name}</strong> con ${s1} punti!` : `🏆 <strong>${APP_STATE.quiz.team1Name}</strong> wins with ${s1} points!`;
         } else if (s2 > s1) {
-            winnerMsg.innerHTML = `🏆 Vince la <strong>${APP_STATE.quiz.team2Name}</strong> con ${s2} punti!`;
+            winnerMsg.innerHTML = APP_STATE.language === 'it' ? `🏆 Vince la <strong>${APP_STATE.quiz.team2Name}</strong> con ${s2} punti!` : `🏆 <strong>${APP_STATE.quiz.team2Name}</strong> wins with ${s2} points!`;
         } else {
-            winnerMsg.innerHTML = `Pareggio! Entrambe le squadre hanno totalizzato ${s1} punti.`;
+            winnerMsg.innerHTML = APP_STATE.language === 'it' ? `Pareggio! Entrambe le squadre hanno totalizzato ${s1} punti.` : `Tie! Both teams scored ${s1} points.`;
         }
         
         document.getElementById("quiz-final-team1-name").innerText = APP_STATE.quiz.team1Name;
@@ -1770,13 +1796,18 @@ function renderQuizGame() {
         document.getElementById("quiz-display-team2-name").innerText = APP_STATE.quiz.team2Name;
         document.getElementById("quiz-display-team2-score").innerText = APP_STATE.quiz.team2Score;
         
-        document.getElementById("quiz-question-index").innerText = `Domanda ${APP_STATE.quiz.questionCount + 1}/20`;
-        document.getElementById("quiz-question-source").innerText = activeQuizQuestion.source;
+        const questionWord = APP_STATE.language === 'it' ? 'Domanda' : 'Question';
+        document.getElementById("quiz-question-index").innerText = `${questionWord} ${APP_STATE.quiz.questionCount + 1}/20`;
+        
+        const qSource = typeof activeQuizQuestion.source === 'object' ? activeQuizQuestion.source[APP_STATE.language] : activeQuizQuestion.source;
+        document.getElementById("quiz-question-source").innerText = qSource;
         
         const turnTeam = APP_STATE.quiz.currentTeam === 1 ? APP_STATE.quiz.team1Name : APP_STATE.quiz.team2Name;
-        document.getElementById("quiz-current-turn-msg").innerText = `Turno della squadra: ${turnTeam}`;
+        const turnMsg = APP_STATE.language === 'it' ? `Turno della squadra: ${turnTeam}` : `Turn of team: ${turnTeam}`;
+        document.getElementById("quiz-current-turn-msg").innerText = turnMsg;
         
-        document.getElementById("quiz-question-text").innerText = activeQuizQuestion.question;
+        const qText = typeof activeQuizQuestion.question === 'object' ? activeQuizQuestion.question[APP_STATE.language] : activeQuizQuestion.question;
+        document.getElementById("quiz-question-text").innerText = qText;
         
         const choicesGrid = document.getElementById("quiz-options-container");
         choicesGrid.innerHTML = "";
@@ -1805,10 +1836,10 @@ function renderQuizGame() {
             feedback.classList.remove("hidden");
             const feedbackMsg = document.getElementById("quiz-feedback-msg");
             if (APP_STATE.quiz.selectedAnswer === activeQuizQuestion.correct) {
-                feedbackMsg.innerText = "✅ Esatto!";
+                feedbackMsg.innerText = APP_STATE.language === 'it' ? "✅ Esatto!" : "✅ Correct!";
                 feedbackMsg.className = "correct-msg";
             } else {
-                feedbackMsg.innerText = `❌ Sbagliato! La risposta corretta era: ${activeQuizQuestion.correct}`;
+                feedbackMsg.innerText = APP_STATE.language === 'it' ? `❌ Sbagliato! La risposta corretta era: ${activeQuizQuestion.correct}` : `❌ Wrong! The correct answer was: ${activeQuizQuestion.correct}`;
                 feedbackMsg.className = "incorrect-msg";
             }
         } else {
@@ -1905,7 +1936,7 @@ function rebuildJeopardyPlayersInputs() {
 function startJeopardyGame() {
     const charSelect = document.getElementById("jeopardy-character-select").value;
     if (charSelect !== "Girla") {
-        alert("Scusa! La board Jeopardy per questo personaggio è in fase di sviluppo. Gioca con Girla!");
+        alert(APP_STATE.language === 'it' ? "Scusa! La board Jeopardy per questo personaggio è in fase di sviluppo. Gioca con Girla!" : "Sorry! The Jeopardy board for this character is under development. Play with Girla!");
         return;
     }
     
@@ -1914,7 +1945,8 @@ function startJeopardyGame() {
     const scores = {};
     
     for (let i = 0; i < count; i++) {
-        const val = document.getElementById(`jeopardy-p-${i}`).value.trim() || `Giocatore ${i+1}`;
+        const defaultVal = APP_STATE.language === 'it' ? `Giocatore ${i+1}` : `Player ${i+1}`;
+        const val = document.getElementById(`jeopardy-p-${i}`).value.trim() || defaultVal;
         players.push(val);
         scores[val] = 0;
     }
@@ -1948,10 +1980,11 @@ function renderJeopardyGame() {
         
         const list = document.getElementById("jeopardy-final-scores-list");
         const sorted = Object.entries(APP_STATE.jeopardy.scores).sort((a,b) => b[1] - a[1]);
+        const pointsLabel = APP_STATE.language === 'it' ? 'Punti' : 'Points';
         list.innerHTML = sorted.map(([name, score], i) => `
             <div class="score-row">
                 <span>${i+1}. <strong>${name}</strong></span>
-                <strong>${score} Punti</strong>
+                <strong>${score} ${pointsLabel}</strong>
             </div>
         `).join("");
     } else {
@@ -1971,15 +2004,24 @@ function renderJeopardyGame() {
         }).join("");
         
         const activeName = APP_STATE.jeopardy.players[APP_STATE.jeopardy.currentTurnPlayerIndex];
-        document.getElementById("jeopardy-turn-banner").innerText = `Turno di: ${activeName}`;
+        document.getElementById("jeopardy-turn-banner").innerText = APP_STATE.language === 'it' ? `Turno di: ${activeName}` : `Turn of: ${activeName}`;
         
         const board = document.getElementById("jeopardy-board");
         board.innerHTML = "";
         
+        const catTranslations = {
+            "Generale": { it: "Generale", en: "General" },
+            "Amore": { it: "Amore", en: "Love" },
+            "Scuola": { it: "Scuola", en: "School" },
+            "Viaggi": { it: "Viaggi", en: "Travel" },
+            "Cibo": { it: "Cibo", en: "Food" }
+        };
+        
         JEOPARDY_CATEGORIES.forEach(cat => {
             const el = document.createElement("div");
             el.className = "jeopardy-cell category-header";
-            el.innerText = cat;
+            const trans = catTranslations[cat] ? catTranslations[cat][APP_STATE.language] : cat;
+            el.innerText = trans;
             board.appendChild(el);
         });
         
@@ -2014,10 +2056,17 @@ function openJeopardyQuestion(catIndex, rowIndex) {
     APP_STATE.jeopardy.currentQuestion = [catIndex, rowIndex];
     APP_STATE.jeopardy.showAnswer = false;
     
-    document.getElementById("jeopardy-modal-category").innerText = questionData.category;
-    document.getElementById("jeopardy-modal-points").innerText = `${questionData.value} Punti`;
-    document.getElementById("jeopardy-modal-question").innerText = questionData.question;
-    document.getElementById("jeopardy-modal-answer").innerText = questionData.answer;
+    const catLabel = typeof questionData.category === 'object' ? questionData.category[APP_STATE.language] : questionData.category;
+    document.getElementById("jeopardy-modal-category").innerText = catLabel;
+    
+    const pointsLabel = APP_STATE.language === 'it' ? 'Punti' : 'Points';
+    document.getElementById("jeopardy-modal-points").innerText = `${questionData.value} ${pointsLabel}`;
+    
+    const qText = typeof questionData.question === 'object' ? questionData.question[APP_STATE.language] : questionData.question;
+    document.getElementById("jeopardy-modal-question").innerText = qText;
+    
+    const aText = typeof questionData.answer === 'object' ? questionData.answer[APP_STATE.language] : questionData.answer;
+    document.getElementById("jeopardy-modal-answer").innerText = aText;
     
     document.getElementById("jeopardy-reveal-area").classList.remove("hidden");
     document.getElementById("jeopardy-answer-area").classList.add("hidden");

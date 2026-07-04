@@ -34,7 +34,7 @@
             <p data-i18n="pass_subtitle" class="subtitle">Inserisci la password per sbloccare l'archivio privato.</p>
             
             <div class="input-group">
-                <input type="password" id="password-input" placeholder="Password..." autocomplete="current-password">
+                <input type="password" id="password-input" placeholder="Password..." autocomplete="current-password" data-i18n="pass_input_placeholder">
                 <button id="password-submit-btn">
                     <i data-lucide="arrow-right"></i>
                 </button>
@@ -81,10 +81,10 @@
             </div>
             <p data-i18n="girla_pass_subtitle" class="subtitle" style="margin-top:10px;">Inserisci la password aggiuntiva di Girla per sbloccare l'area di amministrazione.</p>
             <div class="form-group">
-                <input type="password" id="girla-password-input" placeholder="Password di Girla..." style="width:100%;">
+                <input type="password" id="girla-password-input" placeholder="Password di Girla..." style="width:100%;" data-i18n="girla_pass_input_placeholder">
             </div>
             <p id="girla-password-error" class="error-msg hidden" data-i18n="girla_pass_error">Password non corretta. Riprova.</p>
-            <button id="girla-password-submit-btn" class="btn btn-primary btn-block" style="margin-top: 10px;">Sblocca Amministrazione</button>
+            <button id="girla-password-submit-btn" class="btn btn-primary btn-block" style="margin-top: 10px;" data-i18n="girla_pass_btn">Sblocca Amministrazione</button>
         </div>
     </div>
 
@@ -468,13 +468,13 @@
                         
                         <div class="results-grid" style="grid-template-columns: 1fr; gap: 25px;">
                             <div class="glass-card chart-box" style="min-height: 320px;">
-                                <h3 id="voting-round-chart-heading" style="margin-bottom:15px; display:flex; align-items:center; gap:8px;"><i data-lucide="bar-chart-2"></i> Risultati di questo Round</h3>
+                                <h3 id="voting-round-chart-heading" style="margin-bottom:15px; display:flex; align-items:center; gap:8px;"><i data-lucide="bar-chart-2"></i> <span data-i18n="voting_round_chart_title">Risultati di questo Round</span></h3>
                                 <div class="chart-container">
                                     <canvas id="voting-round-chart"></canvas>
                                 </div>
                             </div>
                             <div class="glass-card chart-box" style="min-height: 320px;">
-                                <h3 id="voting-global-chart-heading" style="margin-bottom:15px; display:flex; align-items:center; gap:8px;"><i data-lucide="bar-chart-2"></i> Classifica Globale (Sessione)</h3>
+                                <h3 id="voting-global-chart-heading" style="margin-bottom:15px; display:flex; align-items:center; gap:8px;"><i data-lucide="bar-chart-2"></i> <span data-i18n="voting_global_chart_title">Classifica Globale (Sessione)</span></h3>
                                 <div class="chart-container">
                                     <canvas id="voting-global-chart"></canvas>
                                 </div>
@@ -557,38 +557,38 @@
                         <h2 class="danger-text"><i data-lucide="user-check"></i> <span data-i18n="tv_turn_voter">Turno di voto per:</span></h2>
                         <h1 id="tv-prompt-voter-name" style="font-size: 2.8rem; color:var(--accent-light); margin-bottom:15px; font-weight:800;">Girla</h1>
                         <p data-i18n="tv_turn_warning" style="margin-bottom:30px; font-size:1.1rem;">(Tutti gli altri partecipanti devono girarsi e NON guardare lo schermo!)</p>
-                        <button id="tv-go-vote-btn" class="btn btn-primary btn-block">Inizia a Votare 🔒</button>
+                        <button id="tv-go-vote-btn" class="btn btn-primary btn-block" data-i18n="tv_go_vote_btn">Inizia a Votare 🔒</button>
                     </div>
                     
                     <!-- Phase 3: Voting form -->
                     <div id="tv-form-panel" class="glass-card hidden" style="max-width: 800px; margin: 0 auto;">
                         <h3 style="margin-bottom:5px;"><span data-i18n="tv_form_title">Votazione Segreta di:</span> <strong id="tv-form-voter-name" style="color:var(--accent-light)">Girla</strong></h3>
-                        <p class="subtitle" style="margin-bottom: 20px;">Dai un voto da 1 a 10 ed esprimi la tua opinione su ciascuno degli altri presenti.</p>
+                        <p class="subtitle" style="margin-bottom: 20px;" data-i18n="tv_form_subtitle">Dai un voto da 1 a 10 ed esprimi la tua opinione su ciascuno degli altri presenti.</p>
                         <div id="tv-targets-container" style="display:flex; flex-direction:column; gap:20px; margin-bottom:25px;">
                             <!-- JS will inject cards to vote for each other person -->
                         </div>
-                        <button id="tv-submit-votes-btn" class="btn btn-primary btn-block">Conferma e Salva Voti Segreti</button>
+                        <button id="tv-submit-votes-btn" class="btn btn-primary btn-block" data-i18n="tv_submit_votes_btn">Conferma e Salva Voti Segreti</button>
                     </div>
                     
                     <!-- Phase 4: Results -->
                     <div id="tv-results-panel" class="hidden">
                         <div class="glass-card text-center max-width-600 margin-auto" style="border-color: var(--accent); margin-bottom: 25px;">
-                            <h2 style="color:var(--accent-light); font-weight:800;">🎉 Votazioni Completate!</h2>
+                            <h2 style="color:var(--accent-light); font-weight:800;" data-i18n="tv_results_completed_title">🎉 Votazioni Completate!</h2>
                             <p class="subtitle" style="margin-top:10px; font-size:1rem; line-height:1.6;" data-i18n="tv_results_disclaimer">Questi voti servono a fare le pagelle, per dare spunti, ma che della vostra opinione non ci interessa e saranno come sempre gestite dai poteri forti.</p>
                             <button id="tv-download-report-btn" class="btn btn-primary flex-center" style="margin: 20px auto 0;">
-                                <i data-lucide="download"></i> Scarica Report Voti (.txt)
+                                <i data-lucide="download"></i> <span data-i18n="tv_download_report_btn">Scarica Report Voti (.txt)</span>
                             </button>
                         </div>
                         
                         <div class="glass-card">
-                            <h3>Riepilogo Voti Medi Ricevuti</h3>
+                            <h3 data-i18n="tv_results_summary_title">Riepilogo Voti Medi Ricevuti</h3>
                             <div class="table-scroll" style="margin-top: 15px;">
                                 <table class="premium-table">
                                     <thead>
                                         <tr>
-                                            <th>Membro Presente</th>
-                                            <th>Voto Medio Ricevuto</th>
-                                            <th>Numero di Voti Ricevuti</th>
+                                            <th data-i18n="tv_table_member">Membro Presente</th>
+                                            <th data-i18n="tv_table_average">Voto Medio Ricevuto</th>
+                                            <th data-i18n="tv_table_count">Numero di Voti Ricevuti</th>
                                         </tr>
                                     </thead>
                                     <tbody id="tv-results-table-body">
@@ -598,13 +598,13 @@
                             </div>
                             
                             <div class="divider"></div>
-                            <h3>Tutti i Commenti e Opinioni Raccolte</h3>
+                            <h3 data-i18n="tv_results_comments_title">Tutti i Commenti e Opinioni Raccolte</h3>
                             <div id="tv-results-comments-list" style="display:flex; flex-direction:column; gap:15px; margin-top:20px;">
                                 <!-- List of comments per target -->
                             </div>
                         </div>
                         
-                        <button id="tv-restart-btn" class="btn btn-secondary btn-block margin-top-20" style="max-width:300px; margin-left:auto; margin-right:auto;">Nuova Sessione Voti 🔄</button>
+                        <button id="tv-restart-btn" class="btn btn-secondary btn-block margin-top-20" style="max-width:300px; margin-left:auto; margin-right:auto;" data-i18n="tv_restart_btn">Nuova Sessione Voti 🔄</button>
                     </div>
                 </section>
                 
