@@ -617,6 +617,10 @@ const TRANSLATIONS = {
         voting_next_question: "Prossima Domanda 💥",
         voting_new_party: "Resetta / Nuova Partita 🔄",
         voting_reveal_btn: "Rivela Chi Ha Votato Chi",
+        voting_players_count: "Numero di partecipanti (2-10)",
+        voting_turn_hint: "(Gli altri giratevi e NON GUARDATE!)",
+        voting_round_chart_title: "Risultati di questo Round",
+        voting_global_chart_title: "Classifica Globale (Sessione)",
         guest_profile_title: "Sei entrato come Ospite",
         guest_profile_desc: "Accedi selezionando uno dei profili ufficiali AP88 per visualizzare le tue pagelle e le tue statistiche storiche.",
         guest_profile_btn: "Seleziona Profilo",
@@ -635,12 +639,39 @@ const TRANSLATIONS = {
         admin_export_title: "Esporta per GitHub",
         tripvoting_intro: "Qui potete inserire i presenti ed effettuare a turni sul dispositivo le votazioni segrete per stabilire le pagelle finali.",
         tv_setup_title: "Configura Votazioni",
+        tv_setup_subtitle: "Aggiungi tutti i presenti alla vacanza che dovranno votare ed essere votati.",
+        tv_add_main_member: "Aggiungi Membro Principale",
+        tv_add_btn: "Aggiungi",
+        tv_add_custom_member: "Oppure aggiungi una persona extra",
+        tv_custom_name_placeholder: "Es: Pippo",
+        tv_participants_present: "Partecipanti Presenti:",
+        tv_start_btn: "Inizia Turni di Voto 🏁",
         tv_turn_voter: "Turno di voto per:",
         tv_turn_warning: "(Tutti gli altri partecipanti devono girarsi e NON guardare lo schermo!)",
         tv_form_title: "Votazione Segreta di:",
         tv_results_disclaimer: "Questi voti servono a fare le pagelle, per dare spunti, ma che della vostra opinione non ci interessa e saranno come sempre gestite dai poteri forti.",
         tv_results_disclaimer_setup: "Questi voti servono a fare le pagelle, per dare spunti, ma che della vostra opinione non ci interessa e saranno come sempre gestite dai poteri forti.",
-        gameslist_intro: "Seleziona uno dei giochi online per iniziare a giocare con il gruppo."
+        gameslist_intro: "Seleziona uno dei giochi online per iniziare a giocare con il gruppo.",
+        admin_trip_name_label: "Nome Vacanza",
+        admin_trip_name_placeholder: "Es: Capodanno 2026/27",
+        admin_trip_location_label: "Luogo / Destinazione",
+        admin_trip_location_placeholder: "Es: Mezzenile, Italia",
+        admin_trip_duration_label: "Durata",
+        admin_trip_duration_placeholder: "Es: 4 giorni",
+        admin_member_section_title: "Aggiungi/Modifica Pagella Membro",
+        admin_member_select_label: "Seleziona Membro",
+        admin_custom_member_name_label: "Nome Membro Personalizzato",
+        admin_custom_member_name_placeholder: "Es: Pippo",
+        admin_member_nick_label: "Soprannome per questa vacanza",
+        admin_member_nick_placeholder: "Es: IL DJ",
+        admin_member_grade_label: "Voto",
+        admin_member_desc_label: "Descrizione della Pagella",
+        admin_member_desc_placeholder: "Scrivi la pagella del membro...",
+        admin_add_report_btn: "Aggiungi Pagella a questa Vacanza",
+        admin_added_reports_title: "Pagelle Pre-compilate per questa Vacanza",
+        admin_save_trip_btn: "Salva e Aggiorna Vacanza 💾",
+        admin_custom_list_subtitle: "Le vacanze storiche permanenti non possono essere rimosse. Quelle create da te possono essere rimosse o modificate qui.",
+        admin_export_subtitle: "Per rendere definitive le nuove vacanze nel codice sorgente online, copia il JSON sottostante e incollalo nella chat dell'assistente."
     },
     en: {
         pass_title: "🔒 AP88 Restricted Access",
@@ -706,6 +737,10 @@ const TRANSLATIONS = {
         voting_next_question: "Next Question 💥",
         voting_new_party: "Reset / New Game 🔄",
         voting_reveal_btn: "Reveal Who Voted Who",
+        voting_players_count: "Number of participants (2-10)",
+        voting_turn_hint: "(Everyone else turn away and DO NOT LOOK!)",
+        voting_round_chart_title: "Results of this Round",
+        voting_global_chart_title: "Global Leaderboard (Session)",
         guest_profile_title: "Logged in as Guest",
         guest_profile_desc: "Log in by choosing one of the official AP88 profiles to view your report card summaries and historical statistics.",
         guest_profile_btn: "Select Profile",
@@ -724,12 +759,39 @@ const TRANSLATIONS = {
         admin_export_title: "Export for GitHub",
         tripvoting_intro: "Here you can enter the participants and run sequential secret voting to prepare final grades suggestions.",
         tv_setup_title: "Configure Voting",
+        tv_setup_subtitle: "Add all vacation participants who will vote and be voted.",
+        tv_add_main_member: "Add Main Member",
+        tv_add_btn: "Add",
+        tv_add_custom_member: "Or add an extra person",
+        tv_custom_name_placeholder: "E.g. Pippo",
+        tv_participants_present: "Participants Present:",
+        tv_start_btn: "Start Voting Turns 🏁",
         tv_turn_voter: "Turn to vote for:",
         tv_turn_warning: "(Everyone else must turn away and NOT look at the screen!)",
         tv_form_title: "Secret Vote of:",
         tv_results_disclaimer: "These votes serve only as suggestions and inspiration. We don't care about your opinion; final grades will still be managed by the authorities.",
         tv_results_disclaimer_setup: "These votes serve only as suggestions and inspiration. We don't care about your opinion; final grades will still be managed by the authorities.",
-        gameslist_intro: "Select one of the online games to start playing with the group."
+        gameslist_intro: "Select one of the online games to start playing with the group.",
+        admin_trip_name_label: "Vacation Name",
+        admin_trip_name_placeholder: "E.g. New Year 2026/27",
+        admin_trip_location_label: "Location / Destination",
+        admin_trip_location_placeholder: "E.g. Mezzenile, Italy",
+        admin_trip_duration_label: "Duration",
+        admin_trip_duration_placeholder: "E.g. 4 days",
+        admin_member_section_title: "Add/Edit Member Report Card",
+        admin_member_select_label: "Select Member",
+        admin_custom_member_name_label: "Custom Member Name",
+        admin_custom_member_name_placeholder: "E.g. Pippo",
+        admin_member_nick_label: "Nickname for this vacation",
+        admin_member_nick_placeholder: "E.g. THE DJ",
+        admin_member_grade_label: "Grade",
+        admin_member_desc_label: "Report Card Description",
+        admin_member_desc_placeholder: "Write the member's report card...",
+        admin_add_report_btn: "Add Report Card to this Vacation",
+        admin_added_reports_title: "Pre-compiled Report Cards for this Vacation",
+        admin_save_trip_btn: "Save and Update Vacation 💾",
+        admin_custom_list_subtitle: "Permanent historical vacations cannot be removed. Those created by you can be removed or modified here.",
+        admin_export_subtitle: "To make new vacations permanent in the online source code, copy the JSON below and paste it in the assistant chat."
     }
 };
 
@@ -935,11 +997,24 @@ function applyLanguageTranslations() {
         if (dict[key]) {
             if (el.tagName === "INPUT" && el.hasAttribute("placeholder")) {
                 el.setAttribute("placeholder", dict[key]);
+            } else if (el.tagName === "TEXTAREA" && el.hasAttribute("placeholder")) {
+                el.setAttribute("placeholder", dict[key]);
             } else {
                 el.innerText = dict[key];
             }
         }
     });
+
+    // Dynamically update team name inputs if they contain default values
+    const quizTeam1 = document.getElementById("quiz-team1-name");
+    const quizTeam2 = document.getElementById("quiz-team2-name");
+    if (quizTeam1 && (quizTeam1.value === "Squadra 1" || quizTeam1.value === "Team 1")) {
+        quizTeam1.value = APP_STATE.language === 'it' ? "Squadra 1" : "Team 1";
+    }
+    if (quizTeam2 && (quizTeam2.value === "Squadra 2" || quizTeam2.value === "Team 2")) {
+        quizTeam2.value = APP_STATE.language === 'it' ? "Squadra 2" : "Team 2";
+    }
+
     lucide.createIcons();
 }
 
@@ -1743,8 +1818,10 @@ function renderQuizGame() {
 }
 
 function startQuizGame() {
-    const t1 = document.getElementById("quiz-team1-name").value.trim() || "Squadra 1";
-    const t2 = document.getElementById("quiz-team2-name").value.trim() || "Squadra 2";
+    const defaultT1 = APP_STATE.language === 'it' ? "Squadra 1" : "Team 1";
+    const defaultT2 = APP_STATE.language === 'it' ? "Squadra 2" : "Team 2";
+    const t1 = document.getElementById("quiz-team1-name").value.trim() || defaultT1;
+    const t2 = document.getElementById("quiz-team2-name").value.trim() || defaultT2;
     
     APP_STATE.quiz.gameStarted = true;
     APP_STATE.quiz.gameOver = false;
@@ -1813,9 +1890,13 @@ function rebuildJeopardyPlayersInputs() {
     for (let i = 0; i < count; i++) {
         const div = document.createElement("div");
         div.className = "form-group";
+        
+        const labelText = APP_STATE.language === 'it' ? `Nome Giocatore ${i+1}` : `Player ${i+1} Name`;
+        const valueText = APP_STATE.language === 'it' ? `Giocatore ${i+1}` : `Player ${i+1}`;
+        
         div.innerHTML = `
-            <label for="jeopardy-p-${i}">Nome Giocatore ${i+1}</label>
-            <input type="text" id="jeopardy-p-${i}" value="Giocatore ${i+1}">
+            <label for="jeopardy-p-${i}">${labelText}</label>
+            <input type="text" id="jeopardy-p-${i}" value="${valueText}">
         `;
         container.appendChild(div);
     }
@@ -2006,9 +2087,13 @@ function rebuildVotingPlayersInputs() {
     for (let i = 0; i < count; i++) {
         const div = document.createElement("div");
         div.className = "form-group";
+        
+        const labelText = APP_STATE.language === 'it' ? `Partecipante ${i+1}` : `Participant ${i+1}`;
+        const valueText = APP_STATE.language === 'it' ? `Giocatore ${i+1}` : `Player ${i+1}`;
+        
         div.innerHTML = `
-            <label for="voting-p-${i}">Partecipante ${i+1}</label>
-            <input type="text" id="voting-p-${i}" value="Giocatore ${i+1}">
+            <label for="voting-p-${i}">${labelText}</label>
+            <input type="text" id="voting-p-${i}" value="${valueText}">
         `;
         container.appendChild(div);
     }
@@ -2163,6 +2248,7 @@ function renderVotingCharts() {
         data: {
             labels: roundLabels,
             datasets: [{
+                label: APP_STATE.language === 'it' ? 'Voti Ricevuti' : 'Votes Received',
                 data: roundVotes,
                 backgroundColor: 'rgba(244, 67, 54, 0.75)',
                 borderColor: 'rgba(244, 67, 54, 1)',
@@ -2195,6 +2281,7 @@ function renderVotingCharts() {
         data: {
             labels: globalLabels,
             datasets: [{
+                label: APP_STATE.language === 'it' ? 'Voti Totali' : 'Total Votes',
                 data: globalVotes,
                 backgroundColor: 'rgba(106, 90, 205, 0.75)',
                 borderColor: 'rgba(106, 90, 205, 1)',
@@ -2281,11 +2368,16 @@ function renderTripVoting() {
             const card = document.createElement("div");
             card.className = "glass-card";
             card.style.padding = "20px";
+            
+            const voteLabel = APP_STATE.language === 'it' ? `Voto per ${target}` : `Grade for ${target}`;
+            const commentLabel = APP_STATE.language === 'it' ? 'Commento / Giustificazione' : 'Comment / Justification';
+            const placeholderText = APP_STATE.language === 'it' ? 'Scrivi una frase per motivare il voto...' : 'Write a reason for this grade...';
+            
             card.innerHTML = `
                 <h4 style="font-size:1.15rem; margin-bottom:12px; color:var(--accent-light);">${target}</h4>
                 <div style="display:flex; flex-direction:column; gap:10px;">
                     <div class="form-group" style="margin-bottom:0;">
-                        <label>Voto per ${target}</label>
+                        <label>${voteLabel}</label>
                         <select class="tv-grade-select" data-target="${target}">
                             <option value="10">10</option>
                             <option value="10-">10-</option>
@@ -2305,8 +2397,8 @@ function renderTripVoting() {
                         </select>
                     </div>
                     <div class="form-group" style="margin-bottom:0; margin-top:5px;">
-                        <label>Commento / Giustificazione</label>
-                        <input type="text" class="tv-comment-input" data-target="${target}" placeholder="Scrivi una frase per motivare il voto..." required style="width:100%;">
+                        <label>${commentLabel}</label>
+                        <input type="text" class="tv-comment-input" data-target="${target}" placeholder="${placeholderText}" required style="width:100%;">
                     </div>
                 </div>
             `;
@@ -2331,19 +2423,25 @@ function renderTripVoting() {
             </tr>
         `).join("");
         
-        commentsContainer.innerHTML = sortedResults.map(item => `
-            <div class="glass-card" style="padding: 20px;">
-                <h4 style="color: var(--accent-light); margin-bottom:12px;">Commenti per: ${item.name}</h4>
-                <div style="display:flex; flex-direction:column; gap:10px;">
-                    ${item.comments.map(c => `
-                        <div class="tv-comment-card">
-                            <div class="tv-comment-author">Voto ricevuto: ${c.grade} (Anonimo)</div>
-                            <div class="tv-comment-text">"${c.text}"</div>
-                        </div>
-                    `).join("")}
+        commentsContainer.innerHTML = sortedResults.map(item => {
+            const headingText = APP_STATE.language === 'it' ? `Commenti per: ${item.name}` : `Comments for: ${item.name}`;
+            return `
+                <div class="glass-card" style="padding: 20px;">
+                    <h4 style="color: var(--accent-light); margin-bottom:12px;">${headingText}</h4>
+                    <div style="display:flex; flex-direction:column; gap:10px;">
+                        ${item.comments.map(c => {
+                            const authorText = APP_STATE.language === 'it' ? `Voto ricevuto: ${c.grade} (Anonimo)` : `Grade received: ${c.grade} (Anonymous)`;
+                            return `
+                                <div class="tv-comment-card">
+                                    <div class="tv-comment-author">${authorText}</div>
+                                    <div class="tv-comment-text">"${c.text}"</div>
+                                </div>
+                            `;
+                        }).join("")}
+                    </div>
                 </div>
-            </div>
-        `).join("");
+            `;
+        }).join("");
     }
 }
 
@@ -2352,15 +2450,18 @@ function renderTvSetupList() {
     list.innerHTML = "";
     
     if (APP_STATE.tripvoting.participants.length === 0) {
-        list.innerHTML = `<li class="text-center" style="color:var(--text-secondary); font-style:italic; padding:15px 0;">Nessun partecipante aggiunto</li>`;
+        const noParticipantsText = APP_STATE.language === 'it' ? "Nessun partecipante aggiunto" : "No participants added";
+        list.innerHTML = `<li class="text-center" style="color:var(--text-secondary); font-style:italic; padding:15px 0;">${noParticipantsText}</li>`;
         return;
     }
+    
+    const removeBtnText = APP_STATE.language === 'it' ? 'Rimuovi' : 'Remove';
     
     APP_STATE.tripvoting.participants.forEach((p, idx) => {
         const li = document.createElement("li");
         li.innerHTML = `
             <span><strong>${p}</strong></span>
-            <button class="btn-trash" onclick="removeTvParticipant(${idx})"><i data-lucide="trash"></i> Rimuovi</button>
+            <button class="btn-trash" onclick="removeTvParticipant(${idx})"><i data-lucide="trash"></i> ${removeBtnText}</button>
         `;
         list.appendChild(li);
     });
@@ -2531,7 +2632,8 @@ function renderAdminPanel() {
     if (!select) return;
     
     let selHtml = MAIN_MEMBERS.map(m => `<option value="${m}">${m}</option>`).join("");
-    selHtml += `<option value="EXTRA_MEMBER">[Aggiungi Persona Extra]</option>`;
+    const extraOptionText = APP_STATE.language === 'it' ? "[Aggiungi Persona Extra]" : "[Add Extra Person]";
+    selHtml += `<option value="EXTRA_MEMBER">${extraOptionText}</option>`;
     select.innerHTML = selHtml;
 
     document.getElementById("admin-custom-member-group").classList.add("hidden");
@@ -2550,15 +2652,19 @@ function renderAdminTempList() {
     list.innerHTML = "";
     
     if (APP_STATE.admin.tempReports.length === 0) {
-        list.innerHTML = `<li class="text-center" style="color:var(--text-secondary); font-style:italic; padding:10px 0;">Nessun report pre-compilato</li>`;
+        const noReportsText = APP_STATE.language === 'it' ? "Nessun report pre-compilato" : "No pre-compiled reports";
+        list.innerHTML = `<li class="text-center" style="color:var(--text-secondary); font-style:italic; padding:10px 0;">${noReportsText}</li>`;
         return;
     }
+    
+    const removeBtnText = APP_STATE.language === 'it' ? 'Rimuovi' : 'Remove';
+    const gradeLabel = APP_STATE.language === 'it' ? 'Voto' : 'Grade';
     
     APP_STATE.admin.tempReports.forEach((rep, idx) => {
         const li = document.createElement("li");
         li.innerHTML = `
-            <span><strong>${rep.name}</strong> (Voto: ${rep.grade}) - <em>${rep.nick.it}</em></span>
-            <button class="btn-trash" onclick="removeTempReport(${idx})"><i data-lucide="trash"></i> Rimuovi</button>
+            <span><strong>${rep.name}</strong> (${gradeLabel}: ${rep.grade}) - <em>${rep.nick.it}</em></span>
+            <button class="btn-trash" onclick="removeTempReport(${idx})"><i data-lucide="trash"></i> ${removeBtnText}</button>
         `;
         list.appendChild(li);
     });
@@ -2581,7 +2687,7 @@ function addReportCardToAdminList() {
     if (memberName === "EXTRA_MEMBER") {
         memberName = customNameInput.value.trim();
         if (!memberName) {
-            alert("Inserisci il nome del membro personalizzato!");
+            alert(APP_STATE.language === 'it' ? "Inserisci il nome del membro personalizzato!" : "Enter the custom member name!");
             return;
         }
     }
@@ -2591,7 +2697,7 @@ function addReportCardToAdminList() {
     const gradeVal = gradeSelect.value;
 
     if (!nickVal || !descVal) {
-        alert("Inserisci soprannome e descrizione per la pagella!");
+        alert(APP_STATE.language === 'it' ? "Inserisci soprannome e descrizione per la pagella!" : "Enter nickname and description for the report card!");
         return;
     }
 
@@ -2626,12 +2732,12 @@ function saveVacationFromAdmin() {
     const durVal = durInput.value.trim();
 
     if (!nameVal || !locVal || !durVal) {
-        alert("Compila i campi principali della vacanza!");
+        alert(APP_STATE.language === 'it' ? "Compila i campi principali della vacanza!" : "Fill in the main vacation fields!");
         return;
     }
 
     if (APP_STATE.admin.tempReports.length === 0) {
-        alert("Aggiungi almeno una pagella prima di salvare!");
+        alert(APP_STATE.language === 'it' ? "Aggiungi almeno una pagella prima di salvare!" : "Add at least one report card before saving!");
         return;
     }
 
@@ -2681,7 +2787,7 @@ function saveVacationFromAdmin() {
     durInput.value = "";
     APP_STATE.admin.tempReports = [];
 
-    alert("Vacanza salvata e aggiornata nel database locale!");
+    alert(APP_STATE.language === 'it' ? "Vacanza salvata e aggiornata nel database locale!" : "Vacation saved and updated in the local database!");
     
     buildTripTabsUI();
     renderTripContent();
@@ -2697,15 +2803,18 @@ function renderManageableTripsList() {
     const customTrips = JSON.parse(localStorage.getItem("ap88_custom_trips")) || [];
     
     if (customTrips.length === 0) {
-        list.innerHTML = `<li class="text-center" style="color:var(--text-secondary); font-style:italic; padding:15px 0;">Nessuna vacanza personalizzata salvata</li>`;
+        const noTripsText = APP_STATE.language === 'it' ? "Nessuna vacanza personalizzata salvata" : "No custom vacations saved";
+        list.innerHTML = `<li class="text-center" style="color:var(--text-secondary); font-style:italic; padding:15px 0;">${noTripsText}</li>`;
         return;
     }
+
+    const removeBtnText = APP_STATE.language === 'it' ? 'Rimuovi' : 'Remove';
 
     customTrips.forEach((trip) => {
         const li = document.createElement("li");
         li.innerHTML = `
             <span><strong>${trip.title.it}</strong> (${trip.stats.location})</span>
-            <button class="btn-trash" onclick="deleteCustomTrip('${trip.key}')"><i data-lucide="trash"></i> Rimuovi</button>
+            <button class="btn-trash" onclick="deleteCustomTrip('${trip.key}')"><i data-lucide="trash"></i> ${removeBtnText}</button>
         `;
         list.appendChild(li);
     });
@@ -2713,7 +2822,8 @@ function renderManageableTripsList() {
 }
 
 window.deleteCustomTrip = function(key) {
-    if (!confirm("Sei sicuro di voler eliminare definitivamente questa vacanza?")) return;
+    const confirmMsg = APP_STATE.language === 'it' ? "Sei sicuro di voler eliminare definitivamente questa vacanza?" : "Are you sure you want to permanently delete this vacation?";
+    if (!confirm(confirmMsg)) return;
 
     delete TRIP_DATA[key];
 

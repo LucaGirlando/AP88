@@ -521,24 +521,24 @@
                     <!-- Phase 1: Setup participants -->
                     <div id="tv-setup-panel" class="glass-card game-setup-card max-width-600">
                         <h3 data-i18n="tv_setup_title">Configura Votazioni</h3>
-                        <p class="subtitle" style="margin-bottom: 20px;">Aggiungi tutti i presenti alla vacanza che dovranno votare ed essere votati.</p>
+                        <p class="subtitle" style="margin-bottom: 20px;" data-i18n="tv_setup_subtitle">Aggiungi tutti i presenti alla vacanza che dovranno votare ed essere votati.</p>
                         <div class="form-group">
-                            <label for="tv-member-select">Aggiungi Membro Principale</label>
+                            <label for="tv-member-select" data-i18n="tv_add_main_member">Aggiungi Membro Principale</label>
                             <div class="range-container">
                                 <select id="tv-member-select" style="flex: 1;"></select>
-                                <button id="tv-add-member-btn" class="btn btn-secondary" style="height:46px;">Aggiungi</button>
+                                <button id="tv-add-member-btn" class="btn btn-secondary" style="height:46px;" data-i18n="tv_add_btn">Aggiungi</button>
                             </div>
                         </div>
                         <div class="form-group" style="margin-top:10px;">
-                            <label for="tv-custom-name">Oppure aggiungi una persona extra</label>
+                            <label for="tv-custom-name" data-i18n="tv_add_custom_member">Oppure aggiungi una persona extra</label>
                             <div class="range-container">
-                                <input type="text" id="tv-custom-name" placeholder="Es: Pippo" style="flex: 1;">
-                                <button id="tv-add-custom-btn" class="btn btn-secondary" style="height:46px;">Aggiungi</button>
+                                <input type="text" id="tv-custom-name" placeholder="Es: Pippo" style="flex: 1;" data-i18n="tv_custom_name_placeholder">
+                                <button id="tv-add-custom-btn" class="btn btn-secondary" style="height:46px;" data-i18n="tv_add_btn">Aggiungi</button>
                             </div>
                         </div>
                         
                         <div class="divider"></div>
-                        <h4 style="margin-bottom:10px;">Partecipanti Presenti:</h4>
+                        <h4 style="margin-bottom:10px;" data-i18n="tv_participants_present">Partecipanti Presenti:</h4>
                         <ul class="custom-list" id="tv-participants-list" style="margin-bottom:20px;">
                             <!-- Injected -->
                         </ul>
@@ -549,7 +549,7 @@
                             </strong>
                         </div>
                         
-                        <button id="tv-start-btn" class="btn btn-primary btn-block">Inizia Turni di Voto 🏁</button>
+                        <button id="tv-start-btn" class="btn btn-primary btn-block" data-i18n="tv_start_btn">Inizia Turni di Voto 🏁</button>
                     </div>
                     
                     <!-- Phase 2: Turn prompt -->
@@ -704,36 +704,36 @@
                             <h2 data-i18n="admin_add_title"><i data-lucide="plus-circle" style="color:var(--accent-light);"></i> Aggiungi Nuova Vacanza</h2>
                             <form id="admin-vacation-form" onsubmit="return false;" style="margin-top: 20px;">
                                 <div class="form-group">
-                                    <label for="admin-trip-name">Nome Vacanza</label>
-                                    <input type="text" id="admin-trip-name" placeholder="Es: Capodanno 2026/27" required>
+                                    <label for="admin-trip-name" data-i18n="admin_trip_name_label">Nome Vacanza</label>
+                                    <input type="text" id="admin-trip-name" placeholder="Es: Capodanno 2026/27" required data-i18n="admin_trip_name_placeholder">
                                 </div>
                                 <div class="form-group" style="margin-top:10px;">
-                                    <label for="admin-trip-location">Luogo / Destinazione</label>
-                                    <input type="text" id="admin-trip-location" placeholder="Es: Mezzenile, Italia" required>
+                                    <label for="admin-trip-location" data-i18n="admin_trip_location_label">Luogo / Destinazione</label>
+                                    <input type="text" id="admin-trip-location" placeholder="Es: Mezzenile, Italia" required data-i18n="admin_trip_location_placeholder">
                                 </div>
                                 <div class="form-group" style="margin-top:10px;">
-                                    <label for="admin-trip-duration">Durata</label>
-                                    <input type="text" id="admin-trip-duration" placeholder="Es: 4 giorni" required>
+                                    <label for="admin-trip-duration" data-i18n="admin_trip_duration_label">Durata</label>
+                                    <input type="text" id="admin-trip-duration" placeholder="Es: 4 giorni" required data-i18n="admin_trip_duration_placeholder">
                                 </div>
                                 
                                 <div class="divider"></div>
-                                <h3 style="margin-bottom:15px; color:var(--accent-light);">Aggiungi/Modifica Pagella Membro</h3>
+                                <h3 style="margin-bottom:15px; color:var(--accent-light);" data-i18n="admin_member_section_title">Aggiungi/Modifica Pagella Membro</h3>
                                 <div class="form-group">
-                                    <label for="admin-member-select">Seleziona Membro</label>
+                                    <label for="admin-member-select" data-i18n="admin_member_select_label">Seleziona Membro</label>
                                     <select id="admin-member-select">
                                         <!-- Will contain Paci, Girla, etc. + option for custom name -->
                                     </select>
                                 </div>
                                 <div id="admin-custom-member-group" class="form-group hidden" style="margin-top:10px;">
-                                    <label for="admin-custom-member-name">Nome Membro Personalizzato</label>
-                                    <input type="text" id="admin-custom-member-name" placeholder="Es: Pippo">
+                                    <label for="admin-custom-member-name" data-i18n="admin_custom_member_name_label">Nome Membro Personalizzato</label>
+                                    <input type="text" id="admin-custom-member-name" placeholder="Es: Pippo" data-i18n="admin_custom_member_name_placeholder">
                                 </div>
                                 <div class="form-group" style="margin-top:10px;">
-                                    <label for="admin-member-nick">Soprannome per questa vacanza</label>
-                                    <input type="text" id="admin-member-nick" placeholder="Es: IL DJ" required>
+                                    <label for="admin-member-nick" data-i18n="admin_member_nick_label">Soprannome per questa vacanza</label>
+                                    <input type="text" id="admin-member-nick" placeholder="Es: IL DJ" required data-i18n="admin_member_nick_placeholder">
                                 </div>
                                 <div class="form-group" style="margin-top:10px;">
-                                    <label for="admin-member-grade">Voto</label>
+                                    <label for="admin-member-grade" data-i18n="admin_member_grade_label">Voto</label>
                                     <select id="admin-member-grade">
                                         <option value="10">10</option>
                                         <option value="10-">10-</option>
@@ -753,32 +753,32 @@
                                     </select>
                                 </div>
                                 <div class="form-group" style="margin-top:10px;">
-                                    <label for="admin-member-desc">Descrizione della Pagella</label>
-                                    <textarea id="admin-member-desc" rows="4" style="width:100%; background:var(--bg-surface-elevated); border:1.5px solid var(--border-color); border-radius:var(--radius-md); padding:10px; color:var(--text-primary); font-size:0.95rem; resize:none;" placeholder="Scrivi la pagella del membro..."></textarea>
+                                    <label for="admin-member-desc" data-i18n="admin_member_desc_label">Descrizione della Pagella</label>
+                                    <textarea id="admin-member-desc" rows="4" style="width:100%; background:var(--bg-surface-elevated); border:1.5px solid var(--border-color); border-radius:var(--radius-md); padding:10px; color:var(--text-primary); font-size:0.95rem; resize:none;" placeholder="Scrivi la pagella del membro..." data-i18n="admin_member_desc_placeholder"></textarea>
                                 </div>
-                                <button id="admin-add-report-btn" class="btn btn-secondary btn-block" style="margin-top:15px; margin-bottom:15px;">Aggiungi Pagella a questa Vacanza</button>
+                                <button id="admin-add-report-btn" class="btn btn-secondary btn-block" style="margin-top:15px; margin-bottom:15px;" data-i18n="admin_add_report_btn">Aggiungi Pagella a questa Vacanza</button>
                                 
                                 <div class="divider"></div>
-                                <h3 style="margin-bottom:10px; color:var(--accent-light);">Pagelle Pre-compilate per questa Vacanza</h3>
+                                <h3 style="margin-bottom:10px; color:var(--accent-light);" data-i18n="admin_added_reports_title">Pagelle Pre-compilate per questa Vacanza</h3>
                                 <ul class="custom-list" id="admin-added-reports-list" style="margin-bottom: 20px;">
                                     <!-- List of reports prepared -->
                                 </ul>
                                 
-                                <button id="admin-save-trip-btn" class="btn btn-primary btn-block">Salva e Aggiorna Vacanza 💾</button>
+                                <button id="admin-save-trip-btn" class="btn btn-primary btn-block" data-i18n="admin_save_trip_btn">Salva e Aggiorna Vacanza 💾</button>
                             </form>
                         </div>
                         
                         <!-- Right: List of Custom Vacations & Export -->
                         <div class="glass-card">
                             <h2 data-i18n="admin_custom_list_title"><i data-lucide="folder" style="color:var(--accent-light);"></i> Vacanze Gestibili</h2>
-                            <p class="subtitle" style="margin-bottom: 15px;">Le vacanze storiche permanenti non possono essere rimosse. Quelle create da te possono essere rimosse o modificate qui.</p>
+                            <p class="subtitle" style="margin-bottom: 15px;" data-i18n="admin_custom_list_subtitle">Le vacanze storiche permanenti non possono essere rimosse. Quelle create da te possono essere rimosse o modificate qui.</p>
                             <ul class="custom-list" id="admin-manageable-trips-list" style="margin-bottom: 20px;">
                                 <!-- List of added custom vacations -->
                             </ul>
                             
                             <div class="divider"></div>
                             <h2 data-i18n="admin_export_title"><i data-lucide="download" style="color:var(--accent-light);"></i> Esporta per GitHub</h2>
-                            <p class="subtitle" style="margin-bottom:15px;">Per rendere definitive le nuove vacanze nel codice sorgente online, copia il JSON sottostante e incollalo nella chat dell'assistente.</p>
+                            <p class="subtitle" style="margin-bottom:15px;" data-i18n="admin_export_subtitle">Per rendere definitive le nuove vacanze nel codice sorgente online, copia il JSON sottostante e incollalo nella chat dell'assistente.</p>
                             <textarea id="admin-export-textarea" readonly rows="8" style="width:100%; font-family:monospace; background:var(--bg-surface-elevated); border:1.5px solid var(--border-color); border-radius:var(--radius-md); padding:10px; color:var(--text-primary); font-size:0.85rem; resize:none;"></textarea>
                         </div>
                     </div>
