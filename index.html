@@ -134,7 +134,7 @@
                 </a>
                 <a href="#gameslist" class="nav-item" data-view="gameslist">
                     <i data-lucide="gamepad-2"></i>
-                    <span data-i18n="nav_gameslist">Giochi Consigliati</span>
+                    <span data-i18n="nav_gameslist">Giochi Online</span>
                 </a>
                 <a href="#profile" class="nav-item" data-view="profile">
                     <i data-lucide="user-check"></i>
@@ -181,7 +181,7 @@
             <header class="content-header">
                 <button id="sidebar-toggle-mobile-btn" class="mobile-only-btn menu-btn">
                     <i data-lucide="menu"></i>
-                </button>
+                </header>
                 <div class="header-title-area">
                     <h1 id="page-title" data-i18n="nav_home">Home Pagelle</h1>
                 </div>
@@ -593,13 +593,23 @@
                     </div>
                 </section>
                 
-                <!-- GIOCHI CONSIGLIATI VIEW -->
+                <!-- GIOCHI ONLINE VIEW -->
                 <section id="view-gameslist" class="view-section">
                     <div class="section-intro">
-                        <p data-i18n="gameslist_intro">Ecco una raccolta di link a giochi divertenti da fare in gruppo, ereditati dal sito del Capodanno 2025.</p>
+                        <p data-i18n="gameslist_intro">Seleziona uno dei giochi online per iniziare a giocare con il gruppo.</p>
                     </div>
-                    <div class="profile-grid" id="recommended-games-grid" style="grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));">
-                        <!-- Injected dynamically via JS -->
+                    <div class="glass-card max-width-600 margin-auto" style="display:flex; flex-direction:column; gap:15px; padding:30px;">
+                        <a href="https://timeguessr.com/" target="_blank" class="btn btn-secondary btn-block" style="font-size:1.1rem; padding:15px 20px; justify-content: space-between;">TimeGuessr <i data-lucide="external-link"></i></a>
+                        <a href="https://www.foodguessr.com/" target="_blank" class="btn btn-secondary btn-block" style="font-size:1.1rem; padding:15px 20px; justify-content: space-between;">FoodGuessr <i data-lucide="external-link"></i></a>
+                        <a href="https://neal.fun/auction-game/" target="_blank" class="btn btn-secondary btn-block" style="font-size:1.1rem; padding:15px 20px; justify-content: space-between;">The Auction Game <i data-lucide="external-link"></i></a>
+                        <a href="https://www.openguessr.com/maps" target="_blank" class="btn btn-secondary btn-block" style="font-size:1.1rem; padding:15px 20px; justify-content: space-between;">OpenGuessr <i data-lucide="external-link"></i></a>
+                        <a href="https://www.higherorlowergame.com/google/" target="_blank" class="btn btn-secondary btn-block" style="font-size:1.1rem; padding:15px 20px; justify-content: space-between;">Higher or Lower <i data-lucide="external-link"></i></a>
+                        <a href="https://makeitmeme.com/it/" target="_blank" class="btn btn-secondary btn-block" style="font-size:1.1rem; padding:15px 20px; justify-content: space-between; background:linear-gradient(45deg, #f09819, #edde5d); color:black; border:none;">Make It Meme <i data-lucide="external-link"></i></a>
+                        
+                        <div class="divider"></div>
+                        <button id="sus-emergency-btn" class="btn btn-error flex-center btn-block" style="background:linear-gradient(45deg, #ff0000, #cc0000); border-color:#ff0000; padding:15px 20px;">
+                            <i data-lucide="bell"></i> EMERGENCY MEETING
+                        </button>
                     </div>
                 </section>
                 

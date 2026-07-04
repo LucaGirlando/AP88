@@ -323,7 +323,7 @@ const TRIP_DATA = {
                 nick: { it: "ANTHONY MARTIAL", en: "ANTHONY MARTIAL" },
                 grade: "9",
                 desc: {
-                    it: "Quest'anno viene contraddistinto dalla sua eleganza, dovuta all'utile generato in questo suo 2023, grazie al quale si imborghesisce e non indossa capi al di sotto del millino. Anche quest'anno non si smentisce nella creazione di meme (potrebbe tranquillamente essere l'admin di nonsonobellomaspaccio) però un problema fisico lo costringe ai box più di una volta. Nelle due serate fatte non si iscrive al tabellino dei marcatori per non ritrovarsi nella stessa situazione dell'Ucraina.",
+                    it: "Quest'anno viene contraddistinto dalla sua eleganza, dovuta all'utile generato in questo suo 2023, grazie al quale si imborghesisce e non indossa capi al di sotto del millino. Anche quest'anno non si smentisce nella creazione di meme (potrebbe tranquillamente essere l'admin di nonsonobellomaspaccio) però un problem fisico lo costringe ai box più di una volta. Nelle due serate fatte non si iscrive al tabellino dei marcatori per non ritrovarsi nella stessa situazione dell'Ucraina.",
                     en: "This year characterized by his elegance, due to the profit generated in this 2023, thanks to which he becomes boujee and doesn't wear garments under a grand. Also this year he doesn't disappoint in creating memes, but a physical issue forces him to the pits more than once. In the two nights out he doesn't score to avoid finding himself in the same situation as Ukraine."
                 }
             },
@@ -402,7 +402,7 @@ const TRIP_DATA = {
         ]
     },
     croazia2024: {
-        title: { it: "🇭🇷 Croazia 2024", en: "🇭🇷 Croatia 2024" },
+        title: { it: "Capodanno 2024 (Croazia)", en: "New Year 2024 (Croatia)" },
         stats: { avg: 8.6, top: "9+ (Bax)", participants: 7, duration: "9 giorni", location: "Croazia" },
         reports: [
             {
@@ -497,7 +497,7 @@ const TRIP_DATA = {
                 nick: { it: "CIPOLLE SUDARE", en: "SWEATING ONIONS" },
                 grade: "9.5",
                 desc: {
-                    it: "Arriva con un zoo intero sulla spalla che però non riesce a soddisfare causa chiusura per feste sfondandosi però con due cope di nada al bar. Lui ha lo stomaco di ferro e il kebab non lo sente nemmeno, probabilmente aveva già preso farmaci per guarire l'inculata dei 120€. Nonostante questa cosa l'abbia destabilizzato un po' la sera di capodanno si diverte e si gode la serata, ma quando scoccano le 3 non c'è n'è per nessuno, si siede al tavolo entrando in mutismo selettivo. L'ultima sera si scontra con martina nella preparazione delle cipolle caramellate ma tutto è bene quel che finisce bene.",
+                    it: "Arriva con un zoo intero sulla spalla che però non riesce a soddisfare causa chiusura per feste sfondandosi però con due cope di nada al bar. Gli fa un male cane la testa per l'alcol del giorno prima, ma si riprende alla grande grazie ai medicinali offerti da letizia. Nonostante questa cosa l'abbia destabilizzato un po' la sera di capodanno si diverte e si gode la serata, ma quando scoccano le 3 non c'è n'è per nessuno, si siede al tavolo entrando in mutismo selettivo. L'ultima sera si scontra con martina nella preparazione delle cipolle caramellate ma tutto è bene quel che finisce bene.",
                     en: "Arrives with a whole zoo on his shoulder which however he can't satisfy due to holiday closures, stuffing himself instead with two cups of nothing at the bar. He has a stomach of steel and doesn't even feel the kebab, probably had already taken meds to cure the 120€ loss. Despite this destabilizing him a bit on New Year's Eve he enjoys the night, but when 3 AM hits, there's no one home, he sits at the table entering selective mutism. On the last night he clashes with Martina in preparing caramelized onions but all's well that ends well."
                 }
             },
@@ -515,7 +515,7 @@ const TRIP_DATA = {
                 nick: { it: "LA RADIOLINA", en: "THE RADIO BOX" },
                 grade: "9+",
                 desc: {
-                    it: "Si presenta in inferiorità numerica a dover fronteggiare un'armata di boys pronta a distruggerle l'umore. Dopo la maratona di BARCELLONA effettuata per prendere un caffè con eugi fa ininterrottamente due cose: chiederti di fare una foto foto e se sei contento che lei sia lì con te e prontamente ogni volta tocca rispondere si. Anche lei con il timore di diventare stitica decide di abbandonare la nave in anticipo e scappa con bax il 2 mattina.",
+                    it: "Si presenta in inferiorità numerica a dover fronteggiare un'armata di boys pronta a distruggerle l'umore. Dopo la maratona di BARCELLONA effettuata per prendere un caffè con eugi fa ininterrottamente due cose: chiederti di fare una foto e se sei contento che lei sia lì con te e prontamente ogni volta tocca rispondere si. Anche lei con il timore di diventare stitica decide di abbandonare la nave in anticipo e scappa con bax il 2 mattina.",
                     en: "Presents herself outnumbered, facing an army of boys ready to destroy her mood. After the BARCELONA marathon done to grab a coffee with Eugi, she continuously does two things: ask you to take a photo and if you are happy she is there with you, and promptly you have to reply yes. She too, fearing becoming constipated, decides to abandon the ship early and escapes with Bax on the morning of the 2nd."
                 }
             },
@@ -565,7 +565,7 @@ const TRANSLATIONS = {
         nav_jeopardy: "Jeopardy Board",
         nav_voting: "Litighiamo! (18+)",
         nav_tripvoting: "Votazioni Fine Vacanza",
-        nav_gameslist: "Giochi Consigliati",
+        nav_gameslist: "Giochi Online",
         nav_profile: "Profilo Personale",
         nav_admin: "Pannello Admin",
         version: "Versione 2.0.0 (Vite modern)",
@@ -636,7 +636,7 @@ const TRANSLATIONS = {
         tv_turn_warning: "(Tutti gli altri partecipanti devono girarsi e NON guardare lo schermo!)",
         tv_form_title: "Votazione Segreta di:",
         tv_results_disclaimer: "Questi voti servono a fare le pagelle, per dare spunti, ma che della vostra opinione non ci interessa e saranno come sempre gestite dai poteri forti.",
-        gameslist_intro: "Ecco una raccolta di link a giochi divertenti da fare in gruppo, ereditati dal sito del Capodanno 2025."
+        gameslist_intro: "Seleziona uno dei giochi online per iniziare a giocare con il gruppo."
     },
     en: {
         pass_title: "🔒 AP88 Restricted Access",
@@ -652,7 +652,7 @@ const TRANSLATIONS = {
         nav_jeopardy: "Jeopardy Board",
         nav_voting: "Litighiamo! (18+)",
         nav_tripvoting: "End Trip Voting",
-        nav_gameslist: "Recommended Games",
+        nav_gameslist: "Online Games",
         nav_profile: "Personal Profile",
         nav_admin: "Admin Panel",
         version: "Version 2.0.0 (Vite modern)",
@@ -723,18 +723,9 @@ const TRANSLATIONS = {
         tv_turn_warning: "(Everyone else must turn away and NOT look at the screen!)",
         tv_form_title: "Secret Vote of:",
         tv_results_disclaimer: "These votes serve only as suggestions and inspiration. We don't care about your opinion; final grades will still be managed by the authorities.",
-        gameslist_intro: "Here is a list of links to fun games to play in groups, inherited from the New Year 2025 website."
+        gameslist_intro: "Select one of the online games to start playing with the group."
     }
 };
-
-const RECOMMENDED_GAMES = [
-    { name: "TimeGuessr", url: "https://timeguessr.com/", desc_it: "Indovina l'anno e la posizione geografica della foto.", desc_en: "Identify the year and geographic location of the photo." },
-    { name: "FoodGuessr", url: "https://www.foodguessr.com/", desc_it: "Caccia culinaria mondiale su mappa.", desc_en: "Worldwide culinary hunt on map." },
-    { name: "The Auction Game", url: "https://neal.fun/auction-game/", desc_it: "Indovina il prezzo di oggetti assurdi all'asta.", desc_en: "Guess the price of absurd items at auction." },
-    { name: "OpenGuessr", url: "https://www.openguessr.com/maps", desc_it: "Battaglia geografica su mappa.", desc_en: "Geography battle on map." },
-    { name: "Higher or Lower", url: "https://www.higherorlowergame.com/google/", desc_it: "Quale termine è più cercato su Google?", desc_en: "Which topic is searched more on Google?" },
-    { name: "Make It Meme", url: "https://makeitmeme.com/it/", desc_it: "Crea i meme migliori e votali con gli amici.", desc_en: "Create the best memes and rate them with friends." }
-];
 
 // --- QUIZ QUESTIONS ---
 const QUIZ_QUESTIONS = [
@@ -801,7 +792,7 @@ const JEOPARDY_QUESTIONS = {
     "2_0": { category: "Scuola", value: 100, question: "Cosa è andato a studiare Girla a Londra?", answer: "Quantitative Finance (with Data Science)" },
     "2_1": { category: "Scuola", value: 200, question: "Voto di laurea triennale di Girla (margine di errore: 2 punti)?", answer: "96" },
     "2_2": { category: "Scuola", value: 300, question: "Quanti debiti scolastici ha preso al liceo Girla?", answer: "8 debiti" },
-    "2_3": { category: "Scuola", value: 400, question: "Voto di maturità di Girla (margine di errore: 1 punto)?", answer: "64" },
+    "2_3": { category: "Scuola", value: 400, question: "Voto di maturità di Girla (margine di errore: 1 point)?", answer: "64" },
     "2_4": { category: "Scuola", value: 500, question: "Quante internship ha fatto in triennale e in quante associazioni universitarie è stato in magistrale?", answer: "2 internship (Fineco, Invesco) e 2 associazioni (Starting Finance, Miura)" },
     
     "3_0": { category: "Viaggi", value: 100, question: "Qual è il viaggio dei sogni di Girla?", answer: "Giappone" },
@@ -961,15 +952,21 @@ function initAuthFlows() {
         passwordOverlay.classList.remove("active");
         
         if (selectedProfile) {
-            APP_STATE.profile = selectedProfile;
-            profileOverlay.classList.remove("active");
-            appContainer.classList.remove("hidden");
-            
-            if (selectedProfile === "Girla" && adminUnlocked) {
-                APP_STATE.adminUnlocked = true;
-                document.getElementById("nav-admin-link").classList.remove("hidden");
+            // FIX: If they are auto-logged as Girla but admin is not unlocked, force selection to request password
+            if (selectedProfile === "Girla" && !adminUnlocked) {
+                localStorage.removeItem("ap88_profile");
+                showProfileSelection();
+            } else {
+                APP_STATE.profile = selectedProfile;
+                profileOverlay.classList.remove("active");
+                appContainer.classList.remove("hidden");
+                
+                if (selectedProfile === "Girla" && adminUnlocked) {
+                    APP_STATE.adminUnlocked = true;
+                    document.getElementById("nav-admin-link").classList.remove("hidden");
+                }
+                updateUIForCurrentUser();
             }
-            updateUIForCurrentUser();
         } else {
             showProfileSelection();
         }
@@ -1218,7 +1215,7 @@ function renderActiveView() {
             renderTripVoting();
             break;
         case "gameslist":
-            renderGamesList();
+            // Managed directly in HTML, no injection needed
             break;
         case "admin":
             renderAdminPanel();
@@ -1259,14 +1256,13 @@ function buildTripTabsUI() {
 }
 
 function initTripTabs() {
-    // Dynamically managed now in buildTripTabsUI
+    // Dynamically managed
 }
 
 function renderTripContent() {
     const container = document.getElementById("trip-content");
     const trip = TRIP_DATA[APP_STATE.activeTrip];
     if (!trip) {
-        // Fallback to first available trip
         const firstKey = Object.keys(TRIP_DATA)[0];
         if (firstKey) {
             APP_STATE.activeTrip = firstKey;
@@ -1359,13 +1355,11 @@ function parseGradeToNumeric(gradeStr) {
 }
 
 function renderHistoricalStats() {
-    // Dynamic recalculation of stats including custom vacations
     const topVoti = [];
     const presenze = {};
     const mediaSomme = {};
     const mediaCount = {};
     
-    // Seed presenze & averages structure
     MAIN_MEMBERS.forEach(m => {
         presenze[m] = 0;
         mediaSomme[m] = 0;
@@ -1377,10 +1371,8 @@ function renderHistoricalStats() {
         trip.reports.forEach(r => {
             const numGrade = parseGradeToNumeric(r.grade);
             
-            // Top votes list
             topVoti.push({ name: r.name, trip: tripName, grade: r.grade, numeric: numGrade || 0 });
             
-            // Presences & Averages
             if (MAIN_MEMBERS.includes(r.name)) {
                 presenze[r.name]++;
                 if (numGrade) {
@@ -1391,7 +1383,6 @@ function renderHistoricalStats() {
         });
     });
 
-    // 1. Top 10 Grades
     const top10Sorted = topVoti.sort((a,b) => b.numeric - a.numeric).slice(0, 10);
     const topVotiList = document.getElementById("stats-top-voti-list");
     topVotiList.innerHTML = top10Sorted.map((item, i) => `
@@ -1401,7 +1392,6 @@ function renderHistoricalStats() {
         </li>
     `).join("");
 
-    // 2. Presences List
     const presenzeSorted = Object.entries(presenze).sort((a,b) => b[1] - a[1]);
     const presenzeList = document.getElementById("stats-presenze-list");
     presenzeList.innerHTML = presenzeSorted.map(([name, count]) => `
@@ -1411,7 +1401,6 @@ function renderHistoricalStats() {
         </li>
     `).join("");
 
-    // 3. Classifica Medie List
     const classificaMedie = [];
     Object.keys(mediaCount).forEach(name => {
         if (mediaCount[name] > 0) {
@@ -1429,7 +1418,6 @@ function renderHistoricalStats() {
         </li>
     `).join("");
     
-    // Sync active profile stats dynamically
     if (APP_STATE.profile && APP_STATE.profile !== 'Guest') {
         const info = MEMBER_INFO[APP_STATE.profile];
         if (info) {
@@ -1496,7 +1484,6 @@ function renderEvolutionChart() {
                     callbacks: {
                         label: function(context) {
                             let val = context.parsed.y;
-                            // Reverse numeric grades to display original grades nicely
                             let orig = val;
                             if (val === 9.7) orig = "10-";
                             return `${context.dataset.label}: ${orig}`;
@@ -1558,7 +1545,6 @@ function renderProfilePage() {
         <span class="nickname-tag">${nick}</span>
     `).join("");
     
-    // Dynamic recalculation of profile statistics
     let tripsCount = 0;
     let gradeSum = 0;
     let gradeCount = 0;
@@ -1644,6 +1630,9 @@ function initGames() {
     document.getElementById("voting-start-btn").addEventListener("click", startVotingGame);
     document.getElementById("voting-next-btn").addEventListener("click", loadNextVotingQuestion);
     document.getElementById("voting-reset-btn").addEventListener("click", resetVotingToSetup);
+    
+    // Sus Button
+    document.getElementById("sus-emergency-btn").addEventListener("click", triggerEmergencyMeetingAlert);
     
     rebuildJeopardyPlayersInputs();
     rebuildVotingPlayersInputs();
@@ -2180,53 +2169,10 @@ function resetVotingToSetup() {
 
 
 // ==========================================================================
-// NEW FEATURE: GIOCHI CONSIGLIATI (RECOMMENDED GAMES)
+// SUS EMERGENCY MEETING EVENT
 // ==========================================================================
 
-function renderGamesList() {
-    const grid = document.getElementById("recommended-games-grid");
-    if (!grid) return;
-    
-    grid.innerHTML = "";
-    
-    RECOMMENDED_GAMES.forEach(game => {
-        const card = document.createElement("div");
-        card.className = "game-card-link";
-        
-        const desc = APP_STATE.language === 'it' ? game.desc_it : game.desc_en;
-        
-        card.innerHTML = `
-            <div>
-                <h4 class="game-card-title">${game.name}</h4>
-                <p class="game-card-desc" style="margin-top:8px;">${desc}</p>
-            </div>
-            <a href="${game.url}" target="_blank" class="btn btn-primary flex-center" style="width:100%;">
-                <i data-lucide="external-link"></i> APRI GIOCO
-            </a>
-        `;
-        grid.appendChild(card);
-    });
-    
-    // Add Among Us (Sus Button)
-    const susCard = document.createElement("div");
-    susCard.className = "game-card-link";
-    susCard.style.borderColor = 'rgba(255,0,0,0.3)';
-    susCard.innerHTML = `
-        <div>
-            <h4 class="game-card-title" style="color:#ef4444;">Among Us (Sus Button)</h4>
-            <p class="game-card-desc" style="margin-top:8px;">Attenzione: Premendo questo bottone attiverai un Emergency Meeting immediato.</p>
-        </div>
-        <button id="sus-emergency-btn" class="btn btn-error flex-center" style="width:100%; background:linear-gradient(45deg, #ff0000, #cc0000); border-color:#ff0000;">
-            <i data-lucide="bell"></i> EMERGENCY MEETING
-        </button>
-    `;
-    grid.appendChild(susCard);
-    
-    document.getElementById("sus-emergency-btn").addEventListener("click", triggerEmergencyMeetingAlert);
-}
-
 function triggerEmergencyMeetingAlert() {
-    // Inject fullscreen Among Us overlay
     const overlay = document.createElement("div");
     overlay.style.position = 'fixed';
     overlay.style.top = '0';
@@ -2260,7 +2206,7 @@ function triggerEmergencyMeetingAlert() {
 
 
 // ==========================================================================
-// NEW FEATURE: VOTAZIONI FINE VACANZA (END-OF-TRIP VOTING SYSTEM)
+// TRIP VOTING (END-OF-TRIP VOTING SYSTEM)
 // ==========================================================================
 
 function initTripVoting() {
@@ -2279,7 +2225,6 @@ function renderTripVoting() {
     const form = document.getElementById("tv-form-panel");
     const results = document.getElementById("tv-results-panel");
     
-    // Toggle views based on stage
     setup.classList.add("hidden");
     prompt.classList.add("hidden");
     form.classList.add("hidden");
@@ -2288,7 +2233,6 @@ function renderTripVoting() {
     if (APP_STATE.tripvoting.stage === 'setup') {
         setup.classList.remove("hidden");
         
-        // Populate setup select
         const sel = document.getElementById("tv-member-select");
         sel.innerHTML = MAIN_MEMBERS.map(m => `<option value="${m}">${m}</option>`).join("");
         
@@ -2302,7 +2246,6 @@ function renderTripVoting() {
         const activeVoter = APP_STATE.tripvoting.participants[APP_STATE.tripvoting.currentVoterIndex];
         document.getElementById("tv-form-voter-name").innerText = activeVoter;
         
-        // Render inputs for other targets
         const container = document.getElementById("tv-targets-container");
         container.innerHTML = "";
         
@@ -2346,7 +2289,6 @@ function renderTripVoting() {
     } else if (APP_STATE.tripvoting.stage === 'results') {
         results.classList.remove("hidden");
         
-        // Generate averages
         const tableBody = document.getElementById("tv-results-table-body");
         const commentsContainer = document.getElementById("tv-results-comments-list");
         
@@ -2430,7 +2372,6 @@ function startTvVotingFlow() {
     APP_STATE.tripvoting.votes = {};
     APP_STATE.tripvoting.results = {};
     
-    // Setup results database
     APP_STATE.tripvoting.participants.forEach(p => {
         APP_STATE.tripvoting.results[p] = { totalGrade: 0, count: 0, comments: [] };
     });
@@ -2449,7 +2390,6 @@ function submitTvVotes() {
     const gradeSelects = document.querySelectorAll(".tv-grade-select");
     const commentInputs = document.querySelectorAll(".tv-comment-input");
     
-    // Check validation (ensure comments are written)
     let allValid = true;
     commentInputs.forEach(input => {
         if (!input.value.trim()) {
@@ -2461,7 +2401,6 @@ function submitTvVotes() {
     
     if (!allValid) return;
     
-    // Store votes
     APP_STATE.tripvoting.votes[activeVoter] = {};
     
     gradeSelects.forEach(select => {
@@ -2469,19 +2408,16 @@ function submitTvVotes() {
         const val = select.value;
         const numVal = parseGradeToNumeric(val) || 9.5;
         
-        // Find matching comment
         const commentInput = Array.from(commentInputs).find(i => i.getAttribute("data-target") === target);
         const commentText = commentInput ? commentInput.value.trim() : "";
         
         APP_STATE.tripvoting.votes[activeVoter][target] = { grade: val, comment: commentText };
         
-        // Increment global results tally
         APP_STATE.tripvoting.results[target].totalGrade += numVal;
         APP_STATE.tripvoting.results[target].count++;
         APP_STATE.tripvoting.results[target].comments.push({ grade: val, text: commentText });
     });
     
-    // Proceed
     APP_STATE.tripvoting.currentVoterIndex++;
     if (APP_STATE.tripvoting.currentVoterIndex >= APP_STATE.tripvoting.participants.length) {
         APP_STATE.tripvoting.stage = 'results';
@@ -2521,7 +2457,6 @@ function downloadTvReportTxt() {
     text += "saranno regolate e gestite insindacabilmente dai poteri forti.\n";
     text += "========================================================================\n";
     
-    // Trigger download
     const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
@@ -2551,7 +2486,6 @@ function initAdminPanel() {
     const builderSelect = document.getElementById("admin-member-select");
     if (!builderSelect) return;
     
-    // Add dropdown member select change binding
     builderSelect.addEventListener("change", () => {
         const val = builderSelect.value;
         const customGroup = document.getElementById("admin-custom-member-group");
@@ -2570,14 +2504,12 @@ function renderAdminPanel() {
     const select = document.getElementById("admin-member-select");
     if (!select) return;
     
-    // Build select dropdown
     let selHtml = MAIN_MEMBERS.map(m => `<option value="${m}">${m}</option>`).join("");
     selHtml += `<option value="EXTRA_MEMBER">[Aggiungi Persona Extra]</option>`;
     select.innerHTML = selHtml;
 
     document.getElementById("admin-custom-member-group").classList.add("hidden");
     
-    // Reset temp inputs
     document.getElementById("admin-custom-member-name").value = "";
     document.getElementById("admin-member-nick").value = "";
     document.getElementById("admin-member-desc").value = "";
@@ -2637,11 +2569,10 @@ function addReportCardToAdminList() {
         return;
     }
 
-    // Check if duplicate
     const existsIdx = APP_STATE.admin.tempReports.findIndex(r => r.name === memberName);
     const reportData = {
         name: memberName,
-        nick: { it: nickVal, en: nickVal }, // Set both languages same for custom
+        nick: { it: nickVal, en: nickVal },
         grade: gradeVal,
         desc: { it: descVal, en: descVal }
     };
@@ -2652,7 +2583,6 @@ function addReportCardToAdminList() {
         APP_STATE.admin.tempReports.push(reportData);
     }
 
-    // Reset inputs
     customNameInput.value = "";
     nickInput.value = "";
     descTextarea.value = "";
@@ -2679,7 +2609,6 @@ function saveVacationFromAdmin() {
         return;
     }
 
-    // Calculate average grade
     let gradeSum = 0;
     let gradeCount = 0;
     APP_STATE.admin.tempReports.forEach(r => {
@@ -2691,7 +2620,6 @@ function saveVacationFromAdmin() {
     });
     const avgVal = gradeCount > 0 ? (gradeSum / gradeCount).toFixed(2) : "0.00";
     
-    // Sort reports by grade descending
     const sortedReports = [...APP_STATE.admin.tempReports].sort((a,b) => {
         return (parseGradeToNumeric(b.grade) || 0) - (parseGradeToNumeric(a.grade) || 0);
     });
@@ -2710,13 +2638,10 @@ function saveVacationFromAdmin() {
         reports: sortedReports
     };
 
-    // Load into state
     TRIP_DATA[tripKey] = tripObject;
     APP_STATE.activeTrip = tripKey;
 
-    // Save to LocalStorage
     const customTrips = JSON.parse(localStorage.getItem("ap88_custom_trips")) || [];
-    // If editing, overwrite, otherwise append
     const existsIdx = customTrips.findIndex(t => t.title.it === nameVal);
     if (existsIdx !== -1) {
         customTrips[existsIdx] = tripObject;
@@ -2725,7 +2650,6 @@ function saveVacationFromAdmin() {
     }
     localStorage.setItem("ap88_custom_trips", JSON.stringify(customTrips));
 
-    // Reset Builder Form
     nameInput.value = "";
     locInput.value = "";
     durInput.value = "";
@@ -2733,7 +2657,6 @@ function saveVacationFromAdmin() {
 
     alert("Vacanza salvata e aggiornata nel database locale!");
     
-    // Refresh UI elements
     buildTripTabsUI();
     renderTripContent();
     renderHistoricalStats();
@@ -2756,7 +2679,7 @@ function renderManageableTripsList() {
         const li = document.createElement("li");
         li.innerHTML = `
             <span><strong>${trip.title.it}</strong> (${trip.stats.location})</span>
-            <button class="btn-trash" onclick="deleteCustomTrip('${trip.key}')"><i data-lucide="trash"></i> Elimina</button>
+            <button class="btn-trash" onclick="deleteCustomTrip('${trip.key}')"><i data-lucide="trash"></i> Rimuovi</button>
         `;
         list.appendChild(li);
     });
@@ -2766,15 +2689,12 @@ function renderManageableTripsList() {
 window.deleteCustomTrip = function(key) {
     if (!confirm("Sei sicuro di voler eliminare definitivamente questa vacanza?")) return;
 
-    // Delete from state
     delete TRIP_DATA[key];
 
-    // Delete from LocalStorage
     let customTrips = JSON.parse(localStorage.getItem("ap88_custom_trips")) || [];
     customTrips = customTrips.filter(t => t.key !== key);
     localStorage.setItem("ap88_custom_trips", JSON.stringify(customTrips));
 
-    // Fallback active trip if deleted
     if (APP_STATE.activeTrip === key) {
         APP_STATE.activeTrip = Object.keys(TRIP_DATA)[0];
     }
