@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP88 - Private Club</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Chart.js for personal finance & voting charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Lucide Icons for premium visual elements -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!-- ============================================ -->
+    <!-- PASSWORD SCREEN (PHASE 1) -->
+    <!-- ============================================ -->
+    <div id="password-overlay" class="overlay active">
+        <div class="glass-card login-card animate-fade-in">
+            <div class="logo-animation">
+                <span class="glowing-orb"></span>
+                <i data-lucide="lock" class="lock-icon"></i>
+            </div>
+            <h2 data-i18n="pass_title">Accesso Riservato AP88</h2>
+            <p data-i18n="pass_subtitle" class="subtitle">Inserisci la password per sbloccare l'archivio privato.</p>
+            
+            <div class="input-group">
+                <input type="password" id="password-input" placeholder="Password..." autocomplete="current-password">
+                <button id="password-submit-btn">
+                    <i data-lucide="arrow-right"></i>
+                </button>
+            </div>
+            
+            <p id="password-error" class="error-msg hidden" data-i18n="pass_error">Password errata. Riprova.</p>
+            
+            <div class="hint-box">
+                <span class="hint-title" data-i18n="pass_hint_title">Suggerimento:</span>
+                <span data-i18n="pass_hint_desc" class="hint-desc">Soprannome di chi ha preso il voto più alto nella pagella della Sardegna.</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- PROFILE SELECTION SCREEN (PHASE 2) -->
+    <!-- ============================================ -->
+    <div id="profile-overlay" class="overlay">
+        <div class="glass-card profile-selection-card animate-fade-in">
+            <h2 data-i18n="profile_select_title">Chi sei?</h2>
+            <p data-i18n="profile_select_subtitle" class="subtitle">Scegli il tuo profilo o entra come ospite.</p>
+            
+            <div class="profile-grid" id="profile-selection-grid">
+                <!-- Injected via JavaScript -->
+            </div>
+            
+            <div class="guest-action">
+                <button id="guest-enter-btn" class="btn btn-secondary">
+                    <i data-lucide="user"></i>
+                    <span data-i18n="profile_select_guest">Entra come Ospite</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- MAIN APPLICATION CONTAINER -->
+    <!-- ============================================ -->
+    <div id="app-container" class="app-layout hidden">
+        
+        <!-- SIDEBAR -->
+        <aside id="app-sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <div class="brand">
+                    <span class="pulse-dot"></span>
+                    <span class="brand-text">AP88</span>
+                </div>
+                <button id="sidebar-close-mobile-btn" class="mobile-only-btn">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            
+            <div class="user-pill-container">
+                <div class="user-pill" id="current-user-pill">
+                    <!-- Injected via JS -->
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="#home" class="nav-item active" data-view="home">
+                    <i data-lucide="home"></i>
+                    <span data-i18n="nav_home">Home Pagelle</span>
+                </a>
+                <a href="#gallery" class="nav-item" data-view="gallery">
+                    <i data-lucide="image"></i>
+                    <span data-i18n="nav_gallery">Album dei Ricordi</span>
+                </a>
+                <a href="#quiz" class="nav-item" data-view="quiz">
+                    <i data-lucide="trophy"></i>
+                    <span data-i18n="nav_quiz">Il Re delle Pagelle</span>
+                </a>
+                <a href="#jeopardy" class="nav-item" data-view="jeopardy">
+                    <i data-lucide="grid"></i>
+                    <span data-i18n="nav_jeopardy">Jeopardy</span>
+                </a>
+                <a href="#voting" class="nav-item" data-view="voting">
+                    <i data-lucide="swords"></i>
+                    <span data-i18n="nav_voting">Litighiamo</span>
+                </a>
+                <a href="#finance" class="nav-item" data-view="finance">
+                    <i data-lucide="trending-up"></i>
+                    <span data-i18n="nav_finance">Pillole di Finanza</span>
+                </a>
+                <a href="#profile" class="nav-item" data-view="profile">
+                    <i data-lucide="user-check"></i>
+                    <span data-i18n="nav_profile">Profilo Personale</span>
+                </a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="settings-toggles">
+                    <!-- Language Toggle -->
+                    <button id="language-toggle-btn" class="settings-btn" title="Cambia Lingua">
+                        <i data-lucide="languages"></i>
+                        <span id="language-label">IT</span>
+                    </button>
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle-btn" class="settings-btn" title="Cambia Tema">
+                        <i data-lucide="sun" id="theme-icon-light" class="hidden"></i>
+                        <i data-lucide="moon" id="theme-icon-dark"></i>
+                    </button>
+                </div>
+                
+                <div class="logout-container">
+                    <button id="change-profile-btn" class="btn btn-logout">
+                        <i data-lucide="log-out"></i>
+                        <span data-i18n="logout_profile">Cambia Profilo</span>
+                    </button>
+                </div>
+                
+                <div class="credits">
+                    <span data-i18n="version">Versione 2.0.0</span><br>
+                    <span data-i18n="created_by">Creata con ❤️ da Girla</span>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- MAIN PANEL -->
+        <main class="main-content">
+            
+            <!-- HEADER (MOBILE ONLY TRIGGER & DESKTOP TITLE BAR) -->
+            <header class="content-header">
+                <button id="sidebar-toggle-mobile-btn" class="mobile-only-btn menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+                <div class="header-title-area">
+                    <h1 id="page-title" data-i18n="nav_home">Home Pagelle</h1>
+                </div>
+                <div class="header-actions">
+                    <span class="badge" id="user-status-badge">Guest</span>
+                </div>
+            </header>
+            
+            <!-- VIEW SECTIONS -->
+            <div class="view-container">
+                
+                <!-- HOME VIEW -->
+                <section id="view-home" class="view-section active">
+                    <div class="section-intro">
+                        <p data-i18n="home_intro">Benvenuti nell'archivio ufficiale del gruppo AP88. Qui troverete tutte le pagelle delle nostre vacanze e le statistiche storiche dei membri del gruppo.</p>
+                    </div>
+                    
+                    <div class="tab-container">
+                        <div class="tab-headers" id="trip-tabs">
+                            <button class="tab-btn active" data-trip="sardegna2021">🇮🇹 Sardegna 2021</button>
+                            <button class="tab-btn" data-trip="corfu2022">🇬🇷 Corfù 2022</button>
+                            <button class="tab-btn" data-trip="puglia2023">🇮🇹 Puglia 2023</button>
+                            <button class="tab-btn" data-trip="croazia2024">🇭🇷 Croazia 2024</button>
+                            <button class="tab-btn" data-trip="barcellona2024">🇪🇸 Barcellona 24/25</button>
+                        </div>
+                        
+                        <div class="tab-content" id="trip-content">
+                            <!-- Injected dynamically via JS -->
+                        </div>
+                    </div>
+                    
+                    <div class="divider"></div>
+                    
+                    <h2 class="section-title text-center" data-i18n="stats_historical_title">Statistiche Storiche</h2>
+                    
+                    <div class="stats-grid">
+                        <div class="glass-card stat-box">
+                            <h3 data-i18n="stats_top_voti">🏆 TOP 10 VOTI</h3>
+                            <ol class="custom-list" id="stats-top-voti-list">
+                                <!-- Injected via JS -->
+                            </ol>
+                        </div>
+                        
+                        <div class="glass-card stat-box">
+                            <h3 data-i18n="stats_presenze">👥 PRESENZE TOTALI</h3>
+                            <ul class="custom-list" id="stats-presenze-list">
+                                <!-- Injected via JS -->
+                            </ul>
+                        </div>
+                        
+                        <div class="glass-card stat-box">
+                            <h3 data-i18n="stats_medie">📊 CLASSIFICA MEDIE</h3>
+                            <ol class="custom-list" id="stats-medie-list">
+                                <!-- Injected via JS -->
+                            </ol>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- GALLERY VIEW -->
+                <section id="view-gallery" class="view-section">
+                    <div class="section-intro">
+                        <p data-i18n="gallery_intro">Una raccolta dei membri storici dell'AP88. Clicca su ciascun membro per scoprirne le pagelle e lo storico.</p>
+                    </div>
+                    
+                    <div class="gallery-grid" id="gallery-grid-container">
+                        <!-- Injected dynamically via JS -->
+                    </div>
+                </section>
+                
+                <!-- QUIZ VIEW -->
+                <section id="view-quiz" class="view-section">
+                    <div class="section-intro">
+                        <p data-i18n="quiz_intro">Due squadre si sfidano rispondendo a 20 domande tratte dalle storiche pagelle! Vince chi fa più punti.</p>
+                    </div>
+                    
+                    <div id="quiz-setup-panel" class="glass-card game-setup-card max-width-600">
+                        <h3 data-i18n="quiz_setup_header">Inserisci i nomi delle squadre</h3>
+                        <div class="form-group">
+                            <label for="quiz-team1-name" data-i18n="quiz_team1_label">Nome Squadra 1</label>
+                            <input type="text" id="quiz-team1-name" value="Squadra 1">
+                        </div>
+                        <div class="form-group">
+                            <label for="quiz-team2-name" data-i18n="quiz_team2_label">Nome Squadra 2</label>
+                            <input type="text" id="quiz-team2-name" value="Squadra 2">
+                        </div>
+                        <button id="quiz-start-btn" class="btn btn-primary btn-block" data-i18n="quiz_start_btn">Inizia la Partita!</button>
+                    </div>
+                    
+                    <div id="quiz-game-panel" class="hidden">
+                        <div class="game-header-stats">
+                            <div class="team-score-card">
+                                <div class="team-name" id="quiz-display-team1-name">Squadra 1</div>
+                                <div class="team-score" id="quiz-display-team1-score">0</div>
+                            </div>
+                            <div class="vs-divider">VS</div>
+                            <div class="team-score-card">
+                                <div class="team-name" id="quiz-display-team2-name">Squadra 2</div>
+                                <div class="team-score" id="quiz-display-team2-score">0</div>
+                            </div>
+                        </div>
+                        
+                        <div class="glass-card quiz-card">
+                            <div class="quiz-info-row">
+                                <span class="badge" id="quiz-question-index">Domanda 1/20</span>
+                                <span class="badge badge-accent" id="quiz-question-source">Sardegna 2021</span>
+                            </div>
+                            <div class="current-turn-indicator" id="quiz-current-turn-msg">
+                                Turno della Squadra 1
+                            </div>
+                            
+                            <h2 class="quiz-question-text" id="quiz-question-text">Testo della domanda?</h2>
+                            
+                            <div class="quiz-options-grid" id="quiz-options-container">
+                                <!-- Injected dynamically -->
+                            </div>
+                            
+                            <div id="quiz-feedback" class="quiz-feedback hidden">
+                                <p id="quiz-feedback-msg">Risposta corretta!</p>
+                                <button id="quiz-next-btn" class="btn btn-primary" data-i18n="next_question">Prossima domanda</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="quiz-results-panel" class="glass-card text-center max-width-600 hidden">
+                        <div class="crown-icon-container">
+                            <i data-lucide="crown" class="crown-icon animate-pulse"></i>
+                        </div>
+                        <h2 data-i18n="game_over">Partita Terminata!</h2>
+                        <h3 id="quiz-winner-msg">Vince la Squadra 1!</h3>
+                        
+                        <div class="scores-summary">
+                            <div class="score-row">
+                                <span id="quiz-final-team1-name">Squadra 1</span>
+                                <strong id="quiz-final-team1-score">0</strong>
+                            </div>
+                            <div class="score-row">
+                                <span id="quiz-final-team2-name">Squadra 2</span>
+                                <strong id="quiz-final-team2-score">0</strong>
+                            </div>
+                        </div>
+                        
+                        <button id="quiz-restart-btn" class="btn btn-primary btn-block" data-i18n="replay">Rigioca</button>
+                    </div>
+                </section>
+                
+                <!-- JEOPARDY VIEW -->
+                <section id="view-jeopardy" class="view-section">
+                    <div class="section-intro">
+                        <p data-i18n="jeopardy_intro">Benvenuti a Jeopardy! Seleziona il numero di giocatori, a turno scegliete una casella ed indovinate la risposta per guadagnare o perdere punti!</p>
+                    </div>
+                    
+                    <div id="jeopardy-setup-panel" class="glass-card game-setup-card max-width-600">
+                        <h3 data-i18n="jeopardy_setup_header">Configura il gioco</h3>
+                        <div class="form-group">
+                            <label for="jeopardy-character-select" data-i18n="jeopardy_char_label">Seleziona il personaggio su cui giocare</label>
+                            <select id="jeopardy-character-select">
+                                <option value="Girla" selected>Girla</option>
+                                <option value="Paci">Paci (WIP)</option>
+                                <option value="Paga">Paga (WIP)</option>
+                                <option value="Bax">Bax (WIP)</option>
+                                <option value="Ari">Ari (WIP)</option>
+                                <option value="Chiara">Chiara (WIP)</option>
+                                <option value="Ceci">Ceci (WIP)</option>
+                                <option value="Gaia">Gaia (WIP)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="jeopardy-players-count" data-i18n="jeopardy_players_count">Numero di giocatori (1-8)</label>
+                            <input type="number" id="jeopardy-players-count" min="1" max="8" value="2">
+                        </div>
+                        
+                        <div id="jeopardy-players-names-container" class="players-inputs">
+                            <!-- Injected dynamically based on count -->
+                        </div>
+                        
+                        <button id="jeopardy-start-btn" class="btn btn-primary btn-block" data-i18n="jeopardy_start_btn">Inizia il Gioco!</button>
+                    </div>
+                    
+                    <div id="jeopardy-game-panel" class="hidden">
+                        <div class="jeopardy-scoreboard" id="jeopardy-scoreboard">
+                            <!-- Injected dynamically -->
+                        </div>
+                        
+                        <div class="jeopardy-turn-banner" id="jeopardy-turn-banner">
+                            Turno di: Giocatore 1
+                        </div>
+                        
+                        <div class="jeopardy-board-container">
+                            <div class="jeopardy-board" id="jeopardy-board">
+                                <!-- Injected dynamically -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Question modal for Jeopardy -->
+                    <div id="jeopardy-modal" class="modal-overlay hidden">
+                        <div class="glass-card modal-card animate-scale-up">
+                            <div class="modal-header">
+                                <span class="badge" id="jeopardy-modal-category">Categoria</span>
+                                <span class="badge badge-accent" id="jeopardy-modal-points">100 Punti</span>
+                            </div>
+                            <div class="modal-body">
+                                <h2 class="jeopardy-question-text" id="jeopardy-modal-question">Testo della domanda</h2>
+                                
+                                <div id="jeopardy-reveal-area">
+                                    <button id="jeopardy-reveal-btn" class="btn btn-primary" data-i18n="reveal_answer">Vedi risposta</button>
+                                </div>
+                                
+                                <div id="jeopardy-answer-area" class="hidden">
+                                    <div class="divider"></div>
+                                    <p class="answer-label" data-i18n="jeopardy_correct_answer">Risposta corretta:</p>
+                                    <h2 class="jeopardy-answer-text" id="jeopardy-modal-answer">Testo della risposta</h2>
+                                    <div class="divider"></div>
+                                    <p class="question-prompt" data-i18n="jeopardy_did_you_guess">Hai indovinato?</p>
+                                    <div class="modal-actions-grid">
+                                        <button id="jeopardy-yes-btn" class="btn btn-success">
+                                            <i data-lucide="check"></i> <span data-i18n="yes">Sì</span>
+                                        </button>
+                                        <button id="jeopardy-no-btn" class="btn btn-error">
+                                            <i data-lucide="x"></i> <span data-i18n="no">No</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="jeopardy-results-panel" class="glass-card text-center max-width-600 hidden">
+                        <h2 data-i18n="jeopardy_over">Gioco terminato!</h2>
+                        <h3 data-i18n="jeopardy_final_scores">Classifica finale:</h3>
+                        <div class="scores-summary" id="jeopardy-final-scores-list">
+                            <!-- Injected -->
+                        </div>
+                        <button id="jeopardy-new-game-btn" class="btn btn-primary btn-block" data-i18n="jeopardy_new_char">Gioca con un nuovo personaggio</button>
+                    </div>
+                </section>
+                
+                <!-- VOTING (LITIGHIAMO) VIEW -->
+                <section id="view-voting" class="view-section">
+                    <div class="section-intro">
+                        <p data-i18n="voting_intro">Una domanda spietata del tipo "Chi è il più predisposto a...". Votate in segreto sul computer e poi scoprite i risultati totali!</p>
+                    </div>
+                    
+                    <div id="voting-setup-panel" class="glass-card game-setup-card max-width-600">
+                        <h3 class="danger-header"><i data-lucide="alert-triangle"></i> <span data-i18n="voting_rules_title">REGOLE DEL GIOCO (18+)</span></h3>
+                        <ol class="custom-list danger-rules">
+                            <li data-i18n="voting_rule_1">Inserite i nomi dei partecipanti (da 2 a 10)</li>
+                            <li data-i18n="voting_rule_2">Apparirà una domanda SPIETATA tipo "Chi è il più predisposto a..."</li>
+                            <li data-i18n="voting_rule_3">Votate in SEGRETO il "fortunato" partecipante</li>
+                            <li data-i18n="voting_rule_4">NON RIVELATE mai il vostro voto!</li>
+                            <li data-i18n="voting_rule_5">Scoprite i risultati anonimi e DISCUTETENE fino a litigare!</li>
+                        </ol>
+                        
+                        <div class="form-group">
+                            <label for="voting-players-count" data-i18n="voting_players_count">Numero di partecipanti (2-10)</label>
+                            <input type="number" id="voting-players-count" min="2" max="10" value="4">
+                        </div>
+                        
+                        <div id="voting-players-names-container" class="players-inputs">
+                            <!-- Injected dynamically -->
+                        </div>
+                        
+                        <button id="voting-start-btn" class="btn btn-error btn-block" data-i18n="voting_start_btn">INIZIA IL GIOCO (a tuo rischio!)</button>
+                    </div>
+                    
+                    <div id="voting-game-panel" class="hidden">
+                        <div class="voting-question-card glass-card">
+                            <i data-lucide="flame" class="danger-flame-icon animate-pulse"></i>
+                            <h2 class="voting-question-text" id="voting-question-text">Chi è il più predisposto a...?</h2>
+                        </div>
+                        
+                        <div class="voting-turn-box glass-card text-center max-width-600 margin-auto">
+                            <h3 class="danger-text"><i data-lucide="skull"></i> <span data-i18n="voting_turn_for">È IL TURNO DI:</span> <strong id="voting-current-voter">Giocatore 1</strong></h3>
+                            <p data-i18n="voting_turn_hint">(Gli altri giratevi e NON GUARDATE!)</p>
+                            
+                            <div class="divider"></div>
+                            
+                            <p class="question-prompt" data-i18n="voting_select_victim">Scegli la tua vittima:</p>
+                            <div class="voting-options-list" id="voting-options-container">
+                                <!-- Injected dynamically -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="voting-results-panel" class="hidden">
+                        <div class="voting-question-card glass-card">
+                            <h2 class="voting-question-text" id="voting-results-question-text">Chi è il più predisposto a...?</h2>
+                        </div>
+                        
+                        <div class="results-grid">
+                            <div class="glass-card chart-box">
+                                <h3 data-i18n="voting_chart_title">Chi è finito nel tritacarne?</h3>
+                                <div class="chart-container">
+                                    <canvas id="voting-chart"></canvas>
+                                </div>
+                            </div>
+                            
+                            <div class="glass-card details-box">
+                                <h3 data-i18n="voting_detail_title">Dettaglio voti (per litigare meglio)</h3>
+                                <div class="table-scroll">
+                                    <table class="premium-table">
+                                        <thead>
+                                            <tr>
+                                                <th data-i18n="voting_table_voter">Votante</th>
+                                                <th data-i18n="voting_table_voted">Ha votato</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="voting-details-table-body">
+                                            <!-- Injected -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="actions-row max-width-600 margin-auto margin-top-20">
+                            <button id="voting-next-btn" class="btn btn-error btn-block">
+                                <i data-lucide="arrow-right"></i> <span data-i18n="voting_next_question">Prossima Domanda</span>
+                            </button>
+                            <button id="voting-reset-btn" class="btn btn-secondary btn-block">
+                                <i data-lucide="rotate-ccw"></i> <span data-i18n="voting_new_party">Nuova Partita</span>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- FINANCE VIEW -->
+                <section id="view-finance" class="view-section">
+                    <div class="section-intro">
+                        <p data-i18n="finance_intro">Ho aggiunto questa sezione perché sono sicuro che farete tanti soldi e non vorrei che ve li lasciate erodere dall'inflazione e dai costi bancari.</p>
+                    </div>
+                    
+                    <div class="finance-layout">
+                        <!-- Left Panel: Slide lesson and download -->
+                        <div class="glass-card finance-learning-card">
+                            <div class="learning-header">
+                                <i data-lucide="book-open" class="learning-icon"></i>
+                                <h2 data-i18n="finance_lecture_title">Materiale Didattico</h2>
+                            </div>
+                            <p data-i18n="finance_lecture_desc">Di seguito trovate la videolezione completa e le slide di un evento di Finanza Personale che ho organizzato con Starting Finance Bicocca.</p>
+                            
+                            <div class="alert-box alert-info">
+                                <i data-lucide="info"></i>
+                                <p data-i18n="finance_lecture_alert">Guardatela per capire: perché ha senso investire, cosa non fare assolutamente, fondi pensione, tassazione e come difendersi dalle trappole.</p>
+                            </div>
+                            
+                            <div class="download-actions">
+                                <a href="https://drive.google.com/file/d/1Y1f8RXeEE0U309EcZJ6cqGZUZwFAB_MF/view" target="_blank" class="btn btn-primary flex-center">
+                                    <i data-lucide="play-circle"></i>
+                                    <span data-i18n="finance_watch_video">Guarda la Videolezione (Drive)</span>
+                                </a>
+                                <a href="Investire senza trappole.pdf" download="Investire_senza_trappole.pdf" class="btn btn-secondary flex-center" id="download-slides-btn">
+                                    <i data-lucide="download"></i>
+                                    <span data-i18n="finance_download_slides">Scarica le Slides (PDF)</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Right Panel: Simulator inputs -->
+                        <div class="glass-card finance-simulator-card">
+                            <h2 data-i18n="finance_simulator_title"><i data-lucide="calculator"></i> Simulatore di Investimento</h2>
+                            <p data-i18n="finance_simulator_desc" class="subtitle">Modifica i parametri e guarda crescere il capitale con l'interesse composto.</p>
+                            
+                            <div class="simulator-inputs-grid">
+                                <div class="form-group">
+                                    <label for="sim-initial-capital" data-i18n="sim_initial_capital">Capitale Iniziale (€)</label>
+                                    <input type="number" id="sim-initial-capital" min="0" value="5000" step="1000">
+                                </div>
+                                <div class="form-group">
+                                    <label for="sim-monthly-investment" data-i18n="sim_monthly_investment">Investimento Mensile (€)</label>
+                                    <input type="number" id="sim-monthly-investment" min="0" value="150" step="50">
+                                </div>
+                                <div class="form-group">
+                                    <label for="sim-years" data-i18n="sim_years">Orizzonte Temporale (Anni)</label>
+                                    <div class="range-container">
+                                        <input type="range" id="sim-years" min="5" max="60" value="30">
+                                        <span class="range-val" id="sim-years-val">30</span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="sim-return" data-i18n="sim_return">Rendimento Annuo Atteso (%)</label>
+                                    <div class="range-container">
+                                        <input type="range" id="sim-return" min="0" max="15" value="7" step="0.5">
+                                        <span class="range-val" id="sim-return-val">7%</span>
+                                    </div>
+                                    <p class="input-note" data-i18n="sim_return_note">Nota: Il mercato azionario globale rende storicamente l'8-10% annuo.</p>
+                                </div>
+                                <div class="form-group full-width">
+                                    <label for="sim-inflation" data-i18n="sim_inflation">Inflazione Annua Attesa (%)</label>
+                                    <div class="range-container">
+                                        <input type="range" id="sim-inflation" min="0" max="10" value="2.5" step="0.25">
+                                        <span class="range-val" id="sim-inflation-val">2.5%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Projections Box -->
+                    <div class="glass-card projection-box margin-top-20">
+                        <h3 data-i18n="sim_projections_header">Proiezione dei Risultati</h3>
+                        <div class="projections-summary-grid">
+                            <div class="proj-card card-orange">
+                                <div class="proj-label" data-i18n="sim_total_invested">Totale Investito</div>
+                                <div class="proj-value" id="proj-total-invested">€ 59,000</div>
+                                <div class="proj-note" data-i18n="sim_total_invested_note">Somma dei tuoi versamenti</div>
+                            </div>
+                            <div class="proj-card card-green">
+                                <div class="proj-label" data-i18n="sim_nominal_value">Valore Nominale</div>
+                                <div class="proj-value" id="proj-nominal-value">€ 215,400</div>
+                                <div class="proj-note" data-i18n="sim_nominal_value_note">Capitale finale accumulato</div>
+                            </div>
+                            <div class="proj-card card-blue">
+                                <div class="proj-label" data-i18n="sim_real_value">Valore Reale (Oggi)</div>
+                                <div class="proj-value" id="proj-real-value">€ 120,500</div>
+                                <div class="proj-note" data-i18n="sim_real_value_note">Potere d'acquisto effettivo</div>
+                            </div>
+                            <div class="proj-card card-red">
+                                <div class="proj-label" data-i18n="sim_inflation_loss">Erosione Inflazione</div>
+                                <div class="proj-value" id="proj-inflation-loss">€ 94,900</div>
+                                <div class="proj-note" data-i18n="sim_inflation_loss_note">Valore perso se non investito</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Chart Panel -->
+                    <div class="glass-card chart-box margin-top-20">
+                        <h3 data-i18n="sim_chart_title">Andamento della crescita nel tempo</h3>
+                        <div class="chart-container-large">
+                            <canvas id="finance-chart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <!-- Decadal table -->
+                    <div class="glass-card details-box margin-top-20">
+                        <h3 data-i18n="sim_table_title">Dettaglio Decennale del Capitale</h3>
+                        <div class="table-scroll">
+                            <table class="premium-table">
+                                <thead>
+                                    <tr>
+                                        <th data-i18n="sim_table_year">Anno</th>
+                                        <th data-i18n="sim_table_invested">Totale Investito</th>
+                                        <th data-i18n="sim_table_nominal">Valore Nominale</th>
+                                        <th data-i18n="sim_table_real">Valore Reale (netto inflazione)</th>
+                                        <th data-i18n="sim_table_loss">Perdita per Inflazione</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="finance-table-body">
+                                    <!-- Injected -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- PROFILE VIEW -->
+                <section id="view-profile" class="view-section">
+                    <div id="guest-profile-msg" class="glass-card text-center max-width-600 margin-auto">
+                        <div class="lock-icon-container">
+                            <i data-lucide="shield-alert" class="lock-icon large"></i>
+                        </div>
+                        <h2 data-i18n="guest_profile_title">Sei entrato come Ospite</h2>
+                        <p data-i18n="guest_profile_desc">Per visualizzare la tua scheda personale e lo storico delle pagelle, devi collegarti con un profilo ufficiale.</p>
+                        <button id="guest-profile-select-btn" class="btn btn-primary" data-i18n="guest_profile_btn">Scegli un Profilo</button>
+                    </div>
+                    
+                    <div id="user-profile-panel" class="profile-layout hidden">
+                        <div class="profile-sidebar-card glass-card">
+                            <div class="profile-img-container">
+                                <img id="profile-user-img" src="" alt="Profile Image" onerror="this.src='https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=300&h=300&q=80'">
+                            </div>
+                            <h2 class="profile-name" id="profile-user-name">Girla</h2>
+                            <div class="profile-nicknames" id="profile-user-nicks">
+                                <!-- Nicknames badges injected -->
+                            </div>
+                            
+                            <div class="divider"></div>
+                            
+                            <div class="profile-stats-card">
+                                <div class="p-stat-row">
+                                    <span data-i18n="prof_trips">Viaggi effettuati</span>
+                                    <strong id="profile-stat-trips">5</strong>
+                                </div>
+                                <div class="p-stat-row">
+                                    <span data-i18n="prof_avg">Media voti storica</span>
+                                    <strong id="profile-stat-avg">9.0</strong>
+                                </div>
+                                <div class="p-stat-row">
+                                    <span data-i18n="prof_max">Voto più alto</span>
+                                    <strong id="profile-stat-max">9.5 (Barcellona)</strong>
+                                </div>
+                                <div class="p-stat-row">
+                                    <span data-i18n="prof_perf">Miglior performance</span>
+                                    <strong id="profile-stat-best">Barcellona</strong>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-history-card glass-card">
+                            <h2 data-i18n="prof_history_title">Cronologia delle Pagelle Storiche</h2>
+                            <div class="timeline" id="profile-timeline-container">
+                                <!-- Timeline milestones injected -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
+            
+        </main>
+        
+    </div>
+
+    <!-- Custom Script -->
+    <script src="app.js"></script>
+</body>
+</html>
