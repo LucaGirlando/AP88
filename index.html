@@ -181,7 +181,7 @@
             <header class="content-header">
                 <button id="sidebar-toggle-mobile-btn" class="mobile-only-btn menu-btn">
                     <i data-lucide="menu"></i>
-                </header>
+                </button>
                 <div class="header-title-area">
                     <h1 id="page-title" data-i18n="nav_home">Home Pagelle</h1>
                 </div>
@@ -421,7 +421,7 @@
                     </div>
                     
                     <div id="voting-setup-panel" class="glass-card game-setup-card max-width-600">
-                        <h3 class="danger-header"><i data-lucide="alert-triangle"></i> <span data-i18n="voting_rules_title">REGOLE DEL GIOCO (18+)</span></h3>
+                        <h3 class="danger-header"><i data-lucide="alert-triangle"></i> <span data-i18n="voting_rules_title">REGOLE DEL GIOCO</span></h3>
                         <ol class="custom-list danger-rules">
                             <li data-i18n="voting_rule_1">Inserite i nomi dei partecipanti (da 2 a 10)</li>
                             <li data-i18n="voting_rule_2">Apparirà una domanda SPIETATA tipo "Chi è il più predisposto a..."</li>
@@ -466,16 +466,25 @@
                             <h2 class="voting-question-text" id="voting-results-question-text">Chi è il più predisposto a...?</h2>
                         </div>
                         
-                        <div class="results-grid">
-                            <div class="glass-card chart-box">
-                                <h3 data-i18n="voting_chart_title">Chi è finito nel tritacarne?</h3>
+                        <div class="results-grid" style="grid-template-columns: 1fr; gap: 25px;">
+                            <div class="glass-card chart-box" style="min-height: 320px;">
+                                <h3 id="voting-round-chart-heading" style="margin-bottom:15px; display:flex; align-items:center; gap:8px;"><i data-lucide="bar-chart-2"></i> Risultati di questo Round</h3>
                                 <div class="chart-container">
-                                    <canvas id="voting-chart"></canvas>
+                                    <canvas id="voting-round-chart"></canvas>
+                                </div>
+                            </div>
+                            <div class="glass-card chart-box" style="min-height: 320px;">
+                                <h3 id="voting-global-chart-heading" style="margin-bottom:15px; display:flex; align-items:center; gap:8px;"><i data-lucide="bar-chart-2"></i> Classifica Globale (Sessione)</h3>
+                                <div class="chart-container">
+                                    <canvas id="voting-global-chart"></canvas>
                                 </div>
                             </div>
                             
                             <div class="glass-card details-box">
-                                <h3 data-i18n="voting_detail_title">Dettaglio voti (per litigare meglio)</h3>
+                                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:15px; flex-wrap:wrap; gap:10px;">
+                                    <h3 data-i18n="voting_detail_title" style="margin-bottom:0;">Dettaglio voti (per litigare meglio)</h3>
+                                    <button id="voting-toggle-reveal-btn" class="btn btn-secondary" style="padding:6px 14px; font-size:0.85rem;" data-i18n="voting_reveal_btn">Rivela Chi Ha Votato Chi</button>
+                                </div>
                                 <div class="table-scroll">
                                     <table class="premium-table">
                                         <thead>
@@ -533,6 +542,12 @@
                         <ul class="custom-list" id="tv-participants-list" style="margin-bottom:20px;">
                             <!-- Injected -->
                         </ul>
+                        
+                        <div class="glass-card" style="border: 2px solid var(--accent); background: var(--accent-glow); margin-bottom: 20px; padding: 20px; text-align: center; border-radius: var(--radius-md);">
+                            <strong style="font-size: 1.15rem; color: var(--text-primary); display: block; line-height: 1.6;" data-i18n="tv_results_disclaimer_setup">
+                                "Questi voti servono a fare le pagelle, per dare spunti, ma che della vostra opinione non ci interessa e saranno come sempre gestite dai poteri forti."
+                            </strong>
+                        </div>
                         
                         <button id="tv-start-btn" class="btn btn-primary btn-block">Inizia Turni di Voto 🏁</button>
                     </div>
@@ -623,11 +638,6 @@
                             <strong>Make It Meme</strong>
                             <span style="font-size:0.85rem; opacity:0.75; font-family:var(--font-primary);">https://makeitmeme.com/</span>
                         </a>
-                        
-                        <div class="divider"></div>
-                        <button id="sus-emergency-btn" class="btn btn-error flex-center btn-block" style="background:linear-gradient(45deg, #ff0000, #cc0000); border-color:#ff0000; padding:15px 20px;">
-                            <i data-lucide="bell"></i> EMERGENCY MEETING
-                        </button>
                     </div>
                 </section>
                 

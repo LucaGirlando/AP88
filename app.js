@@ -43,7 +43,9 @@ const APP_STATE = {
         currentQuestion: '',
         questionsUsed: new Set(),
         votes: {},
-        roundResults: {}
+        roundResults: {},
+        cumulativeResults: {},
+        revealDetailedVotes: false
     },
     tripvoting: {
         participants: [], // List of names
@@ -563,7 +565,7 @@ const TRANSLATIONS = {
         nav_home: "Home Pagelle",
         nav_quiz: "Re delle Pagelle",
         nav_jeopardy: "Jeopardy Board",
-        nav_voting: "Litighiamo! (18+)",
+        nav_voting: "Litighiamo!",
         nav_tripvoting: "Votazioni Fine Vacanza",
         nav_gameslist: "Giochi Online",
         nav_profile: "Profilo Personale",
@@ -599,7 +601,7 @@ const TRANSLATIONS = {
         no: "No",
         reveal_answer: "Rivela Risposta",
         voting_intro: "Gioco di votazioni segrete e spietate. Perfetto per rovinare amicizie e litigare!",
-        voting_rules_title: "⚠️ REGOLE DEL GIOCO (18+)",
+        voting_rules_title: "⚠️ REGOLE DEL GIOCO",
         voting_rule_1: "Inserite i nomi di tutti i partecipanti presenti (2-10).",
         voting_rule_2: "A schermo apparirà una frase del tipo 'Chi è il più predisposto a...'.",
         voting_rule_3: "A turno, ciascuno vota in SEGRETO sul dispositivo per un altro partecipante.",
@@ -608,12 +610,13 @@ const TRANSLATIONS = {
         voting_start_btn: "INIZIA IL GIOCO ☠️",
         voting_turn_for: "VOTA IN SEGRETO:",
         voting_select_victim: "Seleziona la tua vittima:",
-        voting_chart_title: "Chi finisce nel tritacarne?",
-        voting_detail_title: "Tabella dei Voti Esposti",
+        voting_chart_title: "Risultati di questo Round",
+        voting_detail_title: "Dettaglio voti (per litigare meglio)",
         voting_table_voter: "Votante",
         voting_table_voted: "Ha votato",
         voting_next_question: "Prossima Domanda 💥",
         voting_new_party: "Resetta / Nuova Partita 🔄",
+        voting_reveal_btn: "Rivela Chi Ha Votato Chi",
         guest_profile_title: "Sei entrato come Ospite",
         guest_profile_desc: "Accedi selezionando uno dei profili ufficiali AP88 per visualizzare le tue pagelle e le tue statistiche storiche.",
         guest_profile_btn: "Seleziona Profilo",
@@ -636,6 +639,7 @@ const TRANSLATIONS = {
         tv_turn_warning: "(Tutti gli altri partecipanti devono girarsi e NON guardare lo schermo!)",
         tv_form_title: "Votazione Segreta di:",
         tv_results_disclaimer: "Questi voti servono a fare le pagelle, per dare spunti, ma che della vostra opinione non ci interessa e saranno come sempre gestite dai poteri forti.",
+        tv_results_disclaimer_setup: "Questi voti servono a fare le pagelle, per dare spunti, ma che della vostra opinione non ci interessa e saranno come sempre gestite dai poteri forti.",
         gameslist_intro: "Seleziona uno dei giochi online per iniziare a giocare con il gruppo."
     },
     en: {
@@ -650,7 +654,7 @@ const TRANSLATIONS = {
         nav_home: "Trip Grades",
         nav_quiz: "Grades Quiz",
         nav_jeopardy: "Jeopardy Board",
-        nav_voting: "Litighiamo! (18+)",
+        nav_voting: "Let's Fight!",
         nav_tripvoting: "End Trip Voting",
         nav_gameslist: "Online Games",
         nav_profile: "Personal Profile",
@@ -686,7 +690,7 @@ const TRANSLATIONS = {
         no: "No",
         reveal_answer: "Reveal Answer",
         voting_intro: "Secret, savage voting game. Perfect for ruining friendships and starting arguments!",
-        voting_rules_title: "⚠️ GAME RULES (18+)",
+        voting_rules_title: "⚠️ GAME RULES",
         voting_rule_1: "Enter the names of all participants present (2-10).",
         voting_rule_2: "A savage question will appear like 'Who is most likely to...'.",
         voting_rule_3: "One by one, vote in SECRET for another participant on the device.",
@@ -695,12 +699,13 @@ const TRANSLATIONS = {
         voting_start_btn: "START THE GAME ☠️",
         voting_turn_for: "VOTE IN SECRET:",
         voting_select_victim: "Select your victim:",
-        voting_chart_title: "Who ends up in the meat grinder?",
+        voting_chart_title: "Results of this Round",
         voting_detail_title: "Detailed Vote Table",
         voting_table_voter: "Voter",
         voting_table_voted: "Voted for",
         voting_next_question: "Next Question 💥",
         voting_new_party: "Reset / New Game 🔄",
+        voting_reveal_btn: "Reveal Who Voted Who",
         guest_profile_title: "Logged in as Guest",
         guest_profile_desc: "Log in by choosing one of the official AP88 profiles to view your report card summaries and historical statistics.",
         guest_profile_btn: "Select Profile",
@@ -723,6 +728,7 @@ const TRANSLATIONS = {
         tv_turn_warning: "(Everyone else must turn away and NOT look at the screen!)",
         tv_form_title: "Secret Vote of:",
         tv_results_disclaimer: "These votes serve only as suggestions and inspiration. We don't care about your opinion; final grades will still be managed by the authorities.",
+        tv_results_disclaimer_setup: "These votes serve only as suggestions and inspiration. We don't care about your opinion; final grades will still be managed by the authorities.",
         gameslist_intro: "Select one of the online games to start playing with the group."
     }
 };
@@ -810,36 +816,36 @@ const JEOPARDY_QUESTIONS = {
 
 // --- VOTING QUESTIONS ("LITIGHIAMO") ---
 const VOTING_QUESTIONS = [
-    "Chi è il più predisposto a tradire il partner durante un viaggio?",
-    "Chi è il più predisposto a fare sesso in un luogo pubblico?",
-    "Chi è il più predisposto a provare un ménage à trois?",
-    "Chi è il più predisposto a farsi trovare nudo in una situazione imbarazzante?",
-    "Chi è il più predisposto a fare Onlyfans?",
-    "Chi è il più predisposto a mandare un nudo per sbaglio nel gruppo?",
-    "Chi è il più predisposto a farsi arrestare all'estero per qualcosa di stupido?",
-    "Chi è il più predisposto a fare una figura di merda epica al primo appuntamento?",
-    "Chi è il più predisposto a vomitare dopo appena due drink?",
-    "Chi è il più predisposto a farsi scoprire con una sbronza molesta dai genitori?",
-    "Chi è il più predisposto a finire in prigione per evasione fiscale?",
-    "Chi è il più predisposto a rubare asciugamani e accappatoi dagli hotel?",
-    "Chi è il più predisposto a corrompere un poliziotto locale?",
-    "Chi è il più predisposto a tornare con un ex tossico rovinando tutto?",
-    "Chi è il più predisposto a scrivere un papiro imbarazzante all'ex alle 4 del mattino da ubriaco?",
-    "Chi è il più predisposto a farsi truffare da un finto profilo online (catfishing)?",
-    "Chi è il più predisposto a ghostare una persona fidanzata senza motivo?",
-    "Chi è il più predisposto a investire tutti i risparmi in criptovalute scam e perdere tutto?",
-    "Chi è il più predisposto a credere ciecamente alla Terra Piatta o agli UFO?",
-    "Chi è il più predisposto a entrare a far parte di una setta esoterica?",
-    "Chi è il più predisposto a presentarsi già visibilmente ubriaco a un matrimonio formale?",
-    "Chi è il più predisposto a rovinare un gioco di società litigando selvaggiamente?",
-    "Chi è il più predisposto a farsi licenziare per un post cringe su Instagram?",
-    "Chi è il più predisposto a fare sesso con il capo per fare carriera?",
-    "Chi è il più predisposto a non farsi la doccia per un'intera vacanza estiva?",
-    "Chi è il più predisposto a fare la pipì nella piscina dell'hotel?",
-    "Chi è il più predisposto a scoreggiare sotto le lenzuola e chiudere dentro il partner?",
-    "Chi è il più predisposto a diventare un influencer cringe su TikTok a 40 anni?",
-    "Chi è il più predisposto a sposarsi a Las Vegas dopo mezza serata di alcol?",
-    "Chi è il più predisposto a dimenticare il passaporto a casa prima di un volo transatlantico?"
+    { it: "Chi è il più predisposto a tradire il partner durante un viaggio?", en: "Who is most likely to cheat on their partner during a trip?" },
+    { it: "Chi è il più predisposto a fare sesso in un luogo pubblico?", en: "Who is most likely to have sex in a public place?" },
+    { it: "Chi è il più predisposto a provare un ménage à trois?", en: "Who is most likely to try a threesome?" },
+    { it: "Chi è il più predisposto a farsi trovare nudo in una situazione imbarazzante?", en: "Who is most likely to be found naked in an embarrassing situation?" },
+    { it: "Chi è il più predisposto a fare Onlyfans?", en: "Who is most likely to start an OnlyFans?" },
+    { it: "Chi è il più predisposto a mandare un nudo per sbaglio nel gruppo?", en: "Who is most likely to accidentally send a nude in the group chat?" },
+    { it: "Chi è il più predisposto a farsi arrestare all'estero per qualcosa di stupido?", en: "Who is most likely to get arrested abroad for something stupid?" },
+    { it: "Chi è il più predisposto a fare una figura di merda epica al primo appuntamento?", en: "Who is most likely to make an epic fool of themselves on a first date?" },
+    { it: "Chi è il più predisposto a vomitare dopo appena due drink?", en: "Who is most likely to throw up after just two drinks?" },
+    { it: "Chi è il più predisposto a farsi scoprire con una sbronza molesta dai genitori?", en: "Who is most likely to get caught completely hammered by their parents?" },
+    { it: "Chi è il più predisposto a finire in prigione per evasione fiscale?", en: "Who is most likely to end up in jail for tax evasion?" },
+    { it: "Chi è il più predisposto a rubare asciugamani e accappatoi dagli hotel?", en: "Who is most likely to steal towels and bathrobes from hotels?" },
+    { it: "Chi è il più predisposto a corrompere un poliziotto locale?", en: "Who is most likely to bribe a local police officer?" },
+    { it: "Chi è il più predisposto a tornare con un ex tossico rovinando tutto?", en: "Who is most likely to get back with a toxic ex, ruining everything?" },
+    { it: "Chi è il più predisposto a scrivere un papiro imbarazzante all'ex alle 4 del mattino da ubriaco?", en: "Who is most likely to drunk text a long embarrassing essay to their ex at 4 AM?" },
+    { it: "Chi è il più predisposto a farsi truffare da un finto profilo online (catfishing)?", en: "Who is most likely to get catfished by a fake profile online?" },
+    { it: "Chi è il più predisposto a ghostare una persona fidanzata senza motivo?", en: "Who is most likely to ghost a fiancé for no reason?" },
+    { it: "Chi è il più predisposto a investire tutti i risparmi in criptovalute scam e perdere tutto?", en: "Who is most likely to invest all their savings in a scam cryptocurrency and lose it all?" },
+    { it: "Chi è il più predisposto a credere ciecamente alla Terra Piatta o agli UFO?", en: "Who is most likely to believe blindly in Flat Earth or UFOs?" },
+    { it: "Chi è il più predisposto a entrare a far parte di una setta esoterica?", en: "Who is most likely to join an esoteric cult?" },
+    { it: "Chi è il più predisposto a presentarsi già visibilmente ubriaco a un matrimonio formale?", en: "Who is most likely to show up visibly drunk to a formal wedding?" },
+    { it: "Chi è il più predisposto a rovinare un gioco di società litigando selvaggiamente?", en: "Who is most likely to ruin a board game by arguing savagely?" },
+    { it: "Chi è il più predisposto a farsi licenziare per un post cringe su Instagram?", en: "Who is most likely to get fired over a cringe post on Instagram?" },
+    { it: "Chi è il più predisposto a fare sesso con il capo per fare carriera?", en: "Who is most likely to have sex with the boss for a promotion?" },
+    { it: "Chi è il più predisposto a non farsi la doccia per un'intera vacanza estiva?", en: "Who is most likely to not shower for an entire summer vacation?" },
+    { it: "Chi è il più predisposto a fare la pipì nella piscina dell'hotel?", en: "Who is most likely to pee in the hotel pool?" },
+    { it: "Chi è il più predisposto a scoreggiare sotto le lenzuola e chiudere dentro il partner?", en: "Who is most likely to fart under the sheets and trap their partner?" },
+    { it: "Chi è il più predisposto a diventare un influencer cringe su TikTok a 40 anni?", en: "Who is most likely to become a cringe TikTok influencer at age 40?" },
+    { it: "Chi è il più predisposto a sposarsi a Las Vegas dopo mezza serata di alcol?", en: "Who is most likely to get married in Las Vegas after a drunken night?" },
+    { it: "Chi è il più predisposto a dimenticare il passaporto a casa prima di un volo transatlantico?", en: "Who is most likely to forget their passport at home before a transatlantic flight?" }
 ];
 
 
@@ -1640,9 +1646,10 @@ function initGames() {
     document.getElementById("voting-start-btn").addEventListener("click", startVotingGame);
     document.getElementById("voting-next-btn").addEventListener("click", loadNextVotingQuestion);
     document.getElementById("voting-reset-btn").addEventListener("click", resetVotingToSetup);
-    
-    // Sus Button
-    document.getElementById("sus-emergency-btn").addEventListener("click", triggerEmergencyMeetingAlert);
+    document.getElementById("voting-toggle-reveal-btn").addEventListener("click", () => {
+        APP_STATE.voting.revealDetailedVotes = !APP_STATE.voting.revealDetailedVotes;
+        renderVotingDetailsTable();
+    });
     
     rebuildJeopardyPlayersInputs();
     rebuildVotingPlayersInputs();
@@ -1988,7 +1995,8 @@ function resetJeopardyToSetup() {
 // VOTING GAME ("LITIGHIAMO")
 // ==========================================================================
 
-let votingChartInstance = null;
+let votingRoundChartInstance = null;
+let votingGlobalChartInstance = null;
 
 function rebuildVotingPlayersInputs() {
     const count = parseInt(document.getElementById("voting-players-count").value) || 2;
@@ -2022,9 +2030,12 @@ function startVotingGame() {
     APP_STATE.voting.questionsUsed.clear();
     APP_STATE.voting.votes = {};
     APP_STATE.voting.roundResults = {};
+    APP_STATE.voting.cumulativeResults = {};
+    APP_STATE.voting.revealDetailedVotes = false;
     
     participants.forEach(p => {
         APP_STATE.voting.roundResults[p] = 0;
+        APP_STATE.voting.cumulativeResults[p] = 0;
     });
     
     loadNewVotingQuestion();
@@ -2034,7 +2045,7 @@ function startVotingGame() {
 function loadNewVotingQuestion() {
     const available = VOTING_QUESTIONS.filter(q => !APP_STATE.voting.questionsUsed.has(q));
     if (available.length === 0) {
-        alert("Tutte le domande sono state usate!");
+        alert(APP_STATE.language === 'it' ? "Tutte le domande sono state usate!" : "All questions have been used!");
         resetVotingToSetup();
         return;
     }
@@ -2044,10 +2055,32 @@ function loadNewVotingQuestion() {
     APP_STATE.voting.currentQuestion = chosen;
     APP_STATE.voting.currentVoterIndex = 0;
     APP_STATE.voting.votes = {};
+    APP_STATE.voting.revealDetailedVotes = false;
     
     APP_STATE.voting.participants.forEach(p => {
         APP_STATE.voting.roundResults[p] = 0;
     });
+}
+
+function renderVotingDetailsTable() {
+    const tbody = document.getElementById("voting-details-table-body");
+    const toggleBtn = document.getElementById("voting-toggle-reveal-btn");
+    if (!tbody || !toggleBtn) return;
+    
+    const isRevealed = APP_STATE.voting.revealDetailedVotes;
+    
+    if (isRevealed) {
+        toggleBtn.innerText = APP_STATE.language === 'it' ? "Nascondi Voti" : "Hide Votes";
+    } else {
+        toggleBtn.innerText = APP_STATE.language === 'it' ? "Rivela Chi Ha Votato Chi" : "Reveal Who Voted Who";
+    }
+    
+    tbody.innerHTML = Object.entries(APP_STATE.voting.votes).map(([voter, voted]) => `
+        <tr>
+            <td><strong>${isRevealed ? voter : '🔒 ' + (APP_STATE.language === 'it' ? 'Segreto' : 'Secret')}</strong></td>
+            <td><span class="badge badge-accent">${voted}</span></td>
+        </tr>
+    `).join("");
 }
 
 function renderVotingGame() {
@@ -2064,23 +2097,19 @@ function renderVotingGame() {
         gamePanel.classList.add("hidden");
         resultsPanel.classList.remove("hidden");
         
-        document.getElementById("voting-results-question-text").innerText = APP_STATE.voting.currentQuestion;
+        const qText = APP_STATE.language === 'it' ? APP_STATE.voting.currentQuestion.it : APP_STATE.voting.currentQuestion.en;
+        document.getElementById("voting-results-question-text").innerText = qText;
         
-        const tbody = document.getElementById("voting-details-table-body");
-        tbody.innerHTML = Object.entries(APP_STATE.voting.votes).map(([voter, voted]) => `
-            <tr>
-                <td><strong>${voter}</strong></td>
-                <td><span class="badge badge-accent">${voted}</span></td>
-            </tr>
-        `).join("");
+        renderVotingDetailsTable();
         
-        setTimeout(renderVotingChart, 50);
+        setTimeout(renderVotingCharts, 50);
     } else {
         setupPanel.classList.add("hidden");
         gamePanel.classList.remove("hidden");
         resultsPanel.classList.add("hidden");
         
-        document.getElementById("voting-question-text").innerText = APP_STATE.voting.currentQuestion;
+        const qText = APP_STATE.language === 'it' ? APP_STATE.voting.currentQuestion.it : APP_STATE.voting.currentQuestion.en;
+        document.getElementById("voting-question-text").innerText = qText;
         
         const activeVoterName = APP_STATE.voting.participants[APP_STATE.voting.currentVoterIndex];
         document.getElementById("voting-current-voter").innerText = activeVoterName.toUpperCase();
@@ -2101,6 +2130,7 @@ function renderVotingGame() {
 function submitVote(voter, voted) {
     APP_STATE.voting.votes[voter] = voted;
     APP_STATE.voting.roundResults[voted]++;
+    APP_STATE.voting.cumulativeResults[voted] = (APP_STATE.voting.cumulativeResults[voted] || 0) + 1;
     
     APP_STATE.voting.currentVoterIndex++;
     
@@ -2111,29 +2141,29 @@ function submitVote(voter, voted) {
     renderVotingGame();
 }
 
-function renderVotingChart() {
-    const ctx = document.getElementById("voting-chart");
-    if (!ctx) return;
+function renderVotingCharts() {
+    const roundCtx = document.getElementById("voting-round-chart");
+    const globalCtx = document.getElementById("voting-global-chart");
+    if (!roundCtx || !globalCtx) return;
     
-    if (votingChartInstance) {
-        votingChartInstance.destroy();
-    }
-    
-    const dataSet = Object.entries(APP_STATE.voting.roundResults).sort((a,b) => b[1] - a[1]);
-    const labels = dataSet.map(d => d[0]);
-    const votes = dataSet.map(d => d[1]);
+    if (votingRoundChartInstance) votingRoundChartInstance.destroy();
+    if (votingGlobalChartInstance) votingGlobalChartInstance.destroy();
     
     const isDark = document.documentElement.getAttribute("data-theme") === 'dark';
     const textColor = isDark ? '#f8f8f8' : '#1e1e1e';
     const gridColor = isDark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.08)';
     
-    votingChartInstance = new Chart(ctx, {
+    // Chart 1: Round results
+    const roundData = Object.entries(APP_STATE.voting.roundResults).sort((a,b) => b[1] - a[1]);
+    const roundLabels = roundData.map(d => d[0]);
+    const roundVotes = roundData.map(d => d[1]);
+    
+    votingRoundChartInstance = new Chart(roundCtx, {
         type: 'bar',
         data: {
-            labels: labels,
+            labels: roundLabels,
             datasets: [{
-                label: 'Voti Ricevuti',
-                data: votes,
+                data: roundVotes,
                 backgroundColor: 'rgba(244, 67, 54, 0.75)',
                 borderColor: 'rgba(244, 67, 54, 1)',
                 borderWidth: 1.5,
@@ -2144,22 +2174,45 @@ function renderVotingChart() {
             indexAxis: 'y',
             responsive: true,
             maintainAspectRatio: false,
-            plugins: {
-                legend: { display: false }
-            },
+            plugins: { legend: { display: false } },
             scales: {
                 x: {
                     grid: { color: gridColor },
-                    ticks: {
-                        color: textColor,
-                        stepSize: 1,
-                        precision: 0
-                    }
+                    ticks: { color: textColor, stepSize: 1, precision: 0 }
                 },
-                y: {
-                    grid: { display: false },
-                    ticks: { color: textColor }
-                }
+                y: { grid: { display: false }, ticks: { color: textColor } }
+            }
+        }
+    });
+    
+    // Chart 2: Global cumulative results
+    const globalData = Object.entries(APP_STATE.voting.cumulativeResults).sort((a,b) => b[1] - a[1]);
+    const globalLabels = globalData.map(d => d[0]);
+    const globalVotes = globalData.map(d => d[1]);
+    
+    votingGlobalChartInstance = new Chart(globalCtx, {
+        type: 'bar',
+        data: {
+            labels: globalLabels,
+            datasets: [{
+                data: globalVotes,
+                backgroundColor: 'rgba(106, 90, 205, 0.75)',
+                borderColor: 'rgba(106, 90, 205, 1)',
+                borderWidth: 1.5,
+                borderRadius: 8
+            }]
+        },
+        options: {
+            indexAxis: 'y',
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: {
+                x: {
+                    grid: { color: gridColor },
+                    ticks: { color: textColor, stepSize: 1, precision: 0 }
+                },
+                y: { grid: { display: false }, ticks: { color: textColor } }
             }
         }
     });
@@ -2175,43 +2228,6 @@ function resetVotingToSetup() {
     APP_STATE.voting.gameStarted = false;
     APP_STATE.voting.gameOver = false;
     renderVotingGame();
-}
-
-
-// ==========================================================================
-// SUS EMERGENCY MEETING EVENT
-// ==========================================================================
-
-function triggerEmergencyMeetingAlert() {
-    const overlay = document.createElement("div");
-    overlay.style.position = 'fixed';
-    overlay.style.top = '0';
-    overlay.style.left = '0';
-    overlay.style.width = '100vw';
-    overlay.style.height = '100vh';
-    overlay.style.backgroundColor = 'rgba(0,0,0,0.96)';
-    overlay.style.zIndex = '99999';
-    overlay.style.display = 'flex';
-    overlay.style.flexDirection = 'column';
-    overlay.style.alignItems = 'center';
-    overlay.style.justifyContent = 'center';
-    overlay.style.border = '10px solid #ff0000';
-    overlay.style.boxShadow = 'inset 0 0 100px rgba(255, 0, 0, 0.8)';
-    overlay.style.cursor = 'pointer';
-    overlay.className = 'animate-scale-up';
-    
-    overlay.innerHTML = `
-        <h1 style="color:#ff0000; font-size:10vw; margin:0; line-height:1; font-weight:900; text-align:center; text-shadow: 0 0 30px red;">ඞ</h1>
-        <h1 style="color:white; font-size:4vw; font-weight:800; margin-top:20px; text-transform:uppercase; letter-spacing:4px; text-align:center;">Among Us Takeover!</h1>
-        <h2 style="color:#ff0000; font-size:2.5vw; font-weight:700; margin-top:15px; text-shadow:0 0 10px rgba(255,0,0,0.5); text-align:center;">🚨 EMERGENCY MEETING CALLED! 🚨</h2>
-        <p style="color:#888; font-size:1.1vw; margin-top:30px; font-style:italic;">(Clicca ovunque per chiudere)</p>
-    `;
-    
-    overlay.addEventListener("click", () => {
-        document.body.removeChild(overlay);
-    });
-    
-    document.body.appendChild(overlay);
 }
 
 
