@@ -357,17 +357,62 @@ h2 {
     box-shadow: var(--shadow-accent);
 }
 
-.profile-card-option img {
-    width: 70px;
-    height: 70px;
-    border-radius: var(--radius-full);
-    object-fit: cover;
+.profile-img-wrapper {
+    position: relative;
+    width: 120px;
+    height: 145px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
     border: 2px solid var(--border-color);
     transition: border-color var(--transition-fast);
 }
 
-.profile-card-option:hover img {
+.profile-card-option:hover .profile-img-wrapper {
     border-color: var(--accent);
+}
+
+.profile-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-nicks-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 15, 0.92);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 8px;
+    opacity: 0;
+    transition: opacity var(--transition-fast);
+    pointer-events: none;
+    z-index: 5;
+}
+
+.profile-card-option:hover .profile-nicks-overlay {
+    opacity: 1;
+}
+
+.overlay-nick-tag {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--accent-light);
+    text-align: center;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 2px 6px;
+    border-radius: var(--radius-sm);
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.2;
 }
 
 .profile-card-option span {
@@ -1583,9 +1628,9 @@ html[data-theme="light"] .tv-comment-author {
 }
 
 .profile-img-container {
-    width: 130px;
-    height: 130px;
-    border-radius: var(--radius-full);
+    width: 220px;
+    height: 260px;
+    border-radius: var(--radius-md);
     overflow: hidden;
     border: 3px solid var(--accent);
     box-shadow: var(--shadow-accent);

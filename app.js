@@ -402,7 +402,7 @@ const TRIP_DATA = {
         ]
     },
     croazia2024: {
-        title: { it: "Capodanno 2024 (Croazia)", en: "New Year 2024 (Croatia)" },
+        title: { it: "🇭🇷 Croazia 2024", en: "🇭🇷 Croatia 2024" },
         stats: { avg: 8.6, top: "9+ (Bax)", participants: 7, duration: "9 giorni", location: "Croazia" },
         reports: [
             {
@@ -1004,8 +1004,18 @@ function initAuthFlows() {
     MAIN_MEMBERS.forEach(member => {
         const card = document.createElement("div");
         card.className = "profile-card-option";
+        
+        const info = MEMBER_INFO[member];
+        const nicks = info ? info.nicknames : [];
+        const nicksHtml = nicks.map(n => `<span class="overlay-nick-tag">${n}</span>`).join("");
+        
         card.innerHTML = `
-            <img src="${member}.jpg" alt="${member}" onerror="this.src='https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150&h=150&q=80'">
+            <div class="profile-img-wrapper">
+                <img src="${member}.jpg" alt="${member}" onerror="this.src='https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150&h=150&q=80'">
+                <div class="profile-nicks-overlay">
+                    ${nicksHtml}
+                </div>
+            </div>
             <span>${member}</span>
         `;
         card.addEventListener("click", () => handleProfileSelectionClick(member));
