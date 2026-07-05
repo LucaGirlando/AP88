@@ -82,7 +82,7 @@ const MEMBER_INFO = {
     Girla: {
         name: "Girla",
         image: "Girla.jpg",
-        nicknames: ["IL T-REX", "PITA ADVISOR", "ANTHONY MARTIAL", "EHI EWA", "CIPOLLE SUDARE"],
+        nicknames: ["IL T-REX", "PITA ADVISOR", "ANTHONY MARTIAL", "EHI EWA", "CIPOLLE SUDATE"],
         stats: { trips: 5, avg: 9.0, max: "9.5 (Barcellona)", best: "Barcellona 24/25" }
     },
     Paga: {
@@ -496,7 +496,7 @@ const TRIP_DATA = {
             },
             {
                 name: "Girla",
-                nick: { it: "CIPOLLE SUDARE", en: "SWEATING ONIONS" },
+                nick: { it: "CIPOLLE SUDATE", en: "SWEATING ONIONS" },
                 grade: "9.5",
                 desc: {
                     it: "Arriva con un zoo intero sulla spalla che però non riesce a soddisfare causa chiusura per feste sfondandosi però con due cope di nada al bar. Gli fa un male cane la testa per l'alcol del giorno prima, ma si riprende alla grande grazie ai medicinali offerti da letizia. Nonostante questa cosa l'abbia destabilizzato un po' la sera di capodanno si diverte e si gode la serata, ma quando scoccano le 3 non c'è n'è per nessuno, si siede al tavolo entrando in mutismo selettivo. L'ultima sera si scontra con martina nella preparazione delle cipolle caramellate ma tutto è bene quel che finisce bene.",
@@ -1050,19 +1050,10 @@ function initAuthFlows() {
     const profileOverlay = document.getElementById("profile-overlay");
     const appContainer = document.getElementById("app-container");
     
-    const isUnlocked = localStorage.getItem("ap88_unlocked") === "true";
-    const selectedProfile = localStorage.getItem("ap88_profile");
-    const adminUnlocked = localStorage.getItem("ap88_admin_unlocked") === "true";
-    
-    if (isUnlocked) {
-        APP_STATE.unlocked = true;
-        passwordOverlay.classList.remove("active");
-        
-        // Always force profile selection on startup, forget previous session profile
-        localStorage.removeItem("ap88_profile");
-        localStorage.removeItem("ap88_admin_unlocked");
-        showProfileSelection();
-    }
+    // Always clear session tokens on page load to force lock screen
+    localStorage.removeItem("ap88_unlocked");
+    localStorage.removeItem("ap88_profile");
+    localStorage.removeItem("ap88_admin_unlocked");
 
     // Password verification logic
     const pwInput = document.getElementById("password-input");
