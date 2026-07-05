@@ -1851,12 +1851,20 @@ html[data-theme="light"] .timeline-grade {
         left: 0;
         width: 280px;
         height: 100%;
+        display: block !important; /* Switch to block to enable natural scrolling in landscape */
         transform: translateX(-100%);
         transition: transform var(--transition-normal);
         box-shadow: var(--shadow-lg);
         z-index: 1000;
         overflow-y: auto !important;
         -webkit-overflow-scrolling: touch;
+    }
+    
+    .sidebar-nav {
+        display: block !important;
+        overflow: visible !important;
+        flex: none !important;
+        margin: 15px 0 !important;
     }
     
     .sidebar.active {
