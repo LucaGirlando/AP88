@@ -1224,6 +1224,11 @@ function selectProfile(profileName) {
 
     updateUIForCurrentUser();
     renderActiveView();
+
+    // Automatically show mobile navigation drawer once user enters
+    if (window.innerWidth <= 991) {
+        document.getElementById("app-sidebar").classList.add("active");
+    }
 }
 
 function updateUIForCurrentUser() {

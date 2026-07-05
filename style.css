@@ -1872,16 +1872,16 @@ html[data-theme="light"] .timeline-grade {
         width: 100%;
     }
     
-    /* Overlay flex layout fixes for scrollable content on small viewports */
+    /* Overlay layout fixes for scrollable content on small viewports */
     .overlay, .modal-overlay {
-        flex-direction: column;
-        justify-content: flex-start;
+        display: block !important;
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch;
         padding: 40px 15px;
-        overflow-y: auto;
     }
     
     .login-card, .profile-selection-card, .modal-card {
-        margin: auto 0; /* Auto centering vertical alignment */
+        margin: 0 auto !important;
         max-height: none;
     }
 }
