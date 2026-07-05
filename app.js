@@ -1256,14 +1256,21 @@ function initRouting() {
     const menuClose = document.getElementById("sidebar-close-mobile-btn");
     const sidebar = document.getElementById("app-sidebar");
 
-    menuToggle.addEventListener("click", () => sidebar.classList.add("active"));
-    menuClose.addEventListener("click", () => sidebar.classList.remove("active"));
+    menuToggle.addEventListener("click", () => {
+        sidebar.classList.add("active");
+        document.body.classList.add("sidebar-open");
+    });
+    menuClose.addEventListener("click", () => {
+        sidebar.classList.remove("active");
+        document.body.classList.remove("sidebar-open");
+    });
 
     // Close sidebar on tap outside on mobile
     document.addEventListener("click", (e) => {
         if (sidebar.classList.contains("active")) {
             if (!sidebar.contains(e.target) && !menuToggle.contains(e.target) && !menuToggle.querySelector('i')?.contains(e.target)) {
                 sidebar.classList.remove("active");
+                document.body.classList.remove("sidebar-open");
             }
         }
     });
@@ -1275,6 +1282,7 @@ function initRouting() {
             const view = item.getAttribute("data-view");
             navigateTo(view);
             sidebar.classList.remove("active");
+            document.body.classList.remove("sidebar-open");
         });
     });
 
