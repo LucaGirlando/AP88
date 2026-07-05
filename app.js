@@ -1254,6 +1254,15 @@ function initRouting() {
     menuToggle.addEventListener("click", () => sidebar.classList.add("active"));
     menuClose.addEventListener("click", () => sidebar.classList.remove("active"));
 
+    // Close sidebar on tap outside on mobile
+    document.addEventListener("click", (e) => {
+        if (sidebar.classList.contains("active")) {
+            if (!sidebar.contains(e.target) && !menuToggle.contains(e.target) && !menuToggle.querySelector('i')?.contains(e.target)) {
+                sidebar.classList.remove("active");
+            }
+        }
+    });
+
     const navItems = document.querySelectorAll(".nav-item");
     navItems.forEach(item => {
         item.addEventListener("click", (e) => {
