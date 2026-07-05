@@ -1834,6 +1834,13 @@ html[data-theme="light"] .timeline-grade {
    RESPONSIVE STYLING (MOBILE BREAKPOINTS)
    ========================================================================== */
 @media (max-width: 991px) {
+    body {
+        position: fixed !important;
+        overflow: hidden !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+
     .app-layout {
         grid-template-columns: 1fr;
     }
@@ -1900,6 +1907,23 @@ html[data-theme="light"] .timeline-grade {
     .login-card, .profile-selection-card, .modal-card {
         margin: 0 auto !important;
         max-height: none;
+    }
+
+    /* Scrollable Profile Grid inside selection card on mobile */
+    .profile-grid {
+        max-height: 50vh !important;
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch;
+        padding-right: 6px;
+    }
+
+    .profile-grid::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .profile-grid::-webkit-scrollbar-thumb {
+        background: var(--accent);
+        border-radius: var(--radius-full);
     }
 }
 
