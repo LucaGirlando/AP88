@@ -1888,7 +1888,7 @@ html[data-theme="light"] .timeline-grade {
     }
     
     /* Overlay layout fixes for scrollable content on small viewports */
-    .overlay, .modal-overlay {
+    .overlay, .modal-overlay:not(.hidden) {
         display: block !important;
         position: fixed;
         top: 0;
