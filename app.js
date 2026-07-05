@@ -1058,25 +1058,10 @@ function initAuthFlows() {
         APP_STATE.unlocked = true;
         passwordOverlay.classList.remove("active");
         
-        if (selectedProfile) {
-            // FIX: If they are auto-logged as Girla but admin is not unlocked, force selection to request password
-            if (selectedProfile === "Girla" && !adminUnlocked) {
-                localStorage.removeItem("ap88_profile");
-                showProfileSelection();
-            } else {
-                APP_STATE.profile = selectedProfile;
-                profileOverlay.classList.remove("active");
-                appContainer.classList.remove("hidden");
-                
-                if (selectedProfile === "Girla" && adminUnlocked) {
-                    APP_STATE.adminUnlocked = true;
-                    document.getElementById("nav-admin-link").classList.remove("hidden");
-                }
-                updateUIForCurrentUser();
-            }
-        } else {
-            showProfileSelection();
-        }
+        // Always force profile selection on startup, forget previous session profile
+        localStorage.removeItem("ap88_profile");
+        localStorage.removeItem("ap88_admin_unlocked");
+        showProfileSelection();
     }
 
     // Password verification logic
