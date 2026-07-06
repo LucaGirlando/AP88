@@ -82,13 +82,13 @@ const MEMBER_INFO = {
     Girla: {
         name: "Girla",
         image: "Girla.jpg",
-        nicknames: ["IL T-REX", "PITA ADVISOR", "ANTHONY MARTIAL", "EHI EWA", "CIPOLLE SUDATE"],
+        nicknames: ["IL T-REX", "PITA ADVISOR", "ANTHONY MARTIAL", "EHI EWA, HAI PROGRAMMI STASERA?", "FACCIAMOLE SUDAREEEE STE CIPOLLEE"],
         stats: { trips: 5, avg: 9.0, max: "9.5 (Barcellona)", best: "Barcellona 24/25" }
     },
     Paga: {
         name: "Paga",
         image: "Paga.jpg",
-        nicknames: ["ER FREGOLA", "IL BARISTA", "IL MEGAFONO", "RIGATONI, NO FUSILLI", "RISO SENZA LATTOSIO"],
+        nicknames: ["ER FREGOLA", "IL BARISTA", "IL MEGAFONO", "RIGATONI, NO FUSILLI", "SI CON RISO SENZA LATTOSIO"],
         stats: { trips: 5, avg: 8.6, max: "9.5 (Corfù)", best: "Corfù 2022" }
     },
     Bax: {
@@ -427,7 +427,7 @@ const TRIP_DATA = {
             },
             {
                 name: "Girla",
-                nick: { it: "EHI EWA, HAI PROGRAMMI?", en: "EHI EWA, GOT PLANS?" },
+                nick: { it: "EHI EWA, HAI PROGRAMMI STASERA?", en: "EHI EWA, GOT PLANS TONIGHT?" },
                 grade: "9",
                 desc: {
                     it: "Freschissimo di laurea ci sono grandi aspettative su di lui, dovute anche ad un aumento di budget dopo i recenti investimenti ben fatti. Illude tutti offrendo la cena a Spalato, ma in 0.0035 secondi finisce su Splitwise, facendo capire che la musica non è cambiata (come in macchina di Bax). In cucina però si esalta caramellando qualsiasi cosa assomigli ad una cipolla e in serata si cucina le 2005 finlandesi diffondendo il 'Lesgoski'. Il suo prime lo vive sicuramente in Bosnia dove grazie al cambio favorevole, vive due giorni in Black Friday. Verso fine vacanza si scopre che il suo grande miglioramento in inglese non è dovuto alle lezioni della Terzi ma a delle call con l'headquarter di Varsavia.",
@@ -481,8 +481,8 @@ const TRIP_DATA = {
                 nick: { it: "L'INFLUENCER", en: "THE INFLUENCER" },
                 grade: "10",
                 desc: {
-                    it: "Fresca di firma sul contratto è costretta a stamparsi un sorriso in faccia per non fare brutta figura con gli amici del fidanzato. Un po' provata ancora dal recente cambio di telefono che l'ha costretta a ritrovarsi con l'iphone 16, non nasconde comunque la sue doti da boomer ben visibili ai suoi follower. Prepara la squadra alla serata principale infilando scorte di alcol in tutti gli orifizi dei compagni. L'ultima sera ospita un hamburgerata importante mantendendo la calma sotto la pressione degli chef paga e girla.",
-                    en: "Freshly signed she is forced to stamp a smile on her face not to look bad with her boyfriend's friends. A bit tested by the recent phone change that forced her to end up with the iphone 16, she doesn't hide her boomer traits visible to her followers. Prepares the team for the main night stuffing alcohol reserves in all orifices of her comrades. On the last night she hosts an important burger night keeping calm under the pressure of chefs Paga and Girla."
+                    it: "Fresca di firma sul contratto è costretta a stamparsi un sorriso in faccia per non fare brutta figura con gli amici del fidanzato. Un po’ provata ancora dal recente cambio di telefono che l’ha costretta a ritrovarsi con l’iphone 16, non nasconde comunque la sue doti da boomer ben visibili ai suoi follower.Prepara la squadra alla serata principale infilando scorte di alcol in tutti gli orifizi dei compagni risultate utilissime ad allungare il ghiaccio nei bicchieri vuoti. L’ultima sera ospita un hamburgerata importante mantendendo la calma sotto la pressione degli chef paga e girla.",
+                    en: "Freshly signed she is forced to stamp a smile on her face not to look bad with her boyfriend's friends. A bit tested by the recent phone change that forced her to end up with the iphone 16, she doesn't hide her boomer traits visible to her followers. Prepares the team for the main night stuffing alcohol reserves in all orifices of her comrades, which proved extremely useful to extend the ice in empty glasses. On the last night she hosts an important burger night keeping calm under the pressure of chefs Paga and Girla."
                 }
             },
             {
@@ -496,11 +496,11 @@ const TRIP_DATA = {
             },
             {
                 name: "Girla",
-                nick: { it: "CIPOLLE SUDATE", en: "SWEATING ONIONS" },
+                nick: { it: "FACCIAMOLE SUDAREEEE STE CIPOLLEE", en: "MAKE THESE ONIONS SWEATTT" },
                 grade: "9.5",
                 desc: {
-                    it: "Arriva con un zoo intero sulla spalla che però non riesce a soddisfare causa chiusura per feste sfondandosi però con due cope di nada al bar. Gli fa un male cane la testa per l'alcol del giorno prima, ma si riprende alla grande grazie ai medicinali offerti da letizia. Nonostante questa cosa l'abbia destabilizzato un po' la sera di capodanno si diverte e si gode la serata, ma quando scoccano le 3 non c'è n'è per nessuno, si siede al tavolo entrando in mutismo selettivo. L'ultima sera si scontra con martina nella preparazione delle cipolle caramellate ma tutto è bene quel che finisce bene.",
-                    en: "Arrives with a whole zoo on his shoulder which however he can't satisfy due to holiday closures, stuffing himself instead with two cups of nothing at the bar. He has a stomach of steel and doesn't even feel the kebab, probably had already taken meds to cure the 120€ loss. Despite this destabilizing him a bit on New Year's Eve he enjoys the night, but when 3 AM hits, there's no one home, he sits at the table entering selective mutism. On the last night he clashes with Martina in preparing caramelized onions but all's well that ends well."
+                    it: "Arriva con un zoo intero sulla spalla che però non riesce a soddisfare causa chiusura per feste sfondandosi però con due cope di nada al bar. Lui ha lo stomaco di ferro e il kebab non lo sente nemmeno, probabilmente aveva già preso farmaci per guarire l’inculata dei 120€. Nonostante questa cosa l’abbia destabilizzato un po’ la sera di capodanno si diverte e si gode la serata, ma quando scoccano le 3 non c’è n’è per nessuno, si siede al tavolo entrando in mutismo selettivo. L’ultima sera si scontra con martina nella preparazione delle cipolle caramellate ma tutto è bene quel che finisce bene. ( ma è mai stato a Madrid?)",
+                    en: "Arrives with a whole zoo on his shoulder which however he can't satisfy due to holiday closures, stuffing himself instead with two cups of nothing at the bar. He has a stomach of steel and doesn't even feel the kebab, probably had already taken meds to cure the 120€ loss. Despite this destabilizing him a bit on New Year's Eve he enjoys the night, but when 3 AM hits, there's no one home, he sits at the table entering selective mutism. On the last night he clashes with Martina in preparing caramelized onions but all's well that ends well. (But has he ever been to Madrid?)"
                 }
             },
             {
@@ -508,7 +508,7 @@ const TRIP_DATA = {
                 nick: { it: "PAPÀ V", en: "DADDY V" },
                 grade: "9",
                 desc: {
-                    it: "Il papà del gruppo non si smentisce e arriva il 30 sera con tutti i bambini in gita. Gestisce alla perfezione spese e pasti e il 31 sera non si sbottona godendosi la serata davvero signore senza alzare troppo l'omero, ma rischia l'espulsione nel faccia a faccia con Paci, il tutto fortunatamente si risolve con una stretta di mano (e un abbraccio). Dopo che tutto l'1 prova ad utilizzare uno dei due bagni che erano occupati contemporaneamente da paga, decide di arrendersi e tornare in italia con cecilia per poter finalmente cagare.",
+                    it: "Il papà del gruppo non si smentisce e arriva il 30 sera con tutti i bambini in gita. Gestisce alla perfezione spese e pasti e il 31 sera non si sbottona godendosi la serata davvero signore senza alzare troppo l’omero, ma rischia l’espulsione nel faccia a faccia con Paci, il tutto fortunatamente si risolve con una stretta di mano ( e un abbraccio) . Dopo che tutto l’1 prova ad utilizzare uno dei due bagni che erano occupati contemporaneamente da paga, decide di arrendersi e tornare in italia con cecilia per poter finalmente cagare.",
                     en: "The dad of the group doesn't deny himself and arrives on the 30th evening with all the kids on a trip. Manages expenses and meals to perfection and on the 31st evening doesn't unbutton, enjoying the night as a true gentleman without raising his arm too much, but risks expulsion in a face-to-face with Paci, which fortunately resolves with a handshake (and a hug). After all of Jan 1st he tries to use one of the two bathrooms occupied simultaneously by Paga, he decides to surrender and return to Italy with Cecilia to finally take a shit."
                 }
             },
@@ -517,16 +517,16 @@ const TRIP_DATA = {
                 nick: { it: "LA RADIOLINA", en: "THE RADIO BOX" },
                 grade: "9+",
                 desc: {
-                    it: "Si presenta in inferiorità numerica a dover fronteggiare un'armata di boys pronta a distruggerle l'umore. Dopo la maratona di BARCELLONA effettuata per prendere un caffè con eugi fa ininterrottamente due cose: chiederti di fare una foto e se sei contento che lei sia lì con te e prontamente ogni volta tocca rispondere si. Anche lei con il timore di diventare stitica decide di abbandonare la nave in anticipo e scappa con bax il 2 mattina.",
-                    en: "Presents herself outnumbered, facing an army of boys ready to destroy her mood. After the BARCELONA marathon done to grab a coffee with Eugi, she continuously does two things: ask you to take a photo and if you are happy she is there with you, and promptly you have to reply yes. She too, fearing becoming constipated, decides to abandon the ship early and escapes with Bax on the morning of the 2nd."
+                    it: "Si presenta in inferiorità numerica a dover fronteggiare un’armata di boys pronta a distruggerle l’umore. Dopo la maratona di BARCELLONA effettuata per prendere un caffè con eugi fa ininterrottamente due cose: chiederti di fare una foto foto e se sei contento che lei sia lì con te e prontamente ogni volta tocca rispondere si. Anche lei con il timore di diventare stitica decide di abbandonare la nave in anticipo e scappa con bax il 2 mattina.",
+                    en: "Presents herself outnumbered, facing an army of boys ready to destroy her mood. After the BARCELONA marathon done to grab a coffee with Eugi, she continuously does two things: ask you to take a photo photo and if you are happy she is there with you, and promptly you have to reply yes. She too, fearing becoming constipated, decides to abandon the ship early and escapes with Bax on the morning of the 2nd."
                 }
             },
             {
                 name: "Paga",
-                nick: { it: "RISO SENZA LATTOSIO", en: "RICE WITHOUT LACTOSE" },
+                nick: { it: "SI CON RISO SENZA LATTOSIO", en: "YES WITH RICE WITHOUT LACTOSE" },
                 grade: "9-",
                 desc: {
-                    it: "Inizia la vacanza in maniera tranquilla lasciandosi trascinare da girla verso il lato oscuro del risparmio ed ecco qui il primo errore, un kebab dalla qualità discutibile mangiato il 30 dicembre alle ore 13.24 lo rende il più grande incubo di ferdi, il quale non riesce più ad usare il bagno nei 3 giorni successivi. A capodanno fa la sua figura, si iscrive al tabellino ma per problemi di organizzazione non riesce a siglare la doppietta. L'ultima sera si improvvisa capo cuoco a casa martina supervisionando la creazione degli hamburger.",
+                    it: "Inizia la vacanza in maniera tranquilla lasciandosi trascinare da girla verso il lato oscuro del risparmio ed ecco qui il primo errore, un kebab dalla qualità discutibile mangiato il 30 dicembre alle ore 13.24 lo rende il più grande incubo di ferdi, il quale non riesce più ad usare il bagno nei 3 giorni successivi. A capodanno fa la sua figura, si iscrive al tabellino ma per problemi di organizzazione non riesce a siglare la doppietta. L’ultima sera si improvvisa capo cuoco a casa martina supervisionando la creazione degli hamburger.",
                     en: "Starts the vacation quietly letting himself be dragged by Girla to the dark side of saving and here's the first mistake: a kebab of questionable quality eaten on Dec 30th at 1:24 PM makes him Ferdi's worst nightmare, who can no longer use the bathroom for the next 3 days. On New Year's Eve he makes his mark, scoring but due to organization issues fails to secure the brace. On the last night he acts as head chef at Martina's house supervising the burger creation."
                 }
             },
@@ -535,7 +535,7 @@ const TRIP_DATA = {
                 nick: { it: "CAZZO DICI", en: "WHAT THE FUCK ARE YOU SAYING" },
                 grade: "9",
                 desc: {
-                    it: "Dopo aver passato il natale in solitaria viene invaso dall'uragano italiano, ma non si scompone e sembra apprezzare l'arrivo dei monzesi grazie anche al supporto prontamente arrivato dalla bolivia. In casa fa finta di fare qualcosa per nn fare brutta figura con gli ospiti mostrando subito l'italiano imparato in questi mesi: 'Mi mangio la mela mentecatto succhiami il cazzo'. Al Negro rojo non incide, dimenticandosi le chiavi della discordia rischiando di causare una rissa tra coinquilini. L'ultima sera sente la pressione di girla perdendo la lucidità davanti ad un bicchiere per la felicità della proprietaria di casa.",
+                    it: "Dopo aver passato il natale in solitaria viene invaso dall’uragano italiano, ma non si scompone e sembra apprezzare l’arrivo dei monzesi grazie anche al supporto prontamente arrivato dalla bolivia. In casa fa finta di fare qualcosa per nn fare brutta figura con gli ospiti mostrando subito l’italiano imparato in questi mesi: “Mi mangio la mela mentecatto succhiami il cazzo” Al Negro rojo non incide, dimenticandosi le chiavi della discordia rischiando di causare una rissa tra coinquilini. L’ultima sera sente la pressione di girla perdendo la lucidità davanti ad un bicchiere per la felicità della proprietaria di casa.",
                     en: "After spending Christmas in solitude he is invaded by the Italian hurricane, but doesn't get upset and seems to appreciate the arrival of the Monzesi thanks to the support from Bolivia. At home he pretends to do something to look good, showing the Italian learned in these months: 'I eat the apple you idiot suck my dick'. At Negro Rojo he doesn't impact, forgetting the keys of discord and risking a fight between flatmates. The last night he feels Girla's pressure losing lucidity in front of a glass to the home owner's joy."
                 }
             },
@@ -544,8 +544,8 @@ const TRIP_DATA = {
                 nick: { it: "IN SMARTWORKING", en: "IN SMARTWORKING" },
                 grade: "10",
                 desc: {
-                    it: "Pagella d'onore nonostante la sua assenza, che però le ha fatto guadagnare punti infiniti come figlia. Fortunatamente per lei si trattava del primo capodanno low-cost non causando rimorsi dal punto di vista economico. Viene comunque aggiornata tramite videochiamata anche se averla dal vivo sarebbe stata tutt'altra cosa ❤.",
-                    en: "Honorable report card despite her absence, which earned her infinite points as a daughter. Fortunately for her it was the first low-cost New Year's Eve causing no economic remorse. She is still updated via video call even if having her live would have been something else entirely ❤."
+                    it: "Pagella d'onore nonostante la sua assenza, che però le ha fatto guadagnare punti infiniti come figlia. Fortunatamente per lei si trattava del primo capodanno low-cost non causando rimorsi dal punto di vista economico. Viene comunque aggiornata tramite videochiamata anche se averla dal vivo sarebbe stata tutt’altra cosa ❤️.",
+                    en: "Honorable report card despite her absence, which earned her infinite points as a daughter. Fortunately for her it was the first low-cost New Year's Eve causing no economic remorse. She is still updated via video call even if having her live would have been something else entirely ❤️."
                 }
             }
         ]
