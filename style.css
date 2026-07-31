@@ -982,6 +982,7 @@ h2 {
     -webkit-box-orient: vertical;
     overflow: hidden;
     transition: color var(--transition-fast);
+    white-space: pre-line;
 }
 
 .member-report-card:hover .member-card-body {
