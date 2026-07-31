@@ -557,7 +557,7 @@ const TRIP_DATA = {
             {
                 name: "Chiara",
                 nick: { it: "LORD FARQUAAD", en: "LORD FARQUAAD" },
-                grade: "7.5/10",
+                grade: "7.5",
                 desc: {
                     it: "Per la prima volta si fa tutto il precampionato con la squadra, senza cessioni improvvise. La sua vacanza è un vorrei ma non posso, vorrei giocare a schiaccia 7, ma Girla la shotta per prima, vorrei giocare a Lupus , ma viene uccisa per prima, vorrei bermi una birra fresca, ma le faccio esplodere in freezer. Per fortuna ha un alleato, il suo materassino/sedia/amaca/ma che cazzo è?",
                     en: "For the first time she does the whole pre-season with the team, without sudden transfers. Her holiday is a \"I want to but I can't\", I want to play schiaccia 7 but Girla shottas her first, I want to play Lupus but she gets killed first, I want to drink a cold beer but I make them explode in the freezer. Luckily she has an ally, her air bed/chair/hammock/what the fuck is it?"
@@ -566,7 +566,7 @@ const TRIP_DATA = {
             {
                 name: "Ceci",
                 nick: { it: "BUSIVI, BUSIVI", en: "BUSIVI, BUSIVI" },
-                grade: "7.5/10",
+                grade: "7.5",
                 desc: {
                     it: "Arriva venerdì sera diretta per la serata, con un solo obiettivo, scroccare un posto sul pavimento di casa Girla a Monaco. Di giorno durante le sessioni di settimana enigmistica fa l’assistente di Gaia, trascrivendo qualunque cosa esca dalla sua bocca. Di notte leggende dicono usi ancora quell’apparecchio che è entrato nella storia 5 anni fa. A casa di Paci si aggiudica 250g di pasta e 2/3 di vongole, per Chiara solo qualche guscio vuoto e lamentele. A fine cena si trasforma nella polizia del gelato: non più di 2g a testa per ogni gusto. E zitti.",
                     en: "Arrives Friday evening straight for the party, with one goal: scrounging a spot on the floor of Girla's house in Munich. By day during the settimana enigmistica sessions she acts as Gaia's assistant, transcribing whatever comes out of her mouth. By night, legends say she still uses that dental brace that made history 5 years ago. At Paci's house she wins 250g of pasta and 2/3 of the clams, for Chiara only some empty shells and complaints. At the end of the dinner she transforms into the gelato police: no more than 2g per person for each flavor. And shut up."
@@ -575,7 +575,7 @@ const TRIP_DATA = {
             {
                 name: "Ari",
                 nick: { it: "ALESSANDRO MODICA", en: "ALESSANDRO MODICA" },
-                grade: "8-/10",
+                grade: "8-",
                 desc: {
                     it: "Al suo arrivo sembra rilassata, ma dal secondo giorno inizia a mostrare una leggera intolleranza alla sabbia, maledicendo chiunque si muova intorno a lei quando c’è anche solo 1 km/h di vento. Sabato sera però entra nel prime, in particolare quando la discussione si sposta sul tema Pistolero Roggers dove entra in gioco la sua nemesi (Bax), lo scontro è inevitabile, portando a delle conseguenze irreversibili: Cagotto importante nel bagno di gaia e balzato il post serata dai Paci.",
                     en: "Upon her arrival she seems relaxed, but from the second day she begins to show a slight intolerance to sand, cursing anyone who moves around her when there is even just 1 km/h of wind. Saturday night however she enters her prime, particularly when the discussion shifts to the topic of Pistolero Roggers where her nemesis (Bax) comes into play, the clash is inevitable, leading to irreversible consequences: a major cagotto in Gaia's bathroom and skipping the post-party at the Paci's."
@@ -584,7 +584,7 @@ const TRIP_DATA = {
             {
                 name: "Gaia",
                 nick: { it: "SI IL CAZZO", en: "YEAH MY ASS" },
-                grade: "9/10",
+                grade: "9",
                 desc: {
                     it: "Mi sa che è nel Prime, ovunque si vada cascano tutti ai suoi piedi. Peccato che a lei freghi solo del malessere che la aspetta a casa. Ha qualche tipo di allergia alle persone, dovendosi allontanare ogni tot, ma facendo un favore agli altri, dato che non la smette di cantare quella cazzo di canzoncina (non ce la faccio più…) A mani basse la migliore nella Settimana Enigmistica, ma pecca di superbia dopo aver fatto napola fino al 7 a scopone scientifico contro Girla, dicendo che non è tutto culo. Ma ricordiamoci che: chi è fortunato nel gioco è sfortunato in amore…",
                     en: "I think she is in her Prime, everywhere we go everyone falls at her feet. Too bad she only cares about the malessere waiting for her at home. She has some kind of allergy to people, having to walk away every now and then, but doing others a favor, since she won't stop singing that fucking song (I can't take it anymore...) Hands down the best in the Settimana Enigmistica, but sins of pride after making napola up to 7 in scopone scientifico against Girla, claiming it's not all culo. But let's remember: lucky in the game, unlucky in love..."
@@ -593,7 +593,7 @@ const TRIP_DATA = {
             {
                 name: "Bax",
                 nick: { it: "MARKETING CONSULTANT", en: "MARKETING CONSULTANT" },
-                grade: "7.5/10",
+                grade: "7.5",
                 desc: {
                     it: "Grazie ad un piccolo bonus alla firma, riesce a partire con la squadra con un giorno di ritardo. Purtroppo, a suo malgrado si ritrova in casa con 5 ragazze, diventando un’amio a tutti gli effetti. Pur di allontanarsi chiede a chiunque di andare a nuotare. Regge finché può, ma dopo 4 giorni in cui deve aspettare 2h per andare al bagno, è costretto a lasciare il ritiro in anticipo, purtroppo a lavoro (in uno dei due) hanno assolutamente bisogno di lui.",
                     en: "Thanks to a small signing bonus, he manages to leave with the team one day late. Unfortunately, to his regret, he finds himself in a house with 5 girls, becoming an \"amio\" to all intents and purposes. Just to get away, he asks anyone to go swimming. He holds on as long as he can, but after 4 days of having to wait 2h to go to the bathroom, he is forced to leave the ritiro early, unfortunately at work (in one of the two) they absolutely need him."
@@ -611,7 +611,7 @@ const TRIP_DATA = {
             {
                 name: "Eugi",
                 nick: { it: "REMUS LUPIN", en: "REMUS LUPIN" },
-                grade: "7/10",
+                grade: "7",
                 desc: {
                     it: "Con la sua moto ti raggiunge ovunque, tu non gli hai detto dove andrai, ma sei già sicuro che ad un certo punto lo vedrai spuntare da qualche angolo della spiaggia. Anche la sera fa la sua sporca figura saltando solo la trasferta a Porto Rotondo per infortunio. Purtroppo il lunedì è tosto per tutti e a lui è toccato pure il turno di notte… Farà pure smart working dalla spiaggia, ma quelle poche volte che lavora lo fa con autorità, cazziando per bene quelli del SOLE24ORE.",
                     en: "With his motorbike he reaches you anywhere, you didn't tell him where you are going, but you are already sure that at some point you will see him pop up from some corner of the beach. Even in the evening he does his job, only skipping the trip to Porto Rotondo due to injury. Unfortunately Monday is tough for everyone and he also got the night shift... He might do smart working from the beach, but those few times he works he does it with authority, scolding those of the SOLE24ORE."
@@ -620,7 +620,7 @@ const TRIP_DATA = {
             {
                 name: "Marti",
                 nick: { it: "PABLO ESCOBAR", en: "PABLO ESCOBAR" },
-                grade: "8.5/10",
+                grade: "8.5",
                 desc: {
                     it: "Il Generale arriva direttamente dal fronte del Vietnam, aimè con parecchie ferite dopo l’ultimo attacco, ma con un’abbronzatura invidiabile. Da subito si scopre che non è in vacanza, ma è li per controllare che il naso di Paci non pippi sul culo di una Colombiana. Si concede solo una serata libera dove, da vera pugliese, si arma di borsa frigo e distribuisce da bere a tutti i discepoli nel parcheggio del country. Da buon Generale gestisce alla perfezione casa Pacifico, tra pulizie, lavastoviglie e schiscette. Male briscola chiamata e Make Your Memes. +1 voto per quelle frittatozze folli.",
                     en: "The General arrives directly from the Vietnam front, unfortunately with several wounds after the last attack, but with an enviable tan. Right away it turns out she's not on vacation, but is there to make sure Paci's nose doesn't sniff on a Colombian's ass. She allows herself only one night off where, like a true Pugliese, she cools down her cooler bag and distributes drinks to all the disciples in the Country parking lot. As a good General she manages Casa Pacifico to perfection, between cleaning, dishwasher and schiscette. Bad call at briscola chiamata and Make Your Memes. +1 grade for those crazy frittatozze."
@@ -629,7 +629,7 @@ const TRIP_DATA = {
             {
                 name: "Girla",
                 nick: { it: "CARLO CONTI", en: "CARLO CONTI" },
-                grade: "9/10",
+                grade: "9",
                 desc: {
                     it: "Der letzte tanz, in italiano: l’ultimo ballo. Girano voci che dopo il contratto con Amundi, sarà la sua ultima vacanza low-budget, ma non ci crediamo molto… Il Girlone pre partenza le prova tutte per integrarsi con la cultura tedesca e mantenere una carnagione chiara, tra crema 70+ e maglietta contro i raggi UV, ma nulla da fare, già il secondo giorno se spegnevi la luce riuscivi a vedere solo i denti. In camera ci sta solo la notte, forse perche tra tatami sul soppalco e cascate d’acqua dal condizionatore, si sente in cima alla montagna, mentre lui è uno da mare. In cucina è una garanzia, tra carne trita e cipolle sudate al punto giusto, svolta due pranzi che sembravano non essere coperti in casa Pacifico. All’agriturismo però sorprende tutti, forse, poco lucido a causa della quantità di cibo ingerita, decide di pagare 600 bombe e chiarire ancora una volta a tutti che lui fa finance.",
                     en: "Der letzte tanz, in English: the last dance. Rumor has it that after the Amundi contract, this will be his last low-budget vacation, but we don't buy it... Before departure, the Girlone tries everything to integrate with German culture and maintain a fair complexion, between 70+ sunscreen and a UV-ray shirt, but no luck: by the second day if you turned off the light you could only see his teeth. He is only in the room at night, perhaps because between the tatami on the mezzanine and waterfalls from the air conditioner, he feels on top of a mountain, while he is a sea guy. In the kitchen he is a guarantee, between minced meat and sweated onions at the right point, he saves two lunches that seemed uncovered in Casa Pacifico. At the agriturismo however he surprises everyone, perhaps not very lucid due to the amount of food ingested, he decides to pay 600 bombe and clarify once again to everyone that he does finance."
@@ -638,7 +638,7 @@ const TRIP_DATA = {
             {
                 name: "Paci",
                 nick: { it: "ALEXEY STAKHANOV", en: "ALEXEY STAKHANOV" },
-                grade: "8+/10",
+                grade: "8+",
                 desc: {
                     it: "Non una vacanza semplice per il lavoratore del mese, tra call e Powerpoint vanno via 3 giorni su 5. Per fortuna ogni tanto gli fanno fare Part-Time e può cenare con gli altri. Tutto gasato propone la sua spiaggia del cuore, Lu Impostu, che purtroppo non regala emozioni e se la gioca 1vs1 con Milano Marittima. Pare sia affetto da una strana fotofobia e in settimana si concede dei bagni post lavoro alle 20, lontano dalla luce del sole. Quando arrivi a casa post spiaggia, anche se è in call, ti urla di lavarti i piedi e chiudere le zanzariere. Degusta caffè corretti (fin troppo) con Girla prima di ogni serata, i due poi si alternano il bagno sia per i caffè, ma anche nel post pizza in spiaggia e nel post gelato da Mimmo. Si gode l’agriturismo offerto, nonostante non sia paragonabile al fritto del Giuli.",
                     en: "Not an easy vacation for the worker of the month: between calls and PowerPoint, 3 out of 5 days are gone. Luckily every now and then they let him work Part-Time and he can have dinner with the others. All hyped up, he proposes his favorite beach, Lu Impostu, which unfortunately does not deliver and plays 1vs1 with Milano Marittima. He seems to suffer from a strange photophobia and during the week treats himself to post-work baths at 8 PM, away from sunlight. When you arrive home post-beach, even if he is in a call, he yells at you to wash your feet and close the mosquito nets. He enjoys corrected coffees (way too much) with Girla before each party, the two then alternate in the bathroom for the coffees, but also post-pizza on the beach and post-gelato at Mimmo's. He enjoys the offered agriturismo, even though it's not comparable to Giuli's fried food."
@@ -647,10 +647,14 @@ const TRIP_DATA = {
             {
                 name: "Mimmo",
                 nick: { it: "LA PISTACCHIOSA", en: "THE PISTACHIO LOVER" },
-                grade: "50€/10",
+                grade: "50€",
                 desc: {
-                    it: "Poche storie, mangiare da Da Mimmo non è come mangiare da Giuliano nel classico mercoledì sera in quel di Lissone. Lui ci prova, ma sicuramente non viene aiutato dai gusti da under 12 scelti delle girls, senza consultare gli altri. Si parte con Yogurt, vagamente acido ma si va avanti, ci aggiungi un po’ di Dark Chocolate e ti accorgi che nella scodella si sta formando una strana miscela, guardi la vaschetta e vedi 2kg di Nocciotella, vabbè un po monotono ma lo prendi lo stesso, tanto poi con l’ultimo giusto stravolgi tutto sicuro, ci sarà un po’ di frutta, e invece no, c’è Ciucciuè, un Pistacchio Pistacchioso extra dolce. Fortuna che costava solo 50€ dai",
+                    it: "Poche storie, mangiare da Da Mimmo non è come mangiare da Giuliano nel classico mercoledì sera in quel di Lissone. Lui ci prova, ma sicuramente non viene aiutato dai gusti da under 12 scelti delle girls, senza consultare gli altri. Si parte con Yogurt, vagamente acido ma si va avanti, ci aggiungi un po’ di Dark Chocolate e ti accorgi che nella scodella si sta formando una strana miscela, guardi la vaschetta e vedi 2kg di Nocciotella, vabbè un po monotono mal lo prendi lo stesso, tanto poi con l’ultimo giusto stravolgi tutto sicuro, ci sarà un po’ di frutta, e invece no, c’è Ciucciuè, un Pistacchio Pistacchioso extra dolce. Fortuna che costava solo 50€ dai",
                     en: "No question about it, eating at Da Mimmo is not like eating at Giuliano's on a classic Wednesday evening in Lissone. He tries, but he is certainly not helped by the under-12 flavors chosen by the girls without consulting the others. We start with Yogurt, vaguely sour but we move on, you add a bit of Dark Chocolate and you realize that a strange mixture is forming in the bowl, you look at the tub and see 2kg of Nocciotella, well a bit monotonous but you take it anyway, then with the last flavor you'll surely turn everything around, there will be some fruit, and instead no, there is Ciucciuè, an extra sweet Pistacchio Pistacchioso. Good thing it only cost 50€ after all."
+                }
+            }
+        ]
+    }e that a strange mixture is forming in the bowl, you look at the tub and see 2kg of Nocciotella, well a bit monotonous but you take it anyway, then with the last flavor you'll surely turn everything around, there will be some fruit, and instead no, there is Ciucciuè, an extra sweet Pistacchio Pistacchioso. Good thing it only cost 50€ after all."
                 }
             }
         ]
@@ -1570,7 +1574,7 @@ function parseGradeToNumeric(gradeStr) {
     if (clean === "8-") return 7.75;
     if (clean === "8+") return 8.25;
     if (clean === "10:2") return 5;
-    if (clean === "50€/10") return 5;
+    if (clean === "50€/10" || clean === "50€") return 5;
     if (clean === "10-") return 9.7;
     if (clean.endsWith("+")) {
         return parseFloat(clean.replace("+", "")) + 0.3;
@@ -1600,8 +1604,8 @@ function renderHistoricalStats() {
         trip.reports.forEach(r => {
             const numGrade = parseGradeToNumeric(r.grade);
             
-            // Exclude Paga's 10:2 and Mimmo's 50€/10 from topVoti (ranking)
-            if (r.grade !== "10:2" && r.grade !== "50€/10") {
+            // Exclude Paga's 10:2 and Mimmo's 50€ / 50€/10 from topVoti (ranking)
+            if (r.grade !== "10:2" && r.grade !== "50€/10" && r.grade !== "50€") {
                 topVoti.push({ name: r.name, trip: tripName, grade: r.grade, numeric: numGrade || 0 });
             }
             
