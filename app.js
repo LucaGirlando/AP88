@@ -101,7 +101,7 @@ const MEMBER_INFO = {
         name: "Ari",
         image: "Ari.jpg",
         nicknames: ["BULBASAUR", "LA CAMIONISTA", "LA BENZINAIA", "STANGA?MAGARI", "IN SMARTWORKING", "ALESSANDRO MODICA"],
-        stats: { trips: 5, avg: 8.5, max: "10 (Barcellona)", best: "Barcellona 24/25" }
+        stats: { trips: 5, avg: 7.93, max: "9- (Puglia)", best: "Puglia 2023" }
     },
     Chiara: {
         name: "Chiara",
@@ -474,12 +474,12 @@ const TRIP_DATA = {
     },
     barcellona2024: {
         title: { it: "🇪🇸 Barcellona 24/25", en: "🇪🇸 Barcelona 24/25" },
-        stats: { avg: 9.2, top: "10 (Marti/Ari)", participants: 8, duration: "5 giorni", location: "Barcellona" },
+        stats: { avg: 9.14, top: "9.5 (Paci/Girla)", participants: 7, duration: "5 giorni", location: "Barcellona" },
         reports: [
             {
                 name: "Marti",
                 nick: { it: "L'INFLUENCER", en: "THE INFLUENCER" },
-                grade: "10",
+                grade: "9",
                 desc: {
                     it: "Fresca di firma sul contratto è costretta a stamparsi un sorriso in faccia per non fare brutta figura con gli amici del fidanzato. Un po’ provata ancora dal recente cambio di telefono che l’ha costretta a ritrovarsi con l’iphone 16, non nasconde comunque la sue doti da boomer ben visibili ai suoi follower.Prepara la squadra alla serata principale infilando scorte di alcol in tutti gli orifizi dei compagni risultate utilissime ad allungare il ghiaccio nei bicchieri vuoti. L’ultima sera ospita un hamburgerata importante mantendendo la calma sotto la pressione degli chef paga e girla.",
                     en: "Freshly signed she is forced to stamp a smile on her face not to look bad with her boyfriend's friends. A bit tested by the recent phone change that forced her to end up with the iphone 16, she doesn't hide her boomer traits visible to her followers. Prepares the team for the main night stuffing alcohol reserves in all orifices of her comrades, which proved extremely useful to extend the ice in empty glasses. On the last night she hosts an important burger night keeping calm under the pressure of chefs Paga and Girla."
@@ -1604,16 +1604,21 @@ function renderHistoricalStats() {
         trip.reports.forEach(r => {
             const numGrade = parseGradeToNumeric(r.grade);
             
+            const isAriBarcellonaHonorary = (r.name === "Ari" && tripKey === "barcellona2024");
+            
             // Exclude Paga's 10:2 and Mimmo's 50€ / 50€/10 from topVoti (ranking)
-            if (r.grade !== "10:2" && r.grade !== "50€/10" && r.grade !== "50€") {
+            // Also exclude Ari's honorary Barcellona grade
+            if (r.grade !== "10:2" && r.grade !== "50€/10" && r.grade !== "50€" && !isAriBarcellonaHonorary) {
                 topVoti.push({ name: r.name, trip: tripName, grade: r.grade, numeric: numGrade || 0 });
             }
             
             if (MAIN_MEMBERS.includes(r.name)) {
-                presenze[r.name]++;
-                if (numGrade) {
-                    mediaSomme[r.name] += numGrade;
-                    mediaCount[r.name]++;
+                if (!isAriBarcellonaHonorary) {
+                    presenze[r.name]++;
+                    if (numGrade) {
+                        mediaSomme[r.name] += numGrade;
+                        mediaCount[r.name]++;
+                    }
                 }
             }
         });
@@ -1681,6 +1686,9 @@ function renderEvolutionChart() {
 
     const datasets = MAIN_MEMBERS.map(member => {
         const dataPoints = tripKeys.map(key => {
+            if (member === "Ari" && key === "barcellona2024") {
+                return null;
+            }
             const report = TRIP_DATA[key].reports.find(r => r.name === member);
             return report ? parseGradeToNumeric(report.grade) : null;
         });
@@ -1793,16 +1801,20 @@ function renderProfilePage() {
     Object.entries(TRIP_DATA).forEach(([tripKey, trip]) => {
         const report = trip.reports.find(r => r.name === APP_STATE.profile);
         if (report) {
-            tripsCount++;
-            const numGrade = parseGradeToNumeric(report.grade);
-            if (numGrade) {
-                gradeSum += numGrade;
-                gradeCount++;
-                if (numGrade > maxGradeNumeric) {
-                    maxGradeNumeric = numGrade;
-                    const tripTitleText = (typeof trip.title === 'object') ? trip.title.it : trip.title;
-                    maxGradeStr = `${report.grade} (${tripTitleText})`;
-                    bestTrip = tripTitleText;
+            const isAriBarcellonaHonorary = (APP_STATE.profile === "Ari" && tripKey === "barcellona2024");
+            
+            if (!isAriBarcellonaHonorary) {
+                tripsCount++;
+                const numGrade = parseGradeToNumeric(report.grade);
+                if (numGrade) {
+                    gradeSum += numGrade;
+                    gradeCount++;
+                    if (numGrade > maxGradeNumeric) {
+                        maxGradeNumeric = numGrade;
+                        const tripTitleText = (typeof trip.title === 'object') ? trip.title.it : trip.title;
+                        maxGradeStr = `${report.grade} (${tripTitleText})`;
+                        bestTrip = tripTitleText;
+                    }
                 }
             }
 
