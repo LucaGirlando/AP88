@@ -1482,7 +1482,9 @@ function renderHistoricalStats() {
     });
 
     Object.entries(TRIP_DATA).forEach(([tripKey, trip]) => {
-        const tripName = (typeof trip.title === 'object') ? trip.title.it.replace(/[^a-zA-Z0-9 ]/g, "").trim() : trip.title;
+        const lang = APP_STATE.language || 'it';
+        const rawTitle = (typeof trip.title === 'object') ? (trip.title[lang] || trip.title.it) : trip.title;
+        const tripName = rawTitle.replace(/[^\p{L}\p{N}\s/]/gu, "").trim();
         trip.reports.forEach(r => {
             const numGrade = parseGradeToNumeric(r.grade);
             
