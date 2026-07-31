@@ -583,7 +583,7 @@ const TRIP_DATA = {
             },
             {
                 name: "Gaia",
-                nick: { it: "SI IL CAZZO", en: "YEAH MY ASS" },
+                nick: { it: "SI IL CAZZO", en: "SI IL CAZZO" },
                 grade: "9",
                 desc: {
                     it: "Mi sa che è nel Prime, ovunque si vada cascano tutti ai suoi piedi. Peccato che a lei freghi solo del malessere che la aspetta a casa. Ha qualche tipo di allergia alle persone, dovendosi allontanare ogni tot, ma facendo un favore agli altri, dato che non la smette di cantare quella cazzo di canzoncina (non ce la faccio più…) A mani basse la migliore nella Settimana Enigmistica, ma pecca di superbia dopo aver fatto napola fino al 7 a scopone scientifico contro Girla, dicendo che non è tutto culo. Ma ricordiamoci che: chi è fortunato nel gioco è sfortunato in amore…",
@@ -646,7 +646,7 @@ const TRIP_DATA = {
             },
             {
                 name: "Mimmo",
-                nick: { it: "LA PISTACCHIOSA", en: "THE PISTACHIO LOVER" },
+                nick: { it: "LA PISTACCHIOSA", en: "LA PISTACCHIOSA" },
                 grade: "50€",
                 desc: {
                     it: "Poche storie, mangiare da Da Mimmo non è come mangiare da Giuliano nel classico mercoledì sera in quel di Lissone. Lui ci prova, ma sicuramente non viene aiutato dai gusti da under 12 scelti delle girls, senza consultare gli altri. Si parte con Yogurt, vagamente acido ma si va avanti, ci aggiungi un po’ di Dark Chocolate e ti accorgi che nella scodella si sta formando una strana miscela, guardi la vaschetta e vedi 2kg di Nocciotella, vabbè un po monotono mal lo prendi lo stesso, tanto poi con l’ultimo giusto stravolgi tutto sicuro, ci sarà un po’ di frutta, e invece no, c’è Ciucciuè, un Pistacchio Pistacchioso extra dolce. Fortuna che costava solo 50€ dai",
