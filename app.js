@@ -601,6 +601,7 @@ const TRIP_DATA = {
             },
             {
                 name: "Paga",
+                displayName: { it: "Paga e Yara", en: "Paga & Yara" },
                 nick: { it: "I BABIES JETLAGGATI", en: "THE JETLAGGED BABIES" },
                 grade: "10:2",
                 desc: {
@@ -1524,12 +1525,13 @@ function renderTripContent() {
     trip.reports.forEach((report, index) => {
         const nickText = (typeof report.nick === 'object') ? report.nick[APP_STATE.language] : report.nick;
         const descText = (typeof report.desc === 'object') ? report.desc[APP_STATE.language] : report.desc;
+        const displayName = report.displayName ? (typeof report.displayName === 'object' ? report.displayName[APP_STATE.language] : report.displayName) : report.name;
         
         html += `
             <div class="member-report-card" data-index="${index}">
                 <div class="member-card-header">
                     <div>
-                        <h4 class="member-card-title">${report.name}</h4>
+                        <h4 class="member-card-title">${displayName}</h4>
                         <span class="member-card-subtitle">${nickText}</span>
                     </div>
                     <span class="grade-badge">${report.grade}</span>
