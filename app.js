@@ -654,10 +654,6 @@ const TRIP_DATA = {
                 }
             }
         ]
-    }e that a strange mixture is forming in the bowl, you look at the tub and see 2kg of Nocciotella, well a bit monotonous but you take it anyway, then with the last flavor you'll surely turn everything around, there will be some fruit, and instead no, there is Ciucciuè, an extra sweet Pistacchio Pistacchioso. Good thing it only cost 50€ after all."
-                }
-            }
-        ]
     }
 };
 
